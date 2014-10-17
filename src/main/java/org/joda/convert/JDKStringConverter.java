@@ -35,9 +35,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
-
-import javax.xml.bind.DatatypeConverter;
-
+import com.google.common.io.BaseEncoding;
 /**
  * Conversion between JDK classes and a {@code String}.
  */
@@ -124,11 +122,11 @@ enum JDKStringConverter implements TypedStringConverter<Object> {
     BYTE_ARRAY(byte[].class) {
         @Override
         public String convertToString(Object object) {
-            return DatatypeConverter.printBase64Binary((byte[]) object);
+            return BaseEncoding.base64().encode((byte[]) object);
         }
         @Override
         public Object convertFromString(Class<?> cls, String str) {
-            return DatatypeConverter.parseBase64Binary(str);
+            return BaseEncoding.base64().decode(str);
         }
     },
     /**
