@@ -16,7 +16,7 @@ task cycleFinder(type:Exec) {
     inputs.files sourceSets.main.allJava
     executable "${J2OBJC_HOME}/cycle_finder"
     args '-sourcepath', (sourceSets.main.allJava.srcDirs)
-    args '-classpath', "${J2OBJC_HOME}/lib/guava-14.0.1.jar:${J2OBJC_HOME}/lib/jsr305-2.0.2.jar"
+    args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
     args inputs.files
 }
 
@@ -29,7 +29,7 @@ task translateJava(type:Exec) {
     args '--no-package-directories', '--doc-comments'
     args '-d', file('src/gen/objc').path
     args '-sourcepath', (sourceSets.main.allJava.srcDirs)
-    args '-classpath', "${J2OBJC_HOME}/lib/guava-14.0.1.jar:" + sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+    args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
     args inputs.files
 }
 
