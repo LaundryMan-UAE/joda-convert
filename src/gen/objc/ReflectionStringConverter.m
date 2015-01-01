@@ -21,13 +21,13 @@
        withJavaLangReflectMethod:(JavaLangReflectMethod *)toString {
   if (self = [super init]) {
     if (((IOSObjectArray *) nil_chk([((JavaLangReflectMethod *) nil_chk(toString)) getParameterTypes]))->size_ != 0) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must have no parameters: ", toString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must have no parameters: ", toString)] autorelease];
     }
     if ([toString getReturnType] != [IOSClass classWithClass:[NSString class]]) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must return a String: ", toString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must return a String: ", toString)] autorelease];
     }
-    self->cls_ = cls;
-    self->toString__ = toString;
+    OrgJodaConvertReflectionStringConverter_set_cls_(self, cls);
+    OrgJodaConvertReflectionStringConverter_set_toString__(self, toString);
   }
   return self;
 }
@@ -37,13 +37,13 @@
     return (NSString *) check_class_cast([((JavaLangReflectMethod *) nil_chk(toString__)) invokeWithId:object withNSObjectArray:[IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[NSObject class]]]], [NSString class]);
   }
   @catch (JavaLangIllegalAccessException *ex) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", toString__)];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", toString__)] autorelease];
   }
   @catch (JavaLangReflectInvocationTargetException *ex) {
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) check_class_cast([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]] autorelease];
   }
 }
 
@@ -51,10 +51,16 @@
   return JreStrcat("$$C", @"RefectionStringConverter[", [((IOSClass *) nil_chk(cls_)) getSimpleName], ']');
 }
 
+- (void)dealloc {
+  OrgJodaConvertReflectionStringConverter_set_cls_(self, nil);
+  OrgJodaConvertReflectionStringConverter_set_toString__(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertReflectionStringConverter *)other {
   [super copyAllFieldsTo:other];
-  other->cls_ = cls_;
-  other->toString__ = toString__;
+  OrgJodaConvertReflectionStringConverter_set_cls_(other, cls_);
+  OrgJodaConvertReflectionStringConverter_set_toString__(other, toString__);
 }
 
 + (const J2ObjcClassInfo *)__metadata {

@@ -40,8 +40,8 @@ JavaUtilRegexPattern * OrgJodaConvertFactoryCharObjectArrayStringConverterFactor
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryCharObjectArrayStringConverterFactory class]) {
-    OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_ = [[OrgJodaConvertFactoryCharObjectArrayStringConverterFactory alloc] init];
-    OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_ = JavaUtilRegexPattern_compileWithNSString_(@"[,]");
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertFactoryCharObjectArrayStringConverterFactory alloc] init]);
+    JreStrongAssign(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_, nil, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory)
   }
 }
@@ -93,18 +93,18 @@ OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringC
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangCharacter class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangCharacter class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum)
   }
 }
@@ -130,18 +130,18 @@ OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringC
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8] autorelease];
   for (jint i = 0; i < array->size_; i++) {
     if (IOSObjectArray_Get(array, i) == nil) {
-      (void) [buf appendWithNSString:@"\\-"];
+      [buf appendWithNSString:@"\\-"];
     }
     else {
       jchar ch = [((JavaLangCharacter *) nil_chk(IOSObjectArray_Get(array, i))) charValue];
       if (ch == '\\') {
-        (void) [buf appendWithNSString:@"\\\\"];
+        [buf appendWithNSString:@"\\\\"];
       }
       else {
-        (void) [buf appendWithChar:ch];
+        [buf appendWithChar:ch];
       }
     }
   }
@@ -167,7 +167,7 @@ OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringC
       IOSObjectArray_Set(array, arrayPos++, nil);
     }
     else {
-      @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Character[] string, incorrect escape"];
+      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Character[] string, incorrect escape"] autorelease];
     }
     str = [str substring:pos + 2];
   }

@@ -57,7 +57,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
                     withNSString:(NSString *)__name
                          withInt:(jint)__ordinal {
   if (self = [super initWithNSString:__name withInt:__ordinal]) {
-    self->type_ = type;
+    OrgJodaConvertJDKStringConverterEnum_set_type_(self, type);
   }
   return self;
 }
@@ -92,12 +92,12 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
@@ -237,7 +237,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangStringBuffer alloc] initWithNSString:str];
+  return [[[JavaLangStringBuffer alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -261,7 +261,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangStringBuilder alloc] initWithNSString:str];
+  return [[[JavaLangStringBuilder alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -285,7 +285,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangLong alloc] initWithNSString:str];
+  return [[[JavaLangLong alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -309,7 +309,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangInteger alloc] initWithNSString:str];
+  return [[[JavaLangInteger alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -333,7 +333,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangShort alloc] initWithNSString:str];
+  return [[[JavaLangShort alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -357,7 +357,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangByte alloc] initWithNSString:str];
+  return [[[JavaLangByte alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -411,9 +411,9 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) != 1) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Character value must be a string length 1"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Character value must be a string length 1"] autorelease];
   }
-  return [[JavaLangCharacter alloc] initWithChar:[str charAtWithInt:0]];
+  return [[[JavaLangCharacter alloc] initWithChar:[str charAtWithInt:0]] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -472,7 +472,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
   if ([@"false" equalsIgnoreCase:str]) {
     return JavaLangBoolean_get_FALSE__();
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Boolean value must be 'true' or 'false', case insensitive"];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Boolean value must be 'true' or 'false', case insensitive"] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -496,7 +496,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangDouble alloc] initWithNSString:str];
+  return [[[JavaLangDouble alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -520,7 +520,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaLangFloat alloc] initWithNSString:str];
+  return [[[JavaLangFloat alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -544,7 +544,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaMathBigInteger alloc] initWithNSString:str];
+  return [[[JavaMathBigInteger alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -568,7 +568,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaMathBigDecimal alloc] initWithNSString:str];
+  return [[[JavaMathBigDecimal alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -593,7 +593,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   jlong val = JavaLangLong_parseLongWithNSString_(str);
-  return [[JavaUtilConcurrentAtomicAtomicLong alloc] initWithLong:val];
+  return [[[JavaUtilConcurrentAtomicAtomicLong alloc] initWithLong:val] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -618,7 +618,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   jint val = JavaLangInteger_parseIntWithNSString_(str);
-  return [[JavaUtilConcurrentAtomicAtomicInteger alloc] initWithInt:val];
+  return [[[JavaUtilConcurrentAtomicAtomicInteger alloc] initWithInt:val] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -643,12 +643,12 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if ([@"true" equalsIgnoreCase:str]) {
-    return [[JavaUtilConcurrentAtomicAtomicBoolean alloc] initWithBoolean:YES];
+    return [[[JavaUtilConcurrentAtomicAtomicBoolean alloc] initWithBoolean:YES] autorelease];
   }
   if ([@"false" equalsIgnoreCase:str]) {
-    return [[JavaUtilConcurrentAtomicAtomicBoolean alloc] initWithBoolean:NO];
+    return [[[JavaUtilConcurrentAtomicAtomicBoolean alloc] initWithBoolean:NO] autorelease];
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Boolean value must be 'true' or 'false', case insensitive"];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Boolean value must be 'true' or 'false', case insensitive"] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -675,13 +675,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
   IOSObjectArray *split = [((NSString *) nil_chk(str)) split:@"_" limit:3];
   switch (((IOSObjectArray *) nil_chk(split))->size_) {
     case 1:
-    return [[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0)];
+    return [[[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0)] autorelease];
     case 2:
-    return [[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0) withNSString:IOSObjectArray_Get(split, 1)];
+    return [[[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0) withNSString:IOSObjectArray_Get(split, 1)] autorelease];
     case 3:
-    return [[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0) withNSString:IOSObjectArray_Get(split, 1) withNSString:IOSObjectArray_Get(split, 2)];
+    return [[[JavaUtilLocale alloc] initWithNSString:IOSObjectArray_Get(split, 0) withNSString:IOSObjectArray_Get(split, 1) withNSString:IOSObjectArray_Get(split, 2)] autorelease];
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse Locale: ", str)];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse Locale: ", str)] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -713,7 +713,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     return [((OrgJodaConvertRenameHandler *) nil_chk(OrgJodaConvertRenameHandler_get_INSTANCE_())) lookupTypeWithNSString:str];
   }
   @catch (JavaLangClassNotFoundException *ex) {
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:JreStrcat("$$", @"Unable to create type: ", str) withJavaLangThrowable:ex];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:JreStrcat("$$", @"Unable to create type: ", str) withJavaLangThrowable:ex] autorelease];
   }
 }
 
@@ -846,10 +846,10 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   @try {
-    return [[JavaNetURL alloc] initWithNSString:str];
+    return [[[JavaNetURL alloc] initWithNSString:str] autorelease];
   }
   @catch (JavaNetMalformedURLException *ex) {
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:[((JavaNetMalformedURLException *) nil_chk(ex)) getMessage] withJavaLangThrowable:ex];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:[((JavaNetMalformedURLException *) nil_chk(ex)) getMessage] withJavaLangThrowable:ex] autorelease];
   }
 }
 
@@ -906,7 +906,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     return JavaNetInetAddress_getByNameWithNSString_(str);
   }
   @catch (JavaNetUnknownHostException *ex) {
-    @throw [[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex];
+    @throw [[[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex] autorelease];
   }
 }
 
@@ -932,7 +932,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [[JavaIoFile alloc] initWithNSString:str];
+  return [[[JavaIoFile alloc] initWithNSString:str] autorelease];
 }
 
 - (instancetype)initWithIOSClass:(IOSClass *)arg$0
@@ -955,7 +955,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 @implementation OrgJodaConvertJDKStringConverterEnum_$30
 
 - (NSString *)convertToStringWithId:(id)object {
-  JavaTextSimpleDateFormat *f = [[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+  JavaTextSimpleDateFormat *f = [[[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"] autorelease];
   NSString *str = [f formatWithId:object];
   return JreStrcat("$C$", [((NSString *) nil_chk(str)) substring:0 endIndex:26], ':', [str substring:26]);
 }
@@ -963,15 +963,15 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) != 29) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse date: ", str)];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse date: ", str)] autorelease];
   }
   str = JreStrcat("$$", [str substring:0 endIndex:26], [str substring:27]);
-  JavaTextSimpleDateFormat *f = [[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+  JavaTextSimpleDateFormat *f = [[[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"] autorelease];
   @try {
     return [f parseObjectWithNSString:str];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex];
+    @throw [[[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex] autorelease];
   }
 }
 
@@ -997,10 +997,10 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 - (NSString *)convertToStringWithId:(id)object {
   if ([object isKindOfClass:[JavaUtilGregorianCalendar class]] == NO) {
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:@"Unable to convert calendar as it is not a GregorianCalendar"];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:@"Unable to convert calendar as it is not a GregorianCalendar"] autorelease];
   }
   JavaUtilGregorianCalendar *cal = (JavaUtilGregorianCalendar *) check_class_cast(object, [JavaUtilGregorianCalendar class]);
-  JavaTextSimpleDateFormat *f = [[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
+  JavaTextSimpleDateFormat *f = [[[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"] autorelease];
   [f setCalendarWithJavaUtilCalendar:cal];
   NSString *str = [f formatWithJavaUtilDate:[((JavaUtilGregorianCalendar *) nil_chk(cal)) getTime]];
   return JreStrcat("$C$C$C", [((NSString *) nil_chk(str)) substring:0 endIndex:26], ':', [str substring:26], '[', [((JavaUtilTimeZone *) nil_chk([cal getTimeZone])) getID], ']');
@@ -1009,20 +1009,20 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) < 31 || [str charAtWithInt:26] != ':' || [str charAtWithInt:29] != '[' || [str charAtWithInt:((jint) [str length]) - 1] != ']') {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse date: ", str)];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Unable to parse date: ", str)] autorelease];
   }
   JavaUtilTimeZone *zone = JavaUtilTimeZone_getTimeZoneWithNSString_([str substring:30 endIndex:((jint) [str length]) - 1]);
   str = JreStrcat("$$", [str substring:0 endIndex:26], [str substring:27 endIndex:29]);
-  JavaTextSimpleDateFormat *f = [[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
-  JavaUtilGregorianCalendar *cal = [[JavaUtilGregorianCalendar alloc] initWithJavaUtilTimeZone:zone];
+  JavaTextSimpleDateFormat *f = [[[JavaTextSimpleDateFormat alloc] initWithNSString:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"] autorelease];
+  JavaUtilGregorianCalendar *cal = [[[JavaUtilGregorianCalendar alloc] initWithJavaUtilTimeZone:zone] autorelease];
   [cal setTimeInMillisWithLong:0];
   [f setCalendarWithJavaUtilCalendar:cal];
   @try {
-    (void) [f parseObjectWithNSString:str];
+    [f parseObjectWithNSString:str];
     return [f getCalendar];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex];
+    @throw [[[JavaLangRuntimeException alloc] initWithJavaLangThrowable:ex] autorelease];
   }
 }
 

@@ -37,7 +37,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanObjectArray
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory class]) {
-    OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_ = [[OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory alloc] init];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory alloc] init]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory)
   }
 }
@@ -88,18 +88,18 @@ OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayString
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangBoolean class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangBoolean class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum)
   }
 }
@@ -125,9 +125,9 @@ OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayString
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_] autorelease];
   for (jint i = 0; i < array->size_; i++) {
-    (void) [buf appendWithChar:IOSObjectArray_Get(array, i) == nil ? '-' : ([((JavaLangBoolean *) nil_chk(IOSObjectArray_Get(array, i))) booleanValue] ? 'T' : 'F')];
+    [buf appendWithChar:IOSObjectArray_Get(array, i) == nil ? '-' : ([((JavaLangBoolean *) nil_chk(IOSObjectArray_Get(array, i))) booleanValue] ? 'T' : 'F')];
   }
   return [buf description];
 }
@@ -150,7 +150,7 @@ OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayString
       IOSObjectArray_Set(array, i, nil);
     }
     else {
-      @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Boolean[] string, must consist only of 'T', 'F' and '-'"];
+      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Boolean[] string, must consist only of 'T', 'F' and '-'"] autorelease];
     }
   }
   return array;

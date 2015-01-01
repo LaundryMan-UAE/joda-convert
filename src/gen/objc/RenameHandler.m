@@ -28,8 +28,8 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
 
 - (instancetype)init {
   if (self = [super init]) {
-    typeRenames_ = [[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2];
-    enumRenames_ = [[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2];
+    OrgJodaConvertRenameHandler_setAndConsume_typeRenames_(self, [[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2]);
+    OrgJodaConvertRenameHandler_setAndConsume_enumRenames_(self, [[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2]);
   }
   return self;
 }
@@ -37,21 +37,21 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
 - (void)renamedTypeWithNSString:(NSString *)oldName
                    withIOSClass:(IOSClass *)currentValue {
   if (oldName == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"oldName must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"oldName must not be null"] autorelease];
   }
   if (currentValue == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"currentValue must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"currentValue must not be null"] autorelease];
   }
-  (void) [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(typeRenames_)) putWithId:oldName withId:currentValue];
+  [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(typeRenames_)) putWithId:oldName withId:currentValue];
 }
 
 - (id<JavaUtilMap>)getTypeRenames {
-  return [[JavaUtilHashMap alloc] initWithJavaUtilMap:typeRenames_];
+  return [[[JavaUtilHashMap alloc] initWithJavaUtilMap:typeRenames_] autorelease];
 }
 
 - (IOSClass *)lookupTypeWithNSString:(NSString *)name {
   if (name == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"name must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"name must not be null"] autorelease];
   }
   IOSClass *type = [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(typeRenames_)) getWithId:name];
   if (type == nil) {
@@ -68,42 +68,42 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
 - (void)renamedEnumWithNSString:(NSString *)oldName
                withJavaLangEnum:(JavaLangEnum *)currentValue {
   if (oldName == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"oldName must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"oldName must not be null"] autorelease];
   }
   if (currentValue == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"currentValue must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"currentValue must not be null"] autorelease];
   }
   IOSClass *enumType = [((JavaLangEnum *) nil_chk(currentValue)) getDeclaringClass];
   id<JavaUtilMap> perClass = [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(enumRenames_)) getWithId:enumType];
   if (perClass == nil) {
-    (void) [enumRenames_ putIfAbsentWithId:enumType withId:[[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2]];
+    [enumRenames_ putIfAbsentWithId:enumType withId:[[[JavaUtilConcurrentConcurrentHashMap alloc] initWithInt:16 withFloat:0.75f withInt:2] autorelease]];
     perClass = [enumRenames_ getWithId:enumType];
   }
-  (void) [((id<JavaUtilMap>) nil_chk(perClass)) putWithId:oldName withId:currentValue];
+  [((id<JavaUtilMap>) nil_chk(perClass)) putWithId:oldName withId:currentValue];
 }
 
 - (id<JavaUtilSet>)getEnumTypesWithRenames {
-  return [[JavaUtilHashSet alloc] initWithJavaUtilCollection:[((JavaUtilConcurrentConcurrentHashMap *) nil_chk(enumRenames_)) keySet]];
+  return [[[JavaUtilHashSet alloc] initWithJavaUtilCollection:[((JavaUtilConcurrentConcurrentHashMap *) nil_chk(enumRenames_)) keySet]] autorelease];
 }
 
 - (id<JavaUtilMap>)getEnumRenamesWithIOSClass:(IOSClass *)type {
   if (type == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"type must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"type must not be null"] autorelease];
   }
   id<JavaUtilMap> map = [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(enumRenames_)) getWithId:type];
   if (map == nil) {
-    return [[JavaUtilHashMap alloc] init];
+    return [[[JavaUtilHashMap alloc] init] autorelease];
   }
-  return [[JavaUtilHashMap alloc] initWithJavaUtilMap:map];
+  return [[[JavaUtilHashMap alloc] initWithJavaUtilMap:map] autorelease];
 }
 
 - (id)lookupEnumWithIOSClass:(IOSClass *)type
                 withNSString:(NSString *)name {
   if (type == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"type must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"type must not be null"] autorelease];
   }
   if (name == nil) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"name must not be null"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"name must not be null"] autorelease];
   }
   id<JavaUtilMap> map = [self getEnumRenamesWithIOSClass:type];
   JavaLangEnum *value = [((id<JavaUtilMap>) nil_chk(map)) getWithId:name];
@@ -117,15 +117,21 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
   return JreStrcat("$@$@", @"RenamedTypes", typeRenames_, @",RenamedEnumConstants", enumRenames_);
 }
 
+- (void)dealloc {
+  OrgJodaConvertRenameHandler_set_typeRenames_(self, nil);
+  OrgJodaConvertRenameHandler_set_enumRenames_(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertRenameHandler *)other {
   [super copyAllFieldsTo:other];
-  other->typeRenames_ = typeRenames_;
-  other->enumRenames_ = enumRenames_;
+  OrgJodaConvertRenameHandler_set_typeRenames_(other, typeRenames_);
+  OrgJodaConvertRenameHandler_set_enumRenames_(other, enumRenames_);
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertRenameHandler class]) {
-    OrgJodaConvertRenameHandler_INSTANCE_ = [[OrgJodaConvertRenameHandler alloc] init];
+    JreStrongAssignAndConsume(&OrgJodaConvertRenameHandler_INSTANCE_, nil, [[OrgJodaConvertRenameHandler alloc] init]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertRenameHandler)
   }
 }
@@ -157,5 +163,5 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
 
 OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_create() {
   OrgJodaConvertRenameHandler_init();
-  return [[OrgJodaConvertRenameHandler alloc] init];
+  return [[[OrgJodaConvertRenameHandler alloc] init] autorelease];
 }

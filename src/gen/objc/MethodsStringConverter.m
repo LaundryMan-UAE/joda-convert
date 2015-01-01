@@ -23,20 +23,20 @@
                     withIOSClass:(IOSClass *)effectiveType {
   if (self = [super initWithIOSClass:cls withJavaLangReflectMethod:toString]) {
     if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(fromString)) getModifiers]) == NO) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must be static: ", fromString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must be static: ", fromString)] autorelease];
     }
     if (((IOSObjectArray *) nil_chk([fromString getParameterTypes]))->size_ != 1) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must have one parameter: ", fromString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must have one parameter: ", fromString)] autorelease];
     }
     IOSClass *param = IOSObjectArray_Get(nil_chk([fromString getParameterTypes]), 0);
     if (param != [IOSClass classWithClass:[NSString class]] && param != [IOSClass classWithProtocol:@protocol(JavaLangCharSequence)]) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must take a String or CharSequence: ", fromString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must take a String or CharSequence: ", fromString)] autorelease];
     }
     if ([((IOSClass *) nil_chk([fromString getReturnType])) isAssignableFrom:cls] == NO && [((IOSClass *) nil_chk(cls)) isAssignableFrom:[fromString getReturnType]] == NO) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must return specified class or a supertype: ", fromString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must return specified class or a supertype: ", fromString)] autorelease];
     }
-    self->fromString_ = fromString;
-    self->effectiveType_ = effectiveType;
+    OrgJodaConvertMethodsStringConverter_set_fromString_(self, fromString);
+    OrgJodaConvertMethodsStringConverter_set_effectiveType_(self, effectiveType);
   }
   return self;
 }
@@ -47,13 +47,13 @@
     return [((IOSClass *) nil_chk(cls)) cast:[((JavaLangReflectMethod *) nil_chk(fromString_)) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:[IOSClass classWithClass:[NSObject class]]]]];
   }
   @catch (JavaLangIllegalAccessException *ex) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", fromString_)];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", fromString_)] autorelease];
   }
   @catch (JavaLangReflectInvocationTargetException *ex) {
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) check_class_cast([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]] autorelease];
   }
 }
 
@@ -61,10 +61,16 @@
   return effectiveType_;
 }
 
+- (void)dealloc {
+  OrgJodaConvertMethodsStringConverter_set_fromString_(self, nil);
+  OrgJodaConvertMethodsStringConverter_set_effectiveType_(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertMethodsStringConverter *)other {
   [super copyAllFieldsTo:other];
-  other->fromString_ = fromString_;
-  other->effectiveType_ = effectiveType_;
+  OrgJodaConvertMethodsStringConverter_set_fromString_(other, fromString_);
+  OrgJodaConvertMethodsStringConverter_set_effectiveType_(other, effectiveType_);
 }
 
 + (const J2ObjcClassInfo *)__metadata {

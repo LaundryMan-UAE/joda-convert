@@ -23,10 +23,10 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   IOSClass *sup = [((IOSClass *) nil_chk(cls)) getSuperclass];
   if (sup == [IOSClass classWithClass:[JavaLangEnum class]]) {
-    return [[OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc] initWithOrgJodaConvertEnumStringConverterFactory:self withIOSClass:cls];
+    return [[[OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc] initWithOrgJodaConvertEnumStringConverterFactory:self withIOSClass:cls] autorelease];
   }
   else if (sup != nil && [sup getSuperclass] == [IOSClass classWithClass:[JavaLangEnum class]]) {
-    return [[OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc] initWithOrgJodaConvertEnumStringConverterFactory:self withIOSClass:sup];
+    return [[[OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc] initWithOrgJodaConvertEnumStringConverterFactory:self withIOSClass:sup] autorelease];
   }
   return nil;
 }
@@ -37,7 +37,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 
 + (void)initialize {
   if (self == [OrgJodaConvertEnumStringConverterFactory class]) {
-    OrgJodaConvertEnumStringConverterFactory_INSTANCE_ = [[OrgJodaConvertEnumStringConverterFactory alloc] init];
+    JreStrongAssignAndConsume(&OrgJodaConvertEnumStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertEnumStringConverterFactory alloc] init]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertEnumStringConverterFactory)
   }
 }
@@ -62,7 +62,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 - (instancetype)initWithOrgJodaConvertEnumStringConverterFactory:(OrgJodaConvertEnumStringConverterFactory *)outer$
                                                     withIOSClass:(IOSClass *)effectiveType {
   if (self = [super init]) {
-    self->effectiveType_ = effectiveType;
+    OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_set_effectiveType_(self, effectiveType);
   }
   return self;
 }
@@ -80,9 +80,14 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
   return effectiveType_;
 }
 
+- (void)dealloc {
+  OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_set_effectiveType_(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *)other {
   [super copyAllFieldsTo:other];
-  other->effectiveType_ = effectiveType_;
+  OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_set_effectiveType_(other, effectiveType_);
 }
 
 + (const J2ObjcClassInfo *)__metadata {

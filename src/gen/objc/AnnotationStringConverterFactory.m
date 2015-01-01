@@ -42,10 +42,10 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
   OrgJodaConvertMethodConstructorStringConverter *con = [self findFromStringConstructorWithIOSClass:cls withJavaLangReflectMethod:toString];
   OrgJodaConvertMethodsStringConverter *mth = [self findFromStringMethodWithIOSClass:cls withJavaLangReflectMethod:toString withBoolean:con == nil];
   if (con == nil && mth == nil) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Class annotated with @ToString but not with @FromString: ", [((IOSClass *) nil_chk(cls)) getName])];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Class annotated with @ToString but not with @FromString: ", [((IOSClass *) nil_chk(cls)) getName])] autorelease];
   }
   if (con != nil && mth != nil) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Both method and constructor are annotated with @FromString: ", [((IOSClass *) nil_chk(cls)) getName])];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Both method and constructor are annotated with @FromString: ", [((IOSClass *) nil_chk(cls)) getName])] autorelease];
   }
   return (con != nil ? con : mth);
 }
@@ -64,7 +64,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
         id<OrgJodaConvertToString> toString = [((JavaLangReflectMethod *) nil_chk(method)) getAnnotationWithIOSClass:[IOSClass classWithProtocol:@protocol(OrgJodaConvertToString)]];
         if (toString != nil) {
           if (matched != nil) {
-            @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @ToString: ", [((IOSClass *) nil_chk(cls)) getName])];
+            @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @ToString: ", [((IOSClass *) nil_chk(cls)) getName])] autorelease];
           }
           matched = method;
         }
@@ -89,7 +89,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
             id<OrgJodaConvertToString> toString = [((JavaLangReflectMethod *) nil_chk(method)) getAnnotationWithIOSClass:[IOSClass classWithProtocol:@protocol(OrgJodaConvertToString)]];
             if (toString != nil) {
               if (matched != nil) {
-                @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @ToString on interfaces: ", [((IOSClass *) nil_chk(cls)) getName])];
+                @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @ToString on interfaces: ", [((IOSClass *) nil_chk(cls)) getName])] autorelease];
               }
               matched = method;
             }
@@ -119,7 +119,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
   if (fromString == nil) {
     return nil;
   }
-  return [[OrgJodaConvertMethodConstructorStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectConstructor:con];
+  return [[[OrgJodaConvertMethodConstructorStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectConstructor:con] autorelease];
 }
 
 - (OrgJodaConvertMethodsStringConverter *)findFromStringMethodWithIOSClass:(IOSClass *)cls
@@ -129,7 +129,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
   while (loopCls != nil) {
     JavaLangReflectMethod *fromString = [self findFromStringWithIOSClass:loopCls];
     if (fromString != nil) {
-      return [[OrgJodaConvertMethodsStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectMethod:fromString withIOSClass:loopCls];
+      return [[[OrgJodaConvertMethodsStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectMethod:fromString withIOSClass:loopCls] autorelease];
     }
     if (searchSuperclasses == NO) {
       break;
@@ -147,9 +147,9 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
         JavaLangReflectMethod *fromString = [self findFromStringWithIOSClass:loopIfc];
         if (fromString != nil) {
           if (matched != nil) {
-            @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two different interfaces are annotated with @FromString or @FromStringFactory: ", [((IOSClass *) nil_chk(cls)) getName])];
+            @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two different interfaces are annotated with @FromString or @FromStringFactory: ", [((IOSClass *) nil_chk(cls)) getName])] autorelease];
           }
-          matched = [[OrgJodaConvertMethodsStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectMethod:fromString withIOSClass:loopIfc];
+          matched = [[[OrgJodaConvertMethodsStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectMethod:fromString withIOSClass:loopIfc] autorelease];
         }
       }
     }
@@ -169,7 +169,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
       id<OrgJodaConvertFromString> fromString = [((JavaLangReflectMethod *) nil_chk(method)) getAnnotationWithIOSClass:[IOSClass classWithProtocol:@protocol(OrgJodaConvertFromString)]];
       if (fromString != nil) {
         if (matched != nil) {
-          @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @FromString: ", [cls getName])];
+          @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @FromString: ", [cls getName])] autorelease];
         }
         matched = method;
       }
@@ -178,7 +178,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
   id<OrgJodaConvertFromStringFactory> factory = [cls getAnnotationWithIOSClass:[IOSClass classWithProtocol:@protocol(OrgJodaConvertFromStringFactory)]];
   if (factory != nil) {
     if (matched != nil) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Class annotated with @FromString and @FromStringFactory: ", [cls getName])];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Class annotated with @FromString and @FromStringFactory: ", [cls getName])] autorelease];
     }
     IOSObjectArray *factoryMethods = [((IOSClass *) nil_chk([factory factory])) getDeclaredMethods];
     {
@@ -191,7 +191,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
           id<OrgJodaConvertFromString> fromString = [method getAnnotationWithIOSClass:[IOSClass classWithProtocol:@protocol(OrgJodaConvertFromString)]];
           if (fromString != nil) {
             if (matched != nil) {
-              @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @FromString on the factory: ", [((IOSClass *) nil_chk([factory factory])) getName])];
+              @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$$", @"Two methods are annotated with @FromString on the factory: ", [((IOSClass *) nil_chk([factory factory])) getName])] autorelease];
             }
             matched = method;
           }
@@ -216,7 +216,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
 
 + (void)initialize {
   if (self == [OrgJodaConvertAnnotationStringConverterFactory class]) {
-    OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_ = [[OrgJodaConvertAnnotationStringConverterFactory alloc] init];
+    JreStrongAssignAndConsume(&OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertAnnotationStringConverterFactory alloc] init]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertAnnotationStringConverterFactory)
   }
 }

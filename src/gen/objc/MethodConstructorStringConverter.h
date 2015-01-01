@@ -48,6 +48,8 @@
 
 - (IOSClass *)getEffectiveType;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertMethodConstructorStringConverter *)other;
 
 @end

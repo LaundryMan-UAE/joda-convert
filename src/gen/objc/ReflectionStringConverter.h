@@ -47,6 +47,8 @@
 
 - (NSString *)description;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertReflectionStringConverter *)other;
 
 @end

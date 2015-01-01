@@ -260,6 +260,8 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
  */
 - (NSString *)description;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertStringConvert *)other;
 
 @end
@@ -310,6 +312,8 @@ __attribute__((always_inline)) inline void OrgJodaConvertStringConvert_$1_init()
 - (instancetype)initWithOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)capture$0
                   withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
                                            withIOSClass:(IOSClass *)capture$2;
+
+- (void)dealloc;
 
 - (void)copyAllFieldsTo:(OrgJodaConvertStringConvert_$2 *)other;
 

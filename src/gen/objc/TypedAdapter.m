@@ -18,8 +18,8 @@
 - (instancetype)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
                                          withIOSClass:(IOSClass *)effectiveType {
   if (self = [super init]) {
-    self->conv_ = conv;
-    self->effectiveType_ = effectiveType;
+    OrgJodaConvertTypedAdapter_set_conv_(self, conv);
+    OrgJodaConvertTypedAdapter_set_effectiveType_(self, effectiveType);
   }
   return self;
 }
@@ -41,10 +41,16 @@
   return JreStrcat("$$", @"TypedAdapter:", [((id<OrgJodaConvertStringConverter>) nil_chk(conv_)) description]);
 }
 
+- (void)dealloc {
+  OrgJodaConvertTypedAdapter_set_conv_(self, nil);
+  OrgJodaConvertTypedAdapter_set_effectiveType_(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertTypedAdapter *)other {
   [super copyAllFieldsTo:other];
-  other->conv_ = conv_;
-  other->effectiveType_ = effectiveType_;
+  OrgJodaConvertTypedAdapter_set_conv_(other, conv_);
+  OrgJodaConvertTypedAdapter_set_effectiveType_(other, effectiveType_);
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -72,6 +78,6 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertTypedAdapter_adaptWithIOSCl
     return (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(converter, @protocol(OrgJodaConvertTypedStringConverter));
   }
   else {
-    return [[OrgJodaConvertTypedAdapter alloc] initWithOrgJodaConvertStringConverter:converter withIOSClass:cls];
+    return [[[OrgJodaConvertTypedAdapter alloc] initWithOrgJodaConvertStringConverter:converter withIOSClass:cls] autorelease];
   }
 }

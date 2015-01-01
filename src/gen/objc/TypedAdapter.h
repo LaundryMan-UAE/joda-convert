@@ -38,6 +38,8 @@
 
 - (NSString *)description;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertTypedAdapter *)other;
 
 @end

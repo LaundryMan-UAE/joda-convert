@@ -104,6 +104,8 @@
 
 - (NSString *)description;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertRenameHandler *)other;
 
 @end

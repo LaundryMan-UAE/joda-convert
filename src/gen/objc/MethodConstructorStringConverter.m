@@ -24,12 +24,12 @@
   withJavaLangReflectConstructor:(JavaLangReflectConstructor *)fromString {
   if (self = [super initWithIOSClass:cls withJavaLangReflectMethod:toString]) {
     if ([((IOSClass *) nil_chk(cls)) isInterface] || JavaLangReflectModifier_isAbstractWithInt_([cls getModifiers]) || [cls isLocalClass] || [cls isMemberClass]) {
-      @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$@", @"FromString constructor must be on an instantiable class: ", fromString)];
+      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$@", @"FromString constructor must be on an instantiable class: ", fromString)] autorelease];
     }
     if ([((JavaLangReflectConstructor *) nil_chk(fromString)) getDeclaringClass] != cls) {
-      @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString constructor must be defined on specified class: ", fromString)];
+      @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString constructor must be defined on specified class: ", fromString)] autorelease];
     }
-    self->fromString_ = fromString;
+    OrgJodaConvertMethodConstructorStringConverter_set_fromString_(self, fromString);
   }
   return self;
 }
@@ -40,16 +40,16 @@
     return [((JavaLangReflectConstructor *) nil_chk(fromString_)) newInstanceWithNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:[IOSClass classWithClass:[NSObject class]]]];
   }
   @catch (JavaLangIllegalAccessException *ex) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Constructor is not accessible: ", fromString_)];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Constructor is not accessible: ", fromString_)] autorelease];
   }
   @catch (JavaLangInstantiationException *ex) {
-    @throw [[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Constructor is not valid: ", fromString_)];
+    @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Constructor is not valid: ", fromString_)] autorelease];
   }
   @catch (JavaLangReflectInvocationTargetException *ex) {
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) check_class_cast([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]];
+    @throw [[[JavaLangRuntimeException alloc] initWithNSString:[ex getMessage] withJavaLangThrowable:[ex getCause]] autorelease];
   }
 }
 
@@ -57,9 +57,14 @@
   return [((JavaLangReflectConstructor *) nil_chk(fromString_)) getDeclaringClass];
 }
 
+- (void)dealloc {
+  OrgJodaConvertMethodConstructorStringConverter_set_fromString_(self, nil);
+  [super dealloc];
+}
+
 - (void)copyAllFieldsTo:(OrgJodaConvertMethodConstructorStringConverter *)other {
   [super copyAllFieldsTo:other];
-  other->fromString_ = fromString_;
+  OrgJodaConvertMethodConstructorStringConverter_set_fromString_(other, fromString_);
 }
 
 + (const J2ObjcClassInfo *)__metadata {

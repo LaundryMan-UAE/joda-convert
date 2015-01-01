@@ -60,6 +60,8 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertEnumStringConverterFactory, INSTANCE_, 
 
 - (IOSClass *)getEffectiveType;
 
+- (void)dealloc;
+
 - (void)copyAllFieldsTo:(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *)other;
 
 @end

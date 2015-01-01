@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
   s.osx.deployment_target = '10.7'
-  s.requires_arc = true
+  s.requires_arc = false
 
   s.source_files = 'src/gen/objc/*.{h,m}'
  # s..exclude_files = 'src/gen/objc/*Test.{h,m}'

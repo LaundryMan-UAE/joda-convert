@@ -58,8 +58,8 @@ JavaUtilRegexPattern * OrgJodaConvertFactoryNumericObjectArrayStringConverterFac
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory class]) {
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_ = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory alloc] init];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_ = JavaUtilRegexPattern_compileWithNSString_(@"[,]");
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory alloc] init]);
+    JreStrongAssign(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_, nil, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory)
   }
 }
@@ -111,18 +111,18 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringCon
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangLong class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangLong class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum)
   }
 }
@@ -148,10 +148,10 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringCon
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8];
-  (void) [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8] autorelease];
+  [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
   for (jint i = 1; i < array->size_; i++) {
-    (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
+    [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
   }
   return [buf description];
 }
@@ -224,18 +224,18 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConv
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangInteger class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangInteger class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum)
   }
 }
@@ -261,10 +261,10 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConv
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 6];
-  (void) [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 6] autorelease];
+  [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
   for (jint i = 1; i < array->size_; i++) {
-    (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
+    [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
   }
   return [buf description];
 }
@@ -337,18 +337,18 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringCo
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangShort class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangShort class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum)
   }
 }
@@ -374,10 +374,10 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringCo
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 3];
-  (void) [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 3] autorelease];
+  [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
   for (jint i = 1; i < array->size_; i++) {
-    (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
+    [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
   }
   return [buf description];
 }
@@ -450,18 +450,18 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringC
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangDouble class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangDouble class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum)
   }
 }
@@ -487,10 +487,10 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringC
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8];
-  (void) [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8] autorelease];
+  [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
   for (jint i = 1; i < array->size_; i++) {
-    (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
+    [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
   }
   return [buf description];
 }
@@ -563,18 +563,18 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringCo
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangFloat class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangFloat class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum)
   }
 }
@@ -600,10 +600,10 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringCo
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8];
-  (void) [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_ * 8] autorelease];
+  [buf appendWithId:IOSObjectArray_Get(array, 0) != nil ? IOSObjectArray_Get(array, 0) : @"-"];
   for (jint i = 1; i < array->size_; i++) {
-    (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
+    [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:','])) appendWithId:IOSObjectArray_Get(array, i) != nil ? IOSObjectArray_Get(array, i) : @"-"];
   }
   return [buf description];
 }

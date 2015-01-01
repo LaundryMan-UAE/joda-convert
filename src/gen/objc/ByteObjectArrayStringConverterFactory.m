@@ -38,7 +38,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStr
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory class]) {
-    OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_ = [[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory alloc] init];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_, nil, [[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory alloc] init]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
   }
 }
@@ -90,18 +90,18 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
       return e;
     }
   }
-  @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:name];
+  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
   return nil;
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-  return self;
+  return [self retain];
 }
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_INSTANCE = [[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_$1 alloc] initWithNSString:@"INSTANCE" withInt:0];
-    OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_ = [IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[JavaLangByte class]]];
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:[IOSClass classWithClass:[JavaLangByte class]]]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum)
   }
 }
@@ -128,14 +128,14 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [[JavaLangStringBuilder alloc] initWithInt:array->size_];
+  JavaLangStringBuilder *buf = [[[JavaLangStringBuilder alloc] initWithInt:array->size_] autorelease];
   for (jint i = 0; i < array->size_; i++) {
     if (IOSObjectArray_Get(array, i) == nil) {
-      (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:'-'])) appendWithChar:'-'];
+      [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:'-'])) appendWithChar:'-'];
     }
     else {
       jint b = [((JavaLangByte *) nil_chk(IOSObjectArray_Get(array, i))) charValue];
-      (void) [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:[((NSString *) nil_chk(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_())) charAtWithInt:URShift32((b & (jint) 0xF0), 4)]])) appendWithChar:[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_() charAtWithInt:b & (jint) 0x0F]];
+      [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:[((NSString *) nil_chk(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_())) charAtWithInt:URShift32((b & (jint) 0xF0), 4)]])) appendWithChar:[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_() charAtWithInt:b & (jint) 0x0F]];
     }
   }
   return [buf description];
@@ -147,7 +147,7 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
     return OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_EMPTY_();
   }
   if (((jint) [str length]) % 2 == 1) {
-    @throw [[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Byte[] string"];
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Invalid Byte[] string"] autorelease];
   }
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((jint) [str length]) / 2 type:[IOSClass classWithClass:[JavaLangByte class]]];
   for (jint i = 0; i < array->size_; i++) {
