@@ -4,9 +4,22 @@
 //
 
 #include "IOSClass.h"
+#include "J2ObjC_source.h"
 #include "StringConverter.h"
 #include "TypedAdapter.h"
 #include "TypedStringConverter.h"
+
+@interface OrgJodaConvertTypedAdapter () {
+ @public
+  id<OrgJodaConvertStringConverter> conv_;
+  IOSClass *effectiveType_;
+}
+- (instancetype)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
+                                         withIOSClass:(IOSClass *)effectiveType;
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertTypedAdapter, conv_, id<OrgJodaConvertStringConverter>)
+J2OBJC_FIELD_SETTER(OrgJodaConvertTypedAdapter, effectiveType_, IOSClass *)
 
 @implementation OrgJodaConvertTypedAdapter
 
@@ -42,8 +55,8 @@
 }
 
 - (void)dealloc {
-  OrgJodaConvertTypedAdapter_set_conv_(self, nil);
-  OrgJodaConvertTypedAdapter_set_effectiveType_(self, nil);
+  RELEASE_(conv_);
+  RELEASE_(effectiveType_);
   [super dealloc];
 }
 
@@ -66,7 +79,7 @@
     { "conv_", NULL, 0x12, "Lorg.joda.convert.StringConverter;", NULL,  },
     { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL,  },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertTypedAdapter = { "TypedAdapter", "org.joda.convert", NULL, 0x10, 6, methods, 2, fields, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertTypedAdapter = { 1, "TypedAdapter", "org.joda.convert", NULL, 0x10, 6, methods, 2, fields, 0, NULL};
   return &_OrgJodaConvertTypedAdapter;
 }
 
@@ -74,10 +87,12 @@
 
 id<OrgJodaConvertTypedStringConverter> OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(IOSClass *cls, id<OrgJodaConvertStringConverter> converter) {
   OrgJodaConvertTypedAdapter_init();
-  if ([(id) converter conformsToProtocol: @protocol(OrgJodaConvertTypedStringConverter)]) {
+  if ([OrgJodaConvertTypedStringConverter_class_() isInstance:converter]) {
     return (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(converter, @protocol(OrgJodaConvertTypedStringConverter));
   }
   else {
     return [[[OrgJodaConvertTypedAdapter alloc] initWithOrgJodaConvertStringConverter:converter withIOSClass:cls] autorelease];
   }
 }
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertTypedAdapter)

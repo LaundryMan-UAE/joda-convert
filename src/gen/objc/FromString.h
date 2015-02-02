@@ -6,7 +6,7 @@
 #ifndef _OrgJodaConvertFromString_H_
 #define _OrgJodaConvertFromString_H_
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "java/lang/annotation/Annotation.h"
 
 @protocol OrgJodaConvertFromString < JavaLangAnnotationAnnotation >
@@ -17,6 +17,8 @@
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertFromString_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFromString)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromString)
 
 #endif // _OrgJodaConvertFromString_H_

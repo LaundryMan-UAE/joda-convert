@@ -12,7 +12,7 @@
 @protocol JavaUtilMap;
 @protocol JavaUtilSet;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 
 /**
  @brief A general purpose utility for registering renames.
@@ -20,15 +20,6 @@
  @since 1.6
  */
 @interface OrgJodaConvertRenameHandler : NSObject {
- @public
-  /**
-   @brief The type renames.
-   */
-  JavaUtilConcurrentConcurrentHashMap *typeRenames_;
-  /**
-   @brief The enum renames.
-   */
-  JavaUtilConcurrentConcurrentHashMap *enumRenames_;
 }
 
 /**
@@ -37,11 +28,6 @@
  @return a new instance, not null
  */
 + (OrgJodaConvertRenameHandler *)create;
-
-/**
- @brief Restricted constructor.
- */
-- (instancetype)init;
 
 /**
  @brief Register the fact that a type was renamed.
@@ -65,8 +51,6 @@
  @throws ClassNotFoundException if the name is not a valid type
  */
 - (IOSClass *)lookupTypeWithNSString:(NSString *)name;
-
-- (IOSClass *)loadTypeWithNSString:(NSString *)fullName;
 
 /**
  @brief Register the fact that an enum constant was renamed.
@@ -104,20 +88,19 @@
 
 - (NSString *)description;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertRenameHandler *)other;
-
 @end
 
 FOUNDATION_EXPORT BOOL OrgJodaConvertRenameHandler_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertRenameHandler)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertRenameHandler, typeRenames_, JavaUtilConcurrentConcurrentHashMap *)
-J2OBJC_FIELD_SETTER(OrgJodaConvertRenameHandler, enumRenames_, JavaUtilConcurrentConcurrentHashMap *)
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_create();
 
 FOUNDATION_EXPORT OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_INSTANCE_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertRenameHandler, INSTANCE_, OrgJodaConvertRenameHandler *)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertRenameHandler)
 
 #endif // _OrgJodaConvertRenameHandler_H_

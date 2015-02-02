@@ -12,6 +12,7 @@
 #include "FromStringConverter.h"
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
+#include "J2ObjC_source.h"
 #include "JDKStringConverter.h"
 #include "MethodConstructorStringConverter.h"
 #include "MethodsStringConverter.h"
@@ -47,6 +48,92 @@
 #include "java/util/concurrent/ConcurrentMap.h"
 #include "java/util/concurrent/CopyOnWriteArrayList.h"
 
+__attribute__((unused)) static void OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(OrgJodaConvertStringConvert *self, NSString *className_, NSString *fromStringMethodName);
+__attribute__((unused)) static id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls);
+__attribute__((unused)) static id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findAnyConverterWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls);
+__attribute__((unused)) static JavaLangReflectMethod *OrgJodaConvertStringConvert_findToStringMethodWithIOSClass_withNSString_(OrgJodaConvertStringConvert *self, IOSClass *cls, NSString *methodName);
+__attribute__((unused)) static JavaLangReflectMethod *OrgJodaConvertStringConvert_findFromStringMethodWithIOSClass_withNSString_(OrgJodaConvertStringConvert *self, IOSClass *cls, NSString *methodName);
+__attribute__((unused)) static JavaLangReflectConstructor *OrgJodaConvertStringConvert_findFromStringConstructorByTypeWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls);
+
+@interface OrgJodaConvertStringConvert () {
+ @public
+  /**
+   @brief The list of factories.
+   */
+  JavaUtilConcurrentCopyOnWriteArrayList *factories_;
+  /**
+   @brief The cache of converters.
+   */
+  id<JavaUtilConcurrentConcurrentMap> registered_;
+}
+
+/**
+ @brief Tries to register a class using the standard toString/parse pattern.
+ @param className the class name, not null
+ */
+- (void)tryRegisterWithNSString:(NSString *)className_
+                   withNSString:(NSString *)fromStringMethodName;
+
+/**
+ @brief Finds a converter searching registered and annotated.
+ @param < T > the type of the converter
+ @param cls the class to find a method for, not null
+ @return the converter, null if no converter
+ @throws RuntimeException if invalid
+ */
+- (id<OrgJodaConvertTypedStringConverter>)findConverterQuietWithIOSClass:(IOSClass *)cls;
+
+/**
+ @brief Finds a converter searching registered and annotated.
+ @param < T > the type of the converter
+ @param cls the class to find a method for, not null
+ @return the converter, not null
+ @throws RuntimeException if invalid
+ */
+- (id<OrgJodaConvertTypedStringConverter>)findAnyConverterWithIOSClass:(IOSClass *)cls;
+
+/**
+ @brief Finds the conversion method.
+ @param cls the class to find a method for, not null
+ @param methodName the name of the method to find, not null
+ @return the method to call, null means use <code>toString</code>
+ */
+- (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls
+                                             withNSString:(NSString *)methodName;
+
+/**
+ @brief Finds the conversion method.
+ @param cls the class to find a method for, not null
+ @param methodName the name of the method to find, not null
+ @return the method to call, null means use <code>toString</code>
+ */
+- (JavaLangReflectMethod *)findFromStringMethodWithIOSClass:(IOSClass *)cls
+                                               withNSString:(NSString *)methodName;
+
+/**
+ @brief Finds the conversion method.
+ @param < T > the type of the converter
+ @param cls the class to find a method for, not null
+ @return the method to call, null means use <code>toString</code>
+ */
+- (JavaLangReflectConstructor *)findFromStringConstructorByTypeWithIOSClass:(IOSClass *)cls;
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert, factories_, JavaUtilConcurrentCopyOnWriteArrayList *)
+J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert, registered_, id<JavaUtilConcurrentConcurrentMap>)
+
+@interface OrgJodaConvertStringConvert_$2 () {
+ @public
+  id<OrgJodaConvertToStringConverter> val$toString_;
+  id<OrgJodaConvertFromStringConverter> val$fromString_;
+  IOSClass *val$cls_;
+}
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$toString_, id<OrgJodaConvertToStringConverter>)
+J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$fromString_, id<OrgJodaConvertFromStringConverter>)
+J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$cls_, IOSClass *)
+
 BOOL OrgJodaConvertStringConvert_initialized = NO;
 
 @implementation OrgJodaConvertStringConvert
@@ -59,7 +146,7 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_CACHED_NULL_;
 }
 
 - (instancetype)init {
-  return [self initOrgJodaConvertStringConvertWithBoolean:YES withOrgJodaConvertStringConverterFactoryArray:[IOSObjectArray arrayWithLength:0 type:[IOSClass classWithProtocol:@protocol(OrgJodaConvertStringConverterFactory)]]];
+  return [self initOrgJodaConvertStringConvertWithBoolean:YES withOrgJodaConvertStringConverterFactoryArray:[IOSObjectArray arrayWithLength:0 type:OrgJodaConvertStringConverterFactory_class_()]];
 }
 
 - (instancetype)initOrgJodaConvertStringConvertWithBoolean:(jboolean)includeJdkConverters
@@ -93,50 +180,50 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_CACHED_NULL_;
       [registered_ putWithId:JavaLangFloat_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_FLOAT()];
       [registered_ putWithId:JavaLangDouble_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_DOUBLE()];
       [registered_ putWithId:JavaLangCharacter_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_CHARACTER()];
-      [self tryRegisterWithNSString:@"java.time.Instant" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.Duration" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.LocalDate" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.LocalTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.LocalDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.OffsetTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.OffsetDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.ZonedDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.Year" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.YearMonth" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.MonthDay" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.Period" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"java.time.ZoneOffset" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"java.time.ZoneId" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.Instant" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.Duration" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.LocalDate" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.LocalTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.LocalDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.OffsetTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.OffsetDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.ZonedDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.Year" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.YearMonth" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.MonthDay" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.Period" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.ZoneOffset" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"org.threeten.bp.ZoneId" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"javax.time.Instant" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.Duration" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.LocalDate" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.LocalTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.LocalDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.OffsetDate" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.OffsetTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.OffsetDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.ZonedDateTime" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.Year" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.YearMonth" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.MonthDay" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.Period" withNSString:@"parse"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.ZoneOffset" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.ZoneId" withNSString:@"of"];
-      [self tryRegisterWithNSString:@"javax.time.calendar.TimeZone" withNSString:@"of"];
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Instant", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Duration", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.LocalDate", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.LocalTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.LocalDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.OffsetTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.OffsetDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.ZonedDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Year", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.YearMonth", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.MonthDay", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Period", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.ZoneOffset", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.ZoneId", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.Instant", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.Duration", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.LocalDate", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.LocalTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.LocalDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.OffsetTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.OffsetDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.ZonedDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.Year", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.YearMonth", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.MonthDay", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.Period", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.ZoneOffset", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"org.threeten.bp.ZoneId", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.Instant", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.Duration", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.LocalDate", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.LocalTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.LocalDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.OffsetDate", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.OffsetTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.OffsetDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.ZonedDateTime", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.Year", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.YearMonth", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.MonthDay", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.Period", @"parse");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.ZoneOffset", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.ZoneId", @"of");
+      OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"javax.time.calendar.TimeZone", @"of");
     }
     if (factories->size_ > 0) {
       [self->factories_ addAllWithJavaUtilCollection:JavaUtilArrays_asListWithNSObjectArray_(factories)];
@@ -156,12 +243,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 
 - (void)tryRegisterWithNSString:(NSString *)className_
                    withNSString:(NSString *)fromStringMethodName {
-  @try {
-    IOSClass *cls = [((JavaLangClassLoader *) nil_chk([[self getClass] getClassLoader])) loadClassWithNSString:className_];
-    [self registerMethodsWithIOSClass:cls withNSString:@"toString" withNSString:fromStringMethodName];
-  }
-  @catch (JavaLangException *ex) {
-  }
+  OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, className_, fromStringMethodName);
 }
 
 - (NSString *)convertToStringWithId:(id)object {
@@ -193,7 +275,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 
 - (jboolean)isConvertibleWithIOSClass:(IOSClass *)cls {
   @try {
-    return cls != nil && [self findConverterQuietWithIOSClass:cls] != nil;
+    return cls != nil && OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls) != nil;
   }
   @catch (JavaLangRuntimeException *ex) {
     return NO;
@@ -209,7 +291,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 }
 
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterWithIOSClass:(IOSClass *)cls {
-  id<OrgJodaConvertTypedStringConverter> conv = [self findConverterQuietWithIOSClass:cls];
+  id<OrgJodaConvertTypedStringConverter> conv = OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls);
   if (conv == nil) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"No registered converter found: ", cls)] autorelease];
   }
@@ -217,7 +299,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 }
 
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterNoGenericsWithIOSClass:(IOSClass *)cls {
-  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([self findConverterQuietWithIOSClass:cls], @protocol(OrgJodaConvertTypedStringConverter));
+  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls), @protocol(OrgJodaConvertTypedStringConverter));
   if (conv == nil) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"No registered converter found: ", cls)] autorelease];
   }
@@ -225,59 +307,11 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 }
 
 - (id<OrgJodaConvertTypedStringConverter>)findConverterQuietWithIOSClass:(IOSClass *)cls {
-  if (cls == nil) {
-    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Class must not be null"] autorelease];
-  }
-  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(registered_)) getWithId:cls], @protocol(OrgJodaConvertTypedStringConverter));
-  if (conv == OrgJodaConvertStringConvert_CACHED_NULL_) {
-    return nil;
-  }
-  if (conv == nil) {
-    @try {
-      conv = [self findAnyConverterWithIOSClass:cls];
-    }
-    @catch (JavaLangRuntimeException *ex) {
-      [registered_ putIfAbsentWithId:cls withId:OrgJodaConvertStringConvert_CACHED_NULL_];
-      @throw ex;
-    }
-    if (conv == nil) {
-      [registered_ putIfAbsentWithId:cls withId:OrgJodaConvertStringConvert_CACHED_NULL_];
-      return nil;
-    }
-    [registered_ putIfAbsentWithId:cls withId:conv];
-  }
-  return conv;
+  return OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls);
 }
 
 - (id<OrgJodaConvertTypedStringConverter>)findAnyConverterWithIOSClass:(IOSClass *)cls {
-  id<OrgJodaConvertTypedStringConverter> conv = nil;
-  IOSClass *loopCls = [((IOSClass *) nil_chk(cls)) getSuperclass];
-  while (loopCls != nil && conv == nil) {
-    conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(registered_)) getWithId:loopCls], @protocol(OrgJodaConvertTypedStringConverter));
-    if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
-      return conv;
-    }
-    loopCls = [((IOSClass *) nil_chk(loopCls)) getSuperclass];
-  }
-  {
-    IOSObjectArray *a__ = [cls getInterfaces];
-    IOSClass * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
-    IOSClass * const *e__ = b__ + a__->size_;
-    while (b__ < e__) {
-      IOSClass *loopIfc = *b__++;
-      conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(registered_)) getWithId:loopIfc], @protocol(OrgJodaConvertTypedStringConverter));
-      if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
-        return conv;
-      }
-    }
-  }
-  for (id<OrgJodaConvertStringConverterFactory> __strong factory in nil_chk(factories_)) {
-    id<OrgJodaConvertStringConverter> factoryConv = (id<OrgJodaConvertStringConverter>) check_protocol_cast([((id<OrgJodaConvertStringConverterFactory>) nil_chk(factory)) findConverterWithIOSClass:cls], @protocol(OrgJodaConvertStringConverter));
-    if (factoryConv != nil) {
-      return OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(cls, factoryConv);
-    }
-  }
-  return nil;
+  return OrgJodaConvertStringConvert_findAnyConverterWithIOSClass_(self, cls);
 }
 
 - (void)registerFactoryWithOrgJodaConvertStringConverterFactory:(id<OrgJodaConvertStringConverterFactory>)factory {
@@ -325,8 +359,8 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
   if (self == OrgJodaConvertStringConvert_INSTANCE_) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:@"Global singleton cannot be extended"] autorelease];
   }
-  JavaLangReflectMethod *toString = [self findToStringMethodWithIOSClass:cls withNSString:toStringMethodName];
-  JavaLangReflectMethod *fromString = [self findFromStringMethodWithIOSClass:cls withNSString:fromStringMethodName];
+  JavaLangReflectMethod *toString = OrgJodaConvertStringConvert_findToStringMethodWithIOSClass_withNSString_(self, cls, toStringMethodName);
+  JavaLangReflectMethod *fromString = OrgJodaConvertStringConvert_findFromStringMethodWithIOSClass_withNSString_(self, cls, fromStringMethodName);
   OrgJodaConvertMethodsStringConverter *converter = [[[OrgJodaConvertMethodsStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectMethod:fromString withIOSClass:cls] autorelease];
   [((id<JavaUtilConcurrentConcurrentMap>) nil_chk(registered_)) putIfAbsentWithId:cls withId:converter];
 }
@@ -342,59 +376,24 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
   if (self == OrgJodaConvertStringConvert_INSTANCE_) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:@"Global singleton cannot be extended"] autorelease];
   }
-  JavaLangReflectMethod *toString = [self findToStringMethodWithIOSClass:cls withNSString:toStringMethodName];
-  JavaLangReflectConstructor *fromString = [self findFromStringConstructorByTypeWithIOSClass:cls];
+  JavaLangReflectMethod *toString = OrgJodaConvertStringConvert_findToStringMethodWithIOSClass_withNSString_(self, cls, toStringMethodName);
+  JavaLangReflectConstructor *fromString = OrgJodaConvertStringConvert_findFromStringConstructorByTypeWithIOSClass_(self, cls);
   OrgJodaConvertMethodConstructorStringConverter *converter = [[[OrgJodaConvertMethodConstructorStringConverter alloc] initWithIOSClass:cls withJavaLangReflectMethod:toString withJavaLangReflectConstructor:fromString] autorelease];
   [((id<JavaUtilConcurrentConcurrentMap>) nil_chk(registered_)) putIfAbsentWithId:cls withId:converter];
 }
 
 - (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls
                                              withNSString:(NSString *)methodName {
-  JavaLangReflectMethod *m;
-  @try {
-    m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[IOSClass class]]]];
-  }
-  @catch (JavaLangNoSuchMethodException *ex) {
-    @throw [[[JavaLangIllegalArgumentException alloc] initWithJavaLangThrowable:ex] autorelease];
-  }
-  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers])) {
-    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Method must not be static: ", methodName)] autorelease];
-  }
-  return m;
+  return OrgJodaConvertStringConvert_findToStringMethodWithIOSClass_withNSString_(self, cls, methodName);
 }
 
 - (JavaLangReflectMethod *)findFromStringMethodWithIOSClass:(IOSClass *)cls
                                                withNSString:(NSString *)methodName {
-  JavaLangReflectMethod *m;
-  @try {
-    m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ [IOSClass classWithClass:[NSString class]] } count:1 type:[IOSClass classWithClass:[IOSClass class]]]];
-  }
-  @catch (JavaLangNoSuchMethodException *ex) {
-    @try {
-      m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ [IOSClass classWithProtocol:@protocol(JavaLangCharSequence)] } count:1 type:[IOSClass classWithClass:[IOSClass class]]]];
-    }
-    @catch (JavaLangNoSuchMethodException *ex2) {
-      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Method not found" withJavaLangThrowable:ex2] autorelease];
-    }
-  }
-  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers]) == NO) {
-    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Method must be static: ", methodName)] autorelease];
-  }
-  return m;
+  return OrgJodaConvertStringConvert_findFromStringMethodWithIOSClass_withNSString_(self, cls, methodName);
 }
 
 - (JavaLangReflectConstructor *)findFromStringConstructorByTypeWithIOSClass:(IOSClass *)cls {
-  @try {
-    return [((IOSClass *) nil_chk(cls)) getDeclaredConstructor:[IOSObjectArray arrayWithObjects:(id[]){ [IOSClass classWithClass:[NSString class]] } count:1 type:[IOSClass classWithClass:[IOSClass class]]]];
-  }
-  @catch (JavaLangNoSuchMethodException *ex) {
-    @try {
-      return [((IOSClass *) nil_chk(cls)) getDeclaredConstructor:[IOSObjectArray arrayWithObjects:(id[]){ [IOSClass classWithProtocol:@protocol(JavaLangCharSequence)] } count:1 type:[IOSClass classWithClass:[IOSClass class]]]];
-    }
-    @catch (JavaLangNoSuchMethodException *ex2) {
-      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Constructor not found" withJavaLangThrowable:ex2] autorelease];
-    }
-  }
+  return OrgJodaConvertStringConvert_findFromStringConstructorByTypeWithIOSClass_(self, cls);
 }
 
 - (NSString *)description {
@@ -402,8 +401,8 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
 }
 
 - (void)dealloc {
-  OrgJodaConvertStringConvert_set_factories_(self, nil);
-  OrgJodaConvertStringConvert_set_registered_(self, nil);
+  RELEASE_(factories_);
+  RELEASE_(registered_);
   [super dealloc];
 }
 
@@ -453,7 +452,7 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
     { "factories_", NULL, 0x12, "Ljava.util.concurrent.CopyOnWriteArrayList;", NULL,  },
     { "registered_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentMap;", NULL,  },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertStringConvert = { "StringConvert", "org.joda.convert", NULL, 0x11, 23, methods, 4, fields, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertStringConvert = { 1, "StringConvert", "org.joda.convert", NULL, 0x11, 23, methods, 4, fields, 0, NULL};
   return &_OrgJodaConvertStringConvert;
 }
 
@@ -461,8 +460,122 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
 
 OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create() {
   OrgJodaConvertStringConvert_init();
-  return [[[OrgJodaConvertStringConvert alloc] initWithBoolean:YES withOrgJodaConvertStringConverterFactoryArray:[IOSObjectArray arrayWithObjects:(id[]){ OrgJodaConvertFactoryNumericArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_get_INSTANCE_() } count:6 type:[IOSClass classWithProtocol:@protocol(OrgJodaConvertStringConverterFactory)]]] autorelease];
+  return [[[OrgJodaConvertStringConvert alloc] initWithBoolean:YES withOrgJodaConvertStringConverterFactoryArray:[IOSObjectArray arrayWithObjects:(id[]){ OrgJodaConvertFactoryNumericArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_get_INSTANCE_() } count:6 type:OrgJodaConvertStringConverterFactory_class_()]] autorelease];
 }
+
+void OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(OrgJodaConvertStringConvert *self, NSString *className_, NSString *fromStringMethodName) {
+  @try {
+    IOSClass *cls = [((JavaLangClassLoader *) nil_chk([[self getClass] getClassLoader])) loadClassWithNSString:className_];
+    [self registerMethodsWithIOSClass:cls withNSString:@"toString" withNSString:fromStringMethodName];
+  }
+  @catch (JavaLangException *ex) {
+  }
+}
+
+id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls) {
+  if (cls == nil) {
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Class must not be null"] autorelease];
+  }
+  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:cls], @protocol(OrgJodaConvertTypedStringConverter));
+  if (conv == OrgJodaConvertStringConvert_CACHED_NULL_) {
+    return nil;
+  }
+  if (conv == nil) {
+    @try {
+      conv = OrgJodaConvertStringConvert_findAnyConverterWithIOSClass_(self, cls);
+    }
+    @catch (JavaLangRuntimeException *ex) {
+      [self->registered_ putIfAbsentWithId:cls withId:OrgJodaConvertStringConvert_CACHED_NULL_];
+      @throw ex;
+    }
+    if (conv == nil) {
+      [self->registered_ putIfAbsentWithId:cls withId:OrgJodaConvertStringConvert_CACHED_NULL_];
+      return nil;
+    }
+    [self->registered_ putIfAbsentWithId:cls withId:conv];
+  }
+  return conv;
+}
+
+id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findAnyConverterWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls) {
+  id<OrgJodaConvertTypedStringConverter> conv = nil;
+  IOSClass *loopCls = [((IOSClass *) nil_chk(cls)) getSuperclass];
+  while (loopCls != nil && conv == nil) {
+    conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopCls], @protocol(OrgJodaConvertTypedStringConverter));
+    if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
+      return conv;
+    }
+    loopCls = [((IOSClass *) nil_chk(loopCls)) getSuperclass];
+  }
+  {
+    IOSObjectArray *a__ = [cls getInterfaces];
+    IOSClass * const *b__ = ((IOSObjectArray *) nil_chk(a__))->buffer_;
+    IOSClass * const *e__ = b__ + a__->size_;
+    while (b__ < e__) {
+      IOSClass *loopIfc = *b__++;
+      conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopIfc], @protocol(OrgJodaConvertTypedStringConverter));
+      if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
+        return conv;
+      }
+    }
+  }
+  for (id<OrgJodaConvertStringConverterFactory> __strong factory in nil_chk(self->factories_)) {
+    id<OrgJodaConvertStringConverter> factoryConv = (id<OrgJodaConvertStringConverter>) check_protocol_cast([((id<OrgJodaConvertStringConverterFactory>) nil_chk(factory)) findConverterWithIOSClass:cls], @protocol(OrgJodaConvertStringConverter));
+    if (factoryConv != nil) {
+      return OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(cls, factoryConv);
+    }
+  }
+  return nil;
+}
+
+JavaLangReflectMethod *OrgJodaConvertStringConvert_findToStringMethodWithIOSClass_withNSString_(OrgJodaConvertStringConvert *self, IOSClass *cls, NSString *methodName) {
+  JavaLangReflectMethod *m;
+  @try {
+    m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithLength:0 type:IOSClass_class_()]];
+  }
+  @catch (JavaLangNoSuchMethodException *ex) {
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithJavaLangThrowable:ex] autorelease];
+  }
+  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers])) {
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Method must not be static: ", methodName)] autorelease];
+  }
+  return m;
+}
+
+JavaLangReflectMethod *OrgJodaConvertStringConvert_findFromStringMethodWithIOSClass_withNSString_(OrgJodaConvertStringConvert *self, IOSClass *cls, NSString *methodName) {
+  JavaLangReflectMethod *m;
+  @try {
+    m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ NSString_class_() } count:1 type:IOSClass_class_()]];
+  }
+  @catch (JavaLangNoSuchMethodException *ex) {
+    @try {
+      m = [((IOSClass *) nil_chk(cls)) getMethod:methodName parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ JavaLangCharSequence_class_() } count:1 type:IOSClass_class_()]];
+    }
+    @catch (JavaLangNoSuchMethodException *ex2) {
+      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Method not found" withJavaLangThrowable:ex2] autorelease];
+    }
+  }
+  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers]) == NO) {
+    @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:JreStrcat("$$", @"Method must be static: ", methodName)] autorelease];
+  }
+  return m;
+}
+
+JavaLangReflectConstructor *OrgJodaConvertStringConvert_findFromStringConstructorByTypeWithIOSClass_(OrgJodaConvertStringConvert *self, IOSClass *cls) {
+  @try {
+    return [((IOSClass *) nil_chk(cls)) getDeclaredConstructor:[IOSObjectArray arrayWithObjects:(id[]){ NSString_class_() } count:1 type:IOSClass_class_()]];
+  }
+  @catch (JavaLangNoSuchMethodException *ex) {
+    @try {
+      return [((IOSClass *) nil_chk(cls)) getDeclaredConstructor:[IOSObjectArray arrayWithObjects:(id[]){ JavaLangCharSequence_class_() } count:1 type:IOSClass_class_()]];
+    }
+    @catch (JavaLangNoSuchMethodException *ex2) {
+      @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:@"Constructor not found" withJavaLangThrowable:ex2] autorelease];
+    }
+  }
+}
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert)
 
 @implementation OrgJodaConvertStringConvert_$1
 
@@ -490,11 +603,13 @@ OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create() {
     { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL },
     { "init", NULL, NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertStringConvert_$1 = { "$1", "org.joda.convert", "StringConvert", 0x8000, 4, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertStringConvert_$1 = { 1, "$1", "org.joda.convert", "StringConvert", 0x8000, 4, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertStringConvert_$1;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert_$1)
 
 @implementation OrgJodaConvertStringConvert_$2
 
@@ -521,9 +636,9 @@ OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create() {
 }
 
 - (void)dealloc {
-  OrgJodaConvertStringConvert_$2_set_val$toString_(self, nil);
-  OrgJodaConvertStringConvert_$2_set_val$fromString_(self, nil);
-  OrgJodaConvertStringConvert_$2_set_val$cls_(self, nil);
+  RELEASE_(val$toString_);
+  RELEASE_(val$fromString_);
+  RELEASE_(val$cls_);
   [super dealloc];
 }
 
@@ -546,8 +661,10 @@ OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create() {
     { "val$fromString_", NULL, 0x1012, "Lorg.joda.convert.FromStringConverter;", NULL,  },
     { "val$cls_", NULL, 0x1012, "Ljava.lang.Class;", NULL,  },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertStringConvert_$2 = { "$2", "org.joda.convert", "StringConvert", 0x8000, 4, methods, 3, fields, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertStringConvert_$2 = { 1, "$2", "org.joda.convert", "StringConvert", 0x8000, 4, methods, 3, fields, 0, NULL};
   return &_OrgJodaConvertStringConvert_$2;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert_$2)

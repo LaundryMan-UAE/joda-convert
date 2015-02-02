@@ -9,7 +9,7 @@
 @class IOSClass;
 @class JavaLangReflectMethod;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "TypedStringConverter.h"
 
 /**
@@ -18,15 +18,6 @@
  @param < T > the type of the converter
  */
 @interface OrgJodaConvertReflectionStringConverter : NSObject < OrgJodaConvertTypedStringConverter > {
- @public
-  /**
-   @brief The converted class.
-   */
-  IOSClass *cls_;
-  /**
-   @brief Conversion to a string.
-   */
-  JavaLangReflectMethod *toString__;
 }
 
 /**
@@ -47,15 +38,13 @@
 
 - (NSString *)description;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertReflectionStringConverter *)other;
-
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertReflectionStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertReflectionStringConverter)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, cls_, IOSClass *)
-J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString__, JavaLangReflectMethod *)
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertReflectionStringConverter)
 
 #endif // _OrgJodaConvertReflectionStringConverter_H_

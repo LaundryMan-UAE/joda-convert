@@ -9,7 +9,7 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 
 /**
  @brief Factory for <code>StringConverter</code> that allows converters to be created dynamically or easily initialised.
@@ -28,6 +28,8 @@
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertStringConverterFactory_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertStringConverterFactory)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConverterFactory)
 
 #endif // _OrgJodaConvertStringConverterFactory_H_

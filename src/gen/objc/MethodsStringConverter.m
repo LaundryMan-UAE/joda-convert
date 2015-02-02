@@ -5,6 +5,7 @@
 
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
+#include "J2ObjC_source.h"
 #include "MethodsStringConverter.h"
 #include "java/lang/CharSequence.h"
 #include "java/lang/IllegalAccessException.h"
@@ -14,6 +15,22 @@
 #include "java/lang/reflect/InvocationTargetException.h"
 #include "java/lang/reflect/Method.h"
 #include "java/lang/reflect/Modifier.h"
+
+@interface OrgJodaConvertMethodsStringConverter () {
+ @public
+  /**
+   @brief Conversion from a string.
+   */
+  JavaLangReflectMethod *fromString_;
+  /**
+   @brief Effective type.
+   */
+  IOSClass *effectiveType_;
+}
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertMethodsStringConverter, fromString_, JavaLangReflectMethod *)
+J2OBJC_FIELD_SETTER(OrgJodaConvertMethodsStringConverter, effectiveType_, IOSClass *)
 
 @implementation OrgJodaConvertMethodsStringConverter
 
@@ -29,7 +46,7 @@
       @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must have one parameter: ", fromString)] autorelease];
     }
     IOSClass *param = IOSObjectArray_Get(nil_chk([fromString getParameterTypes]), 0);
-    if (param != [IOSClass classWithClass:[NSString class]] && param != [IOSClass classWithProtocol:@protocol(JavaLangCharSequence)]) {
+    if (param != NSString_class_() && param != JavaLangCharSequence_class_()) {
       @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"FromString method must take a String or CharSequence: ", fromString)] autorelease];
     }
     if ([((IOSClass *) nil_chk([fromString getReturnType])) isAssignableFrom:cls] == NO && [((IOSClass *) nil_chk(cls)) isAssignableFrom:[fromString getReturnType]] == NO) {
@@ -44,7 +61,7 @@
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   @try {
-    return [((IOSClass *) nil_chk(cls)) cast:[((JavaLangReflectMethod *) nil_chk(fromString_)) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:[IOSClass classWithClass:[NSObject class]]]]];
+    return [((IOSClass *) nil_chk(cls)) cast:[((JavaLangReflectMethod *) nil_chk(fromString_)) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:NSObject_class_()]]];
   }
   @catch (JavaLangIllegalAccessException *ex) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", fromString_)] autorelease];
@@ -62,8 +79,8 @@
 }
 
 - (void)dealloc {
-  OrgJodaConvertMethodsStringConverter_set_fromString_(self, nil);
-  OrgJodaConvertMethodsStringConverter_set_effectiveType_(self, nil);
+  RELEASE_(fromString_);
+  RELEASE_(effectiveType_);
   [super dealloc];
 }
 
@@ -84,8 +101,10 @@
     { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL,  },
   };
   static const char *superclass_type_args[] = {"TT;"};
-  static const J2ObjcClassInfo _OrgJodaConvertMethodsStringConverter = { "MethodsStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 2, fields, 1, superclass_type_args};
+  static const J2ObjcClassInfo _OrgJodaConvertMethodsStringConverter = { 1, "MethodsStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 2, fields, 1, superclass_type_args};
   return &_OrgJodaConvertMethodsStringConverter;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertMethodsStringConverter)

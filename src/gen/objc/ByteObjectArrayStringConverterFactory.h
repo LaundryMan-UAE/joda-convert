@@ -10,7 +10,7 @@
 @class IOSObjectArray;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "StringConverterFactory.h"
 #include "TypedStringConverter.h"
 #include "java/lang/Enum.h"
@@ -22,11 +22,6 @@
  */
 @interface OrgJodaConvertFactoryByteObjectArrayStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory > {
 }
-
-/**
- @brief Restricted constructor.
- */
-- (instancetype)init;
 
 /**
  @brief Finds a converter by type.
@@ -43,8 +38,13 @@
 FOUNDATION_EXPORT BOOL OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
 
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory, INSTANCE_, id<OrgJodaConvertStringConverterFactory>)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter) {
   OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_INSTANCE = 0,
@@ -61,7 +61,8 @@ FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertFactoryByteObjectArrayStringConv
 
 + (OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum *)valueOfWithNSString:(NSString *)name;
 
-FOUNDATION_EXPORT OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_valueOfWithNSString_(NSString *name);- (id)copyWithZone:(NSZone *)zone;
+FOUNDATION_EXPORT OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_valueOfWithNSString_(NSString *name);
+- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -71,13 +72,15 @@ J2OBJC_STATIC_INIT(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_By
 FOUNDATION_EXPORT OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_values_[];
 
 #define OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_INSTANCE OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_values_[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_INSTANCE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, INSTANCE, OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, INSTANCE)
 
 FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, EMPTY_, IOSObjectArray *)
 
 FOUNDATION_EXPORT NSString *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_HEX_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, HEX_, NSString *)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum)
 
 @interface OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_$1 : OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum {
 }
@@ -94,6 +97,11 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryByteObjectArrayStringConverterFa
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_$1_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_$1)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_$1)
 
 #endif // _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_H_

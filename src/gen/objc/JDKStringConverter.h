@@ -8,7 +8,7 @@
 
 @class IOSClass;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "TypedStringConverter.h"
 #include "java/lang/Enum.h"
 
@@ -47,20 +47,7 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter) {
 };
 
 @interface OrgJodaConvertJDKStringConverterEnum : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter > {
- @public
-  /**
-   @brief The type.
-   */
-  IOSClass *type_;
 }
-
-/**
- @brief Creates an enum.
- @param type the type, not null
- */
-- (instancetype)initWithIOSClass:(IOSClass *)type
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal;
 
 /**
  @brief Gets the type of the converter.
@@ -81,7 +68,8 @@ FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertJDKStringConverterEnum_values();
 
 + (OrgJodaConvertJDKStringConverterEnum *)valueOfWithNSString:(NSString *)name;
 
-FOUNDATION_EXPORT OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_valueOfWithNSString_(NSString *name);- (id)copyWithZone:(NSZone *)zone;
+FOUNDATION_EXPORT OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_valueOfWithNSString_(NSString *name);
+- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -91,99 +79,99 @@ J2OBJC_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum)
 FOUNDATION_EXPORT OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_values_[];
 
 #define OrgJodaConvertJDKStringConverterEnum_STRING OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_STRING]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING)
 
 #define OrgJodaConvertJDKStringConverterEnum_CHAR_SEQUENCE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CHAR_SEQUENCE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CHAR_SEQUENCE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CHAR_SEQUENCE)
 
 #define OrgJodaConvertJDKStringConverterEnum_STRING_BUFFER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_STRING_BUFFER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING_BUFFER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING_BUFFER)
 
 #define OrgJodaConvertJDKStringConverterEnum_STRING_BUILDER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_STRING_BUILDER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING_BUILDER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, STRING_BUILDER)
 
 #define OrgJodaConvertJDKStringConverterEnum_LONG OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_LONG]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, LONG, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, LONG)
 
 #define OrgJodaConvertJDKStringConverterEnum_INTEGER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_INTEGER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, INTEGER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, INTEGER)
 
 #define OrgJodaConvertJDKStringConverterEnum_SHORT OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_SHORT]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, SHORT, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, SHORT)
 
 #define OrgJodaConvertJDKStringConverterEnum_BYTE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_BYTE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, BYTE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, BYTE)
 
 #define OrgJodaConvertJDKStringConverterEnum_BYTE_ARRAY OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_BYTE_ARRAY]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, BYTE_ARRAY, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, BYTE_ARRAY)
 
 #define OrgJodaConvertJDKStringConverterEnum_CHARACTER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CHARACTER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CHARACTER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CHARACTER)
 
 #define OrgJodaConvertJDKStringConverterEnum_CHAR_ARRAY OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CHAR_ARRAY]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CHAR_ARRAY, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CHAR_ARRAY)
 
 #define OrgJodaConvertJDKStringConverterEnum_BOOLEAN OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_BOOLEAN]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, BOOLEAN, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, BOOLEAN)
 
 #define OrgJodaConvertJDKStringConverterEnum_DOUBLE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_DOUBLE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, DOUBLE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, DOUBLE)
 
 #define OrgJodaConvertJDKStringConverterEnum_FLOAT OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_FLOAT]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, FLOAT, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, FLOAT)
 
 #define OrgJodaConvertJDKStringConverterEnum_BIG_INTEGER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_BIG_INTEGER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, BIG_INTEGER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, BIG_INTEGER)
 
 #define OrgJodaConvertJDKStringConverterEnum_BIG_DECIMAL OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_BIG_DECIMAL]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, BIG_DECIMAL, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, BIG_DECIMAL)
 
 #define OrgJodaConvertJDKStringConverterEnum_ATOMIC_LONG OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_ATOMIC_LONG]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_LONG, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_LONG)
 
 #define OrgJodaConvertJDKStringConverterEnum_ATOMIC_INTEGER OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_ATOMIC_INTEGER]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_INTEGER, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_INTEGER)
 
 #define OrgJodaConvertJDKStringConverterEnum_ATOMIC_BOOLEAN OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_ATOMIC_BOOLEAN]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_BOOLEAN, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, ATOMIC_BOOLEAN)
 
 #define OrgJodaConvertJDKStringConverterEnum_LOCALE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_LOCALE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, LOCALE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, LOCALE)
 
 #define OrgJodaConvertJDKStringConverterEnum_CLASS OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CLASS]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CLASS, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CLASS)
 
 #define OrgJodaConvertJDKStringConverterEnum_PACKAGE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_PACKAGE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, PACKAGE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, PACKAGE)
 
 #define OrgJodaConvertJDKStringConverterEnum_CURRENCY OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CURRENCY]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CURRENCY, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CURRENCY)
 
 #define OrgJodaConvertJDKStringConverterEnum_TIME_ZONE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_TIME_ZONE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, TIME_ZONE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, TIME_ZONE)
 
 #define OrgJodaConvertJDKStringConverterEnum_UUID OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_UUID]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, UUID, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, UUID)
 
 #define OrgJodaConvertJDKStringConverterEnum_URL OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_URL]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, URL, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, URL)
 
 #define OrgJodaConvertJDKStringConverterEnum_URI OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_URI]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, URI, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, URI)
 
 #define OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_INET_ADDRESS]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, INET_ADDRESS, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, INET_ADDRESS)
 
-#define OrgJodaConvertJDKStringConverterEnum_FILE_ OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_FILE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, FILE_, OrgJodaConvertJDKStringConverterEnum *)
+#define OrgJodaConvertJDKStringConverterEnum_FILE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_FILE]
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, FILE)
 
 #define OrgJodaConvertJDKStringConverterEnum_DATE OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_DATE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, DATE, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, DATE)
 
 #define OrgJodaConvertJDKStringConverterEnum_CALENDAR OrgJodaConvertJDKStringConverterEnum_values_[OrgJodaConvertJDKStringConverter_CALENDAR]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertJDKStringConverterEnum, CALENDAR, OrgJodaConvertJDKStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertJDKStringConverterEnum, CALENDAR)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertJDKStringConverterEnum, type_, IOSClass *)
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$1 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -197,7 +185,12 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertJDKStringConverterEnum, type_, IOSClass *)
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$1_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$1)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$1)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$2 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -211,7 +204,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$2_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$2)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$2)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$3 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -225,7 +223,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$3_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$3)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$3)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$4 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -239,7 +242,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$4_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$4)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$4)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$5 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -253,7 +261,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$5_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$5)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$5)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$6 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -267,7 +280,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$6_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$6)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$6)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$7 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -281,7 +299,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$7_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$7)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$7)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$8 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -295,7 +318,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$8_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$8)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$8)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$9 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -311,7 +339,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$9_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$9)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$9)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$10 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -325,7 +358,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$10_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$10)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$10)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$11 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -341,7 +379,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$11_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$11)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$11)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$12 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -355,7 +398,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$12_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$12)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$12)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$13 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -369,7 +417,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$13_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$13)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$13)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$14 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -383,7 +436,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$14_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$14)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$14)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$15 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -397,7 +455,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$15_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$15)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$15)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$16 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -411,7 +474,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$16_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$16)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$16)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$17 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -425,7 +493,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$17_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$17)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$17)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$18 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -439,7 +512,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$18_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$18)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$18)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$19 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -453,7 +531,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$19_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$19)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$19)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$20 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -467,7 +550,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$20_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$20)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$20)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$21 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -483,7 +571,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$21_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$21)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$21)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$22 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -499,7 +592,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$22_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$22)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$22)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$23 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -513,7 +611,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$23_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$23)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$23)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$24 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -529,7 +632,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$24_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$24)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$24)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$25 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -543,7 +651,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$25_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$25)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$25)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$26 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -557,7 +670,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$26_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$26)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$26)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$27 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -571,7 +689,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$27_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$27)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$27)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$28 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -587,7 +710,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$28_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$28)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$28)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$29 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -601,7 +729,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$29_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$29)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$29)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$30 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -617,7 +750,12 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$30_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$30)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$30)
 
 @interface OrgJodaConvertJDKStringConverterEnum_$31 : OrgJodaConvertJDKStringConverterEnum {
 }
@@ -633,6 +771,11 @@ __attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertJDKStringConverterEnum_$31_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverterEnum_$31)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverterEnum_$31)
 
 #endif // _OrgJodaConvertJDKStringConverter_H_

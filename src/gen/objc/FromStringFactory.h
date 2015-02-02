@@ -8,13 +8,12 @@
 
 @class IOSClass;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "java/lang/annotation/Annotation.h"
 
 @protocol OrgJodaConvertFromStringFactory < JavaLangAnnotationAnnotation >
 
 @property (readonly) IOSClass *factory;
-
 
 @end
 
@@ -27,6 +26,8 @@
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertFromStringFactory_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFromStringFactory)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromStringFactory)
 
 #endif // _OrgJodaConvertFromStringFactory_H_

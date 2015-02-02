@@ -17,7 +17,7 @@
 @protocol OrgJodaConvertStringConverterFactory;
 @protocol OrgJodaConvertToStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "TypedStringConverter.h"
 
 /**
@@ -25,15 +25,6 @@
  <p> Support is provided for conversions based on the StringConverter interface or the ToString and FromString annotations. <p> StringConvert is thread-safe with concurrent caches.
  */
 @interface OrgJodaConvertStringConvert : NSObject {
- @public
-  /**
-   @brief The list of factories.
-   */
-  JavaUtilConcurrentCopyOnWriteArrayList *factories_;
-  /**
-   @brief The cache of converters.
-   */
-  id<JavaUtilConcurrentConcurrentMap> registered_;
 }
 
 /**
@@ -58,13 +49,6 @@
  */
 - (instancetype)initWithBoolean:(jboolean)includeJdkConverters
 withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories;
-
-/**
- @brief Tries to register a class using the standard toString/parse pattern.
- @param className the class name, not null
- */
-- (void)tryRegisterWithNSString:(NSString *)className_
-                   withNSString:(NSString *)fromStringMethodName;
 
 /**
  @brief Converts the specified object to a <code>String</code> .
@@ -149,24 +133,6 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories;
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterNoGenericsWithIOSClass:(IOSClass *)cls;
 
 /**
- @brief Finds a converter searching registered and annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @return the converter, null if no converter
- @throws RuntimeException if invalid
- */
-- (id<OrgJodaConvertTypedStringConverter>)findConverterQuietWithIOSClass:(IOSClass *)cls;
-
-/**
- @brief Finds a converter searching registered and annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @return the converter, not null
- @throws RuntimeException if invalid
- */
-- (id<OrgJodaConvertTypedStringConverter>)findAnyConverterWithIOSClass:(IOSClass *)cls;
-
-/**
  @brief Registers a converter factory.
  <p> This will be registered ahead of all existing factories. <p> No new factories may be registered for the global singleton.
  @param factory the converter factory, not null
@@ -229,48 +195,18 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
                                  withNSString:(NSString *)toStringMethodName;
 
 /**
- @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param methodName the name of the method to find, not null
- @return the method to call, null means use <code>toString</code>
- */
-- (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls
-                                             withNSString:(NSString *)methodName;
-
-/**
- @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param methodName the name of the method to find, not null
- @return the method to call, null means use <code>toString</code>
- */
-- (JavaLangReflectMethod *)findFromStringMethodWithIOSClass:(IOSClass *)cls
-                                               withNSString:(NSString *)methodName;
-
-/**
- @brief Finds the conversion method.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @return the method to call, null means use <code>toString</code>
- */
-- (JavaLangReflectConstructor *)findFromStringConstructorByTypeWithIOSClass:(IOSClass *)cls;
-
-/**
  @brief Returns a simple string representation of the object.
  @return the string representation, never null
  */
 - (NSString *)description;
-
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertStringConvert *)other;
 
 @end
 
 FOUNDATION_EXPORT BOOL OrgJodaConvertStringConvert_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertStringConvert)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert, factories_, JavaUtilConcurrentCopyOnWriteArrayList *)
-J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert, registered_, id<JavaUtilConcurrentConcurrentMap>)
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create();
 
 FOUNDATION_EXPORT OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_INSTANCE_;
@@ -278,6 +214,9 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertStringConvert, INSTANCE_, OrgJodaConver
 
 FOUNDATION_EXPORT id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_CACHED_NULL_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertStringConvert, CACHED_NULL_, id<OrgJodaConvertTypedStringConverter>)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConvert)
 
 @interface OrgJodaConvertStringConvert_$1 : NSObject < OrgJodaConvertTypedStringConverter > {
 }
@@ -293,13 +232,14 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertStringConvert, CACHED_NULL_, id<OrgJoda
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertStringConvert_$1_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertStringConvert_$1)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConvert_$1)
 
 @interface OrgJodaConvertStringConvert_$2 : NSObject < OrgJodaConvertTypedStringConverter > {
- @public
-  id<OrgJodaConvertToStringConverter> val$toString_;
-  id<OrgJodaConvertFromStringConverter> val$fromString_;
-  IOSClass *val$cls_;
 }
 
 - (NSString *)convertToStringWithId:(id)object;
@@ -313,16 +253,13 @@ __attribute__((always_inline)) inline void OrgJodaConvertStringConvert_$1_init()
                   withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
                                            withIOSClass:(IOSClass *)capture$2;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertStringConvert_$2 *)other;
-
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertStringConvert_$2_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertStringConvert_$2)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$toString_, id<OrgJodaConvertToStringConverter>)
-J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$fromString_, id<OrgJodaConvertFromStringConverter>)
-J2OBJC_FIELD_SETTER(OrgJodaConvertStringConvert_$2, val$cls_, IOSClass *)
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConvert_$2)
 
 #endif // _OrgJodaConvertStringConvert_H_

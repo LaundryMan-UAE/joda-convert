@@ -4,6 +4,7 @@
 //
 
 #include "IOSClass.h"
+#include "J2ObjC_source.h"
 #include "RenameHandler.h"
 #include "java/lang/ClassLoader.h"
 #include "java/lang/ClassNotFoundException.h"
@@ -15,6 +16,27 @@
 #include "java/util/Map.h"
 #include "java/util/Set.h"
 #include "java/util/concurrent/ConcurrentHashMap.h"
+
+__attribute__((unused)) static IOSClass *OrgJodaConvertRenameHandler_loadTypeWithNSString_(OrgJodaConvertRenameHandler *self, NSString *fullName);
+
+@interface OrgJodaConvertRenameHandler () {
+ @public
+  /**
+   @brief The type renames.
+   */
+  JavaUtilConcurrentConcurrentHashMap *typeRenames_;
+  /**
+   @brief The enum renames.
+   */
+  JavaUtilConcurrentConcurrentHashMap *enumRenames_;
+}
+- (instancetype)init;
+
+- (IOSClass *)loadTypeWithNSString:(NSString *)fullName;
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertRenameHandler, typeRenames_, JavaUtilConcurrentConcurrentHashMap *)
+J2OBJC_FIELD_SETTER(OrgJodaConvertRenameHandler, enumRenames_, JavaUtilConcurrentConcurrentHashMap *)
 
 BOOL OrgJodaConvertRenameHandler_initialized = NO;
 
@@ -55,14 +77,13 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
   }
   IOSClass *type = [((JavaUtilConcurrentConcurrentHashMap *) nil_chk(typeRenames_)) getWithId:name];
   if (type == nil) {
-    type = [self loadTypeWithNSString:name];
+    type = OrgJodaConvertRenameHandler_loadTypeWithNSString_(self, name);
   }
   return type;
 }
 
 - (IOSClass *)loadTypeWithNSString:(NSString *)fullName {
-  JavaLangClassLoader *loader = [((JavaLangThread *) nil_chk(JavaLangThread_currentThread())) getContextClassLoader];
-  return loader != nil ? [loader loadClassWithNSString:fullName] : IOSClass_forNameWithNSString_(fullName);
+  return OrgJodaConvertRenameHandler_loadTypeWithNSString_(self, fullName);
 }
 
 - (void)renamedEnumWithNSString:(NSString *)oldName
@@ -118,8 +139,8 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
 }
 
 - (void)dealloc {
-  OrgJodaConvertRenameHandler_set_typeRenames_(self, nil);
-  OrgJodaConvertRenameHandler_set_enumRenames_(self, nil);
+  RELEASE_(typeRenames_);
+  RELEASE_(enumRenames_);
   [super dealloc];
 }
 
@@ -155,7 +176,7 @@ OrgJodaConvertRenameHandler * OrgJodaConvertRenameHandler_INSTANCE_;
     { "typeRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL,  },
     { "enumRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL,  },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertRenameHandler = { "RenameHandler", "org.joda.convert", NULL, 0x11, 11, methods, 3, fields, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertRenameHandler = { 1, "RenameHandler", "org.joda.convert", NULL, 0x11, 11, methods, 3, fields, 0, NULL};
   return &_OrgJodaConvertRenameHandler;
 }
 
@@ -165,3 +186,10 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_create() {
   OrgJodaConvertRenameHandler_init();
   return [[[OrgJodaConvertRenameHandler alloc] init] autorelease];
 }
+
+IOSClass *OrgJodaConvertRenameHandler_loadTypeWithNSString_(OrgJodaConvertRenameHandler *self, NSString *fullName) {
+  JavaLangClassLoader *loader = [((JavaLangThread *) nil_chk(JavaLangThread_currentThread())) getContextClassLoader];
+  return loader != nil ? [loader loadClassWithNSString:fullName] : IOSClass_forNameWithNSString_(fullName);
+}
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertRenameHandler)

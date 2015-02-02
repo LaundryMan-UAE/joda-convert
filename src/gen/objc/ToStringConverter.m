@@ -3,6 +3,7 @@
 //  source: /Users/nbransby/Documents/joda-convert/src/main/java/org/joda/convert/ToStringConverter.java
 //
 
+#include "J2ObjC_source.h"
 #include "ToStringConverter.h"
 
 @interface OrgJodaConvertToStringConverter : NSObject
@@ -14,9 +15,10 @@
   static const J2ObjcMethodInfo methods[] = {
     { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x401, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertToStringConverter = { "ToStringConverter", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertToStringConverter = { 1, "ToStringConverter", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertToStringConverter;
 }
 
 @end
 
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertToStringConverter)

@@ -6,8 +6,8 @@
 #ifndef _OrgJodaConvertStringConverter_H_
 #define _OrgJodaConvertStringConverter_H_
 
-#import "JreEmulation.h"
 #include "FromStringConverter.h"
+#include "J2ObjC_header.h"
 #include "ToStringConverter.h"
 
 /**
@@ -18,6 +18,8 @@
 @protocol OrgJodaConvertStringConverter < OrgJodaConvertToStringConverter, OrgJodaConvertFromStringConverter, NSObject, JavaObject >
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertStringConverter)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConverter)
 
 #endif // _OrgJodaConvertStringConverter_H_

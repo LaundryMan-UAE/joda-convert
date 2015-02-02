@@ -10,7 +10,7 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "StringConverterFactory.h"
 #include "TypedStringConverter.h"
 #include "java/lang/Enum.h"
@@ -22,11 +22,6 @@
  */
 @interface OrgJodaConvertFactoryBooleanArrayStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory > {
 }
-
-/**
- @brief Restricted constructor.
- */
-- (instancetype)init;
 
 /**
  @brief Finds a converter by type.
@@ -43,8 +38,13 @@
 FOUNDATION_EXPORT BOOL OrgJodaConvertFactoryBooleanArrayStringConverterFactory_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
 
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INSTANCE_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory, INSTANCE_, id<OrgJodaConvertStringConverterFactory>)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter) {
   OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_INSTANCE = 0,
@@ -61,7 +61,8 @@ FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertFactoryBooleanArrayStringConvert
 
 + (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum *)valueOfWithNSString:(NSString *)name;
 
-FOUNDATION_EXPORT OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_valueOfWithNSString_(NSString *name);- (id)copyWithZone:(NSZone *)zone;
+FOUNDATION_EXPORT OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_valueOfWithNSString_(NSString *name);
+- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -71,10 +72,12 @@ J2OBJC_STATIC_INIT(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_Boole
 FOUNDATION_EXPORT OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_values_[];
 
 #define OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_INSTANCE OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_values_[OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_INSTANCE]
-J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum, INSTANCE, OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum *)
+J2OBJC_ENUM_CONSTANT_GETTER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum, INSTANCE)
 
 FOUNDATION_EXPORT IOSBooleanArray *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum, EMPTY_, IOSBooleanArray *)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum)
 
 @interface OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_$1 : OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum {
 }
@@ -91,6 +94,11 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertFactoryBooleanArrayStringConverterFacto
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_$1_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_$1)
+
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverterEnum_$1)
 
 #endif // _OrgJodaConvertFactoryBooleanArrayStringConverterFactory_H_

@@ -10,7 +10,7 @@
 @class JavaLangReflectConstructor;
 @class JavaLangReflectMethod;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "ReflectionStringConverter.h"
 
 /**
@@ -19,11 +19,6 @@
  @param < T > the type of the converter
  */
 @interface OrgJodaConvertMethodConstructorStringConverter : OrgJodaConvertReflectionStringConverter {
- @public
-  /**
-   @brief Conversion from a string.
-   */
-  JavaLangReflectConstructor *fromString_;
 }
 
 /**
@@ -48,14 +43,13 @@
 
 - (IOSClass *)getEffectiveType;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertMethodConstructorStringConverter *)other;
-
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertMethodConstructorStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertMethodConstructorStringConverter)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_, JavaLangReflectConstructor *)
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertMethodConstructorStringConverter)
 
 #endif // _OrgJodaConvertMethodConstructorStringConverter_H_

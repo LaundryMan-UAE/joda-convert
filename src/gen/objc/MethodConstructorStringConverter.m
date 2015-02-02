@@ -5,6 +5,7 @@
 
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
+#include "J2ObjC_source.h"
 #include "MethodConstructorStringConverter.h"
 #include "java/lang/IllegalAccessException.h"
 #include "java/lang/IllegalArgumentException.h"
@@ -16,6 +17,17 @@
 #include "java/lang/reflect/InvocationTargetException.h"
 #include "java/lang/reflect/Method.h"
 #include "java/lang/reflect/Modifier.h"
+
+@interface OrgJodaConvertMethodConstructorStringConverter () {
+ @public
+  /**
+   @brief Conversion from a string.
+   */
+  JavaLangReflectConstructor *fromString_;
+}
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_, JavaLangReflectConstructor *)
 
 @implementation OrgJodaConvertMethodConstructorStringConverter
 
@@ -37,7 +49,7 @@
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   @try {
-    return [((JavaLangReflectConstructor *) nil_chk(fromString_)) newInstanceWithNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:[IOSClass classWithClass:[NSObject class]]]];
+    return [((JavaLangReflectConstructor *) nil_chk(fromString_)) newInstanceWithNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:NSObject_class_()]];
   }
   @catch (JavaLangIllegalAccessException *ex) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Constructor is not accessible: ", fromString_)] autorelease];
@@ -58,7 +70,7 @@
 }
 
 - (void)dealloc {
-  OrgJodaConvertMethodConstructorStringConverter_set_fromString_(self, nil);
+  RELEASE_(fromString_);
   [super dealloc];
 }
 
@@ -77,8 +89,10 @@
     { "fromString_", NULL, 0x12, "Ljava.lang.reflect.Constructor;", NULL,  },
   };
   static const char *superclass_type_args[] = {"TT;"};
-  static const J2ObjcClassInfo _OrgJodaConvertMethodConstructorStringConverter = { "MethodConstructorStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 1, fields, 1, superclass_type_args};
+  static const J2ObjcClassInfo _OrgJodaConvertMethodConstructorStringConverter = { 1, "MethodConstructorStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 1, fields, 1, superclass_type_args};
   return &_OrgJodaConvertMethodConstructorStringConverter;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertMethodConstructorStringConverter)

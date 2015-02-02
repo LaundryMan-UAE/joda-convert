@@ -8,7 +8,7 @@
 
 @class IOSClass;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 
 /**
  @brief Interface defining conversion from a <code>String</code> .
@@ -28,6 +28,8 @@
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertFromStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFromStringConverter)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromStringConverter)
 
 #endif // _OrgJodaConvertFromStringConverter_H_

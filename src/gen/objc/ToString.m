@@ -4,6 +4,7 @@
 //
 
 #include "IOSClass.h"
+#include "J2ObjC_source.h"
 #include "ToString.h"
 #include "java/lang/annotation/ElementType.h"
 #include "java/lang/annotation/Retention.h"
@@ -13,16 +14,18 @@
 @implementation OrgJodaConvertToString
 
 - (IOSClass *)annotationType {
-  return [IOSClass classWithProtocol:@protocol(OrgJodaConvertToString)];
+  return OrgJodaConvertToString_class_();
 }
 
 + (IOSObjectArray *)__annotations {
-  return [IOSObjectArray arrayWithObjects:(id[]) { [[[JavaLangAnnotationTarget alloc] initWithValue:[IOSObjectArray arrayWithObjects:(id[]) { JavaLangAnnotationElementTypeEnum_get_METHOD() } count:1 type:[[NSObject class] getClass]]] autorelease], [[[JavaLangAnnotationRetention alloc] initWithValue:JavaLangAnnotationRetentionPolicyEnum_get_RUNTIME()] autorelease] } count:2 type:[IOSClass classWithProtocol:@protocol(JavaLangAnnotationAnnotation)]];
+  return [IOSObjectArray arrayWithObjects:(id[]) { [[[JavaLangAnnotationTarget alloc] initWithValue:[IOSObjectArray arrayWithObjects:(id[]) { JavaLangAnnotationElementTypeEnum_get_METHOD() } count:1 type:NSObject_class_()]] autorelease], [[[JavaLangAnnotationRetention alloc] initWithValue:JavaLangAnnotationRetentionPolicyEnum_get_RUNTIME()] autorelease] } count:2 type:JavaLangAnnotationAnnotation_class_()];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcClassInfo _OrgJodaConvertToString = { "ToString", "org.joda.convert", NULL, 0x2201, 0, NULL, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertToString = { 1, "ToString", "org.joda.convert", NULL, 0x2201, 0, NULL, 0, NULL, 0, NULL};
   return &_OrgJodaConvertToString;
 }
 
 @end
+
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertToString)

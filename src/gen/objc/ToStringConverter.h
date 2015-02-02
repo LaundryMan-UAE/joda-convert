@@ -6,7 +6,7 @@
 #ifndef _OrgJodaConvertToStringConverter_H_
 #define _OrgJodaConvertToStringConverter_H_
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 
 /**
  @brief Interface defining conversion to a <code>String</code> .
@@ -24,6 +24,8 @@
 
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertToStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertToStringConverter)
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertToStringConverter)
 
 #endif // _OrgJodaConvertToStringConverter_H_

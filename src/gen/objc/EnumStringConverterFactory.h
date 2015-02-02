@@ -10,7 +10,7 @@
 @class JavaLangEnum;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "StringConverterFactory.h"
 #include "TypedStringConverter.h"
 
@@ -21,11 +21,6 @@
  */
 @interface OrgJodaConvertEnumStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory > {
 }
-
-/**
- @brief Restricted constructor.
- */
-- (instancetype)init;
 
 /**
  @brief Finds a converter by type.
@@ -42,12 +37,15 @@
 FOUNDATION_EXPORT BOOL OrgJodaConvertEnumStringConverterFactory_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertEnumStringConverterFactory)
 
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactory_INSTANCE_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertEnumStringConverterFactory, INSTANCE_, id<OrgJodaConvertStringConverterFactory>)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertEnumStringConverterFactory)
 
 @interface OrgJodaConvertEnumStringConverterFactory_EnumStringConverter : NSObject < OrgJodaConvertTypedStringConverter > {
- @public
-  IOSClass *effectiveType_;
 }
 
 - (instancetype)initWithOrgJodaConvertEnumStringConverterFactory:(OrgJodaConvertEnumStringConverterFactory *)outer$
@@ -60,14 +58,13 @@ J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertEnumStringConverterFactory, INSTANCE_, 
 
 - (IOSClass *)getEffectiveType;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *)other;
-
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter, effectiveType_, IOSClass *)
+CF_EXTERN_C_BEGIN
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter)
 
 #endif // _OrgJodaConvertEnumStringConverterFactory_H_

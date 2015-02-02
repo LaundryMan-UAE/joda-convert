@@ -6,6 +6,7 @@
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
 #include "IOSPrimitiveArray.h"
+#include "J2ObjC_source.h"
 #include "JDKStringConverter.h"
 #include "RenameHandler.h"
 #include "com/google/common/io/BaseEncoding.h"
@@ -47,6 +48,20 @@
 
 #pragma clang diagnostic ignored "-Wprotocol"
 
+@interface OrgJodaConvertJDKStringConverterEnum () {
+ @public
+  /**
+   @brief The type.
+   */
+  IOSClass *type_;
+}
+- (instancetype)initWithIOSClass:(IOSClass *)type
+                    withNSString:(NSString *)__name
+                         withInt:(jint)__ordinal;
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertJDKStringConverterEnum, type_, IOSClass *)
+
 BOOL OrgJodaConvertJDKStringConverterEnum_initialized = NO;
 
 OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_values_[31];
@@ -74,8 +89,9 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
   return [nil_chk(object) description];
 }
 
-FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertJDKStringConverterEnum_values() {
-  return [IOSObjectArray arrayWithObjects:OrgJodaConvertJDKStringConverterEnum_values_ count:31 type:[IOSClass classWithClass:[OrgJodaConvertJDKStringConverterEnum class]]];
+IOSObjectArray *OrgJodaConvertJDKStringConverterEnum_values() {
+  OrgJodaConvertJDKStringConverterEnum_init();
+  return [IOSObjectArray arrayWithObjects:OrgJodaConvertJDKStringConverterEnum_values_ count:31 type:OrgJodaConvertJDKStringConverterEnum_class_()];
 }
 + (IOSObjectArray *)values {
   return OrgJodaConvertJDKStringConverterEnum_values();
@@ -86,6 +102,7 @@ FOUNDATION_EXPORT IOSObjectArray *OrgJodaConvertJDKStringConverterEnum_values() 
 }
 
 OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_valueOfWithNSString_(NSString *name) {
+  OrgJodaConvertJDKStringConverterEnum_init();
   for (int i = 0; i < 31; i++) {
     OrgJodaConvertJDKStringConverterEnum *e = OrgJodaConvertJDKStringConverterEnum_values_[i];
     if ([name isEqual:[e name]]) {
@@ -102,37 +119,37 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 + (void)initialize {
   if (self == [OrgJodaConvertJDKStringConverterEnum class]) {
-    OrgJodaConvertJDKStringConverterEnum_STRING = [[OrgJodaConvertJDKStringConverterEnum_$1 alloc] initWithIOSClass:[IOSClass classWithClass:[NSString class]] withNSString:@"STRING" withInt:0];
-    OrgJodaConvertJDKStringConverterEnum_CHAR_SEQUENCE = [[OrgJodaConvertJDKStringConverterEnum_$2 alloc] initWithIOSClass:[IOSClass classWithProtocol:@protocol(JavaLangCharSequence)] withNSString:@"CHAR_SEQUENCE" withInt:1];
-    OrgJodaConvertJDKStringConverterEnum_STRING_BUFFER = [[OrgJodaConvertJDKStringConverterEnum_$3 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangStringBuffer class]] withNSString:@"STRING_BUFFER" withInt:2];
-    OrgJodaConvertJDKStringConverterEnum_STRING_BUILDER = [[OrgJodaConvertJDKStringConverterEnum_$4 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangStringBuilder class]] withNSString:@"STRING_BUILDER" withInt:3];
-    OrgJodaConvertJDKStringConverterEnum_LONG = [[OrgJodaConvertJDKStringConverterEnum_$5 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangLong class]] withNSString:@"LONG" withInt:4];
-    OrgJodaConvertJDKStringConverterEnum_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$6 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangInteger class]] withNSString:@"INTEGER" withInt:5];
-    OrgJodaConvertJDKStringConverterEnum_SHORT = [[OrgJodaConvertJDKStringConverterEnum_$7 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangShort class]] withNSString:@"SHORT" withInt:6];
-    OrgJodaConvertJDKStringConverterEnum_BYTE = [[OrgJodaConvertJDKStringConverterEnum_$8 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangByte class]] withNSString:@"BYTE" withInt:7];
-    OrgJodaConvertJDKStringConverterEnum_BYTE_ARRAY = [[OrgJodaConvertJDKStringConverterEnum_$9 alloc] initWithIOSClass:[IOSByteArray iosClass] withNSString:@"BYTE_ARRAY" withInt:8];
-    OrgJodaConvertJDKStringConverterEnum_CHARACTER = [[OrgJodaConvertJDKStringConverterEnum_$10 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangCharacter class]] withNSString:@"CHARACTER" withInt:9];
-    OrgJodaConvertJDKStringConverterEnum_CHAR_ARRAY = [[OrgJodaConvertJDKStringConverterEnum_$11 alloc] initWithIOSClass:[IOSCharArray iosClass] withNSString:@"CHAR_ARRAY" withInt:10];
-    OrgJodaConvertJDKStringConverterEnum_BOOLEAN = [[OrgJodaConvertJDKStringConverterEnum_$12 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangBoolean class]] withNSString:@"BOOLEAN" withInt:11];
-    OrgJodaConvertJDKStringConverterEnum_DOUBLE = [[OrgJodaConvertJDKStringConverterEnum_$13 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangDouble class]] withNSString:@"DOUBLE" withInt:12];
-    OrgJodaConvertJDKStringConverterEnum_FLOAT = [[OrgJodaConvertJDKStringConverterEnum_$14 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangFloat class]] withNSString:@"FLOAT" withInt:13];
-    OrgJodaConvertJDKStringConverterEnum_BIG_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$15 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaMathBigInteger class]] withNSString:@"BIG_INTEGER" withInt:14];
-    OrgJodaConvertJDKStringConverterEnum_BIG_DECIMAL = [[OrgJodaConvertJDKStringConverterEnum_$16 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaMathBigDecimal class]] withNSString:@"BIG_DECIMAL" withInt:15];
-    OrgJodaConvertJDKStringConverterEnum_ATOMIC_LONG = [[OrgJodaConvertJDKStringConverterEnum_$17 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilConcurrentAtomicAtomicLong class]] withNSString:@"ATOMIC_LONG" withInt:16];
-    OrgJodaConvertJDKStringConverterEnum_ATOMIC_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$18 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilConcurrentAtomicAtomicInteger class]] withNSString:@"ATOMIC_INTEGER" withInt:17];
-    OrgJodaConvertJDKStringConverterEnum_ATOMIC_BOOLEAN = [[OrgJodaConvertJDKStringConverterEnum_$19 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilConcurrentAtomicAtomicBoolean class]] withNSString:@"ATOMIC_BOOLEAN" withInt:18];
-    OrgJodaConvertJDKStringConverterEnum_LOCALE = [[OrgJodaConvertJDKStringConverterEnum_$20 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilLocale class]] withNSString:@"LOCALE" withInt:19];
-    OrgJodaConvertJDKStringConverterEnum_CLASS = [[OrgJodaConvertJDKStringConverterEnum_$21 alloc] initWithIOSClass:[IOSClass classWithClass:[IOSClass class]] withNSString:@"CLASS" withInt:20];
-    OrgJodaConvertJDKStringConverterEnum_PACKAGE = [[OrgJodaConvertJDKStringConverterEnum_$22 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaLangPackage class]] withNSString:@"PACKAGE" withInt:21];
-    OrgJodaConvertJDKStringConverterEnum_CURRENCY = [[OrgJodaConvertJDKStringConverterEnum_$23 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilCurrency class]] withNSString:@"CURRENCY" withInt:22];
-    OrgJodaConvertJDKStringConverterEnum_TIME_ZONE = [[OrgJodaConvertJDKStringConverterEnum_$24 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilTimeZone class]] withNSString:@"TIME_ZONE" withInt:23];
-    OrgJodaConvertJDKStringConverterEnum_UUID = [[OrgJodaConvertJDKStringConverterEnum_$25 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilUUID class]] withNSString:@"UUID" withInt:24];
-    OrgJodaConvertJDKStringConverterEnum_URL = [[OrgJodaConvertJDKStringConverterEnum_$26 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaNetURL class]] withNSString:@"URL" withInt:25];
-    OrgJodaConvertJDKStringConverterEnum_URI = [[OrgJodaConvertJDKStringConverterEnum_$27 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaNetURI class]] withNSString:@"URI" withInt:26];
-    OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS = [[OrgJodaConvertJDKStringConverterEnum_$28 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaNetInetAddress class]] withNSString:@"INET_ADDRESS" withInt:27];
-    OrgJodaConvertJDKStringConverterEnum_FILE_ = [[OrgJodaConvertJDKStringConverterEnum_$29 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaIoFile class]] withNSString:@"FILE_" withInt:28];
-    OrgJodaConvertJDKStringConverterEnum_DATE = [[OrgJodaConvertJDKStringConverterEnum_$30 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilDate class]] withNSString:@"DATE" withInt:29];
-    OrgJodaConvertJDKStringConverterEnum_CALENDAR = [[OrgJodaConvertJDKStringConverterEnum_$31 alloc] initWithIOSClass:[IOSClass classWithClass:[JavaUtilCalendar class]] withNSString:@"CALENDAR" withInt:30];
+    OrgJodaConvertJDKStringConverterEnum_STRING = [[OrgJodaConvertJDKStringConverterEnum_$1 alloc] initWithIOSClass:NSString_class_() withNSString:@"STRING" withInt:0];
+    OrgJodaConvertJDKStringConverterEnum_CHAR_SEQUENCE = [[OrgJodaConvertJDKStringConverterEnum_$2 alloc] initWithIOSClass:JavaLangCharSequence_class_() withNSString:@"CHAR_SEQUENCE" withInt:1];
+    OrgJodaConvertJDKStringConverterEnum_STRING_BUFFER = [[OrgJodaConvertJDKStringConverterEnum_$3 alloc] initWithIOSClass:JavaLangStringBuffer_class_() withNSString:@"STRING_BUFFER" withInt:2];
+    OrgJodaConvertJDKStringConverterEnum_STRING_BUILDER = [[OrgJodaConvertJDKStringConverterEnum_$4 alloc] initWithIOSClass:JavaLangStringBuilder_class_() withNSString:@"STRING_BUILDER" withInt:3];
+    OrgJodaConvertJDKStringConverterEnum_LONG = [[OrgJodaConvertJDKStringConverterEnum_$5 alloc] initWithIOSClass:JavaLangLong_class_() withNSString:@"LONG" withInt:4];
+    OrgJodaConvertJDKStringConverterEnum_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$6 alloc] initWithIOSClass:JavaLangInteger_class_() withNSString:@"INTEGER" withInt:5];
+    OrgJodaConvertJDKStringConverterEnum_SHORT = [[OrgJodaConvertJDKStringConverterEnum_$7 alloc] initWithIOSClass:JavaLangShort_class_() withNSString:@"SHORT" withInt:6];
+    OrgJodaConvertJDKStringConverterEnum_BYTE = [[OrgJodaConvertJDKStringConverterEnum_$8 alloc] initWithIOSClass:JavaLangByte_class_() withNSString:@"BYTE" withInt:7];
+    OrgJodaConvertJDKStringConverterEnum_BYTE_ARRAY = [[OrgJodaConvertJDKStringConverterEnum_$9 alloc] initWithIOSClass:IOSClass_byteArray(1) withNSString:@"BYTE_ARRAY" withInt:8];
+    OrgJodaConvertJDKStringConverterEnum_CHARACTER = [[OrgJodaConvertJDKStringConverterEnum_$10 alloc] initWithIOSClass:JavaLangCharacter_class_() withNSString:@"CHARACTER" withInt:9];
+    OrgJodaConvertJDKStringConverterEnum_CHAR_ARRAY = [[OrgJodaConvertJDKStringConverterEnum_$11 alloc] initWithIOSClass:IOSClass_charArray(1) withNSString:@"CHAR_ARRAY" withInt:10];
+    OrgJodaConvertJDKStringConverterEnum_BOOLEAN = [[OrgJodaConvertJDKStringConverterEnum_$12 alloc] initWithIOSClass:JavaLangBoolean_class_() withNSString:@"BOOLEAN" withInt:11];
+    OrgJodaConvertJDKStringConverterEnum_DOUBLE = [[OrgJodaConvertJDKStringConverterEnum_$13 alloc] initWithIOSClass:JavaLangDouble_class_() withNSString:@"DOUBLE" withInt:12];
+    OrgJodaConvertJDKStringConverterEnum_FLOAT = [[OrgJodaConvertJDKStringConverterEnum_$14 alloc] initWithIOSClass:JavaLangFloat_class_() withNSString:@"FLOAT" withInt:13];
+    OrgJodaConvertJDKStringConverterEnum_BIG_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$15 alloc] initWithIOSClass:JavaMathBigInteger_class_() withNSString:@"BIG_INTEGER" withInt:14];
+    OrgJodaConvertJDKStringConverterEnum_BIG_DECIMAL = [[OrgJodaConvertJDKStringConverterEnum_$16 alloc] initWithIOSClass:JavaMathBigDecimal_class_() withNSString:@"BIG_DECIMAL" withInt:15];
+    OrgJodaConvertJDKStringConverterEnum_ATOMIC_LONG = [[OrgJodaConvertJDKStringConverterEnum_$17 alloc] initWithIOSClass:JavaUtilConcurrentAtomicAtomicLong_class_() withNSString:@"ATOMIC_LONG" withInt:16];
+    OrgJodaConvertJDKStringConverterEnum_ATOMIC_INTEGER = [[OrgJodaConvertJDKStringConverterEnum_$18 alloc] initWithIOSClass:JavaUtilConcurrentAtomicAtomicInteger_class_() withNSString:@"ATOMIC_INTEGER" withInt:17];
+    OrgJodaConvertJDKStringConverterEnum_ATOMIC_BOOLEAN = [[OrgJodaConvertJDKStringConverterEnum_$19 alloc] initWithIOSClass:JavaUtilConcurrentAtomicAtomicBoolean_class_() withNSString:@"ATOMIC_BOOLEAN" withInt:18];
+    OrgJodaConvertJDKStringConverterEnum_LOCALE = [[OrgJodaConvertJDKStringConverterEnum_$20 alloc] initWithIOSClass:JavaUtilLocale_class_() withNSString:@"LOCALE" withInt:19];
+    OrgJodaConvertJDKStringConverterEnum_CLASS = [[OrgJodaConvertJDKStringConverterEnum_$21 alloc] initWithIOSClass:IOSClass_class_() withNSString:@"CLASS" withInt:20];
+    OrgJodaConvertJDKStringConverterEnum_PACKAGE = [[OrgJodaConvertJDKStringConverterEnum_$22 alloc] initWithIOSClass:JavaLangPackage_class_() withNSString:@"PACKAGE" withInt:21];
+    OrgJodaConvertJDKStringConverterEnum_CURRENCY = [[OrgJodaConvertJDKStringConverterEnum_$23 alloc] initWithIOSClass:JavaUtilCurrency_class_() withNSString:@"CURRENCY" withInt:22];
+    OrgJodaConvertJDKStringConverterEnum_TIME_ZONE = [[OrgJodaConvertJDKStringConverterEnum_$24 alloc] initWithIOSClass:JavaUtilTimeZone_class_() withNSString:@"TIME_ZONE" withInt:23];
+    OrgJodaConvertJDKStringConverterEnum_UUID = [[OrgJodaConvertJDKStringConverterEnum_$25 alloc] initWithIOSClass:JavaUtilUUID_class_() withNSString:@"UUID" withInt:24];
+    OrgJodaConvertJDKStringConverterEnum_URL = [[OrgJodaConvertJDKStringConverterEnum_$26 alloc] initWithIOSClass:JavaNetURL_class_() withNSString:@"URL" withInt:25];
+    OrgJodaConvertJDKStringConverterEnum_URI = [[OrgJodaConvertJDKStringConverterEnum_$27 alloc] initWithIOSClass:JavaNetURI_class_() withNSString:@"URI" withInt:26];
+    OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS = [[OrgJodaConvertJDKStringConverterEnum_$28 alloc] initWithIOSClass:JavaNetInetAddress_class_() withNSString:@"INET_ADDRESS" withInt:27];
+    OrgJodaConvertJDKStringConverterEnum_FILE = [[OrgJodaConvertJDKStringConverterEnum_$29 alloc] initWithIOSClass:JavaIoFile_class_() withNSString:@"FILE" withInt:28];
+    OrgJodaConvertJDKStringConverterEnum_DATE = [[OrgJodaConvertJDKStringConverterEnum_$30 alloc] initWithIOSClass:JavaUtilDate_class_() withNSString:@"DATE" withInt:29];
+    OrgJodaConvertJDKStringConverterEnum_CALENDAR = [[OrgJodaConvertJDKStringConverterEnum_$31 alloc] initWithIOSClass:JavaUtilCalendar_class_() withNSString:@"CALENDAR" withInt:30];
     J2OBJC_SET_INITIALIZED(OrgJodaConvertJDKStringConverterEnum)
   }
 }
@@ -173,17 +190,19 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "URL", "URL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URL,  },
     { "URI", "URI", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URI,  },
     { "INET_ADDRESS", "INET_ADDRESS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS,  },
-    { "FILE_", NULL, 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FILE_,  },
+    { "FILE", "FILE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FILE,  },
     { "DATE", "DATE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_DATE,  },
     { "CALENDAR", "CALENDAR", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CALENDAR,  },
     { "type_", NULL, 0x2, "Ljava.lang.Class;", NULL,  },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.JDKStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum = { "JDKStringConverter", "org.joda.convert", NULL, 0x4400, 4, methods, 32, fields, 1, superclass_type_args};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum = { 1, "JDKStringConverter", "org.joda.convert", NULL, 0x4400, 4, methods, 32, fields, 1, superclass_type_args};
   return &_OrgJodaConvertJDKStringConverterEnum;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$1
 
@@ -203,11 +222,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$1 = { "$1", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$1 = { 1, "$1", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$1;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$1)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$2
 
@@ -227,11 +248,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$2 = { "$2", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$2 = { 1, "$2", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$2;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$2)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$3
 
@@ -251,11 +274,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$3 = { "$3", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$3 = { 1, "$3", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$3;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$3)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$4
 
@@ -275,11 +300,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$4 = { "$4", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$4 = { 1, "$4", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$4;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$4)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$5
 
@@ -299,11 +326,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$5 = { "$5", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$5 = { 1, "$5", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$5;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$5)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$6
 
@@ -323,11 +352,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$6 = { "$6", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$6 = { 1, "$6", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$6;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$6)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$7
 
@@ -347,11 +378,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$7 = { "$7", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$7 = { 1, "$7", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$7;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$7)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$8
 
@@ -371,11 +404,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$8 = { "$8", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$8 = { 1, "$8", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$8;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$8)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$9
 
@@ -400,11 +435,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$9 = { "$9", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$9 = { 1, "$9", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$9;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$9)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$10
 
@@ -427,11 +464,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$10 = { "$10", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$10 = { 1, "$10", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$10;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$10)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$11
 
@@ -456,11 +495,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$11 = { "$11", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$11 = { 1, "$11", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$11;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$11)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$12
 
@@ -486,11 +527,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$12 = { "$12", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$12 = { 1, "$12", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$12;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$12)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$13
 
@@ -510,11 +553,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$13 = { "$13", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$13 = { 1, "$13", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$13;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$13)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$14
 
@@ -534,11 +579,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$14 = { "$14", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$14 = { 1, "$14", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$14;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$14)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$15
 
@@ -558,11 +605,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$15 = { "$15", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$15 = { 1, "$15", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$15;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$15)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$16
 
@@ -582,11 +631,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$16 = { "$16", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$16 = { 1, "$16", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$16;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$16)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$17
 
@@ -607,11 +658,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$17 = { "$17", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$17 = { 1, "$17", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$17;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$17)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$18
 
@@ -632,11 +685,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$18 = { "$18", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$18 = { 1, "$18", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$18;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$18)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$19
 
@@ -662,11 +717,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$19 = { "$19", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$19 = { 1, "$19", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$19;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$19)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$20
 
@@ -695,11 +752,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$20 = { "$20", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$20 = { 1, "$20", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$20;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$20)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$21
 
@@ -729,11 +788,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$21 = { "$21", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$21 = { 1, "$21", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$21;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$21)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$22
 
@@ -758,11 +819,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$22 = { "$22", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$22 = { 1, "$22", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$22;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$22)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$23
 
@@ -782,11 +845,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$23 = { "$23", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$23 = { 1, "$23", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$23;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$23)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$24
 
@@ -811,11 +876,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$24 = { "$24", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$24 = { 1, "$24", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$24;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$24)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$25
 
@@ -835,11 +902,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$25 = { "$25", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$25 = { 1, "$25", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$25;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$25)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$26
 
@@ -864,11 +933,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$26 = { "$26", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$26 = { 1, "$26", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$26;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$26)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$27
 
@@ -888,11 +959,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$27 = { "$27", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$27 = { 1, "$27", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$27;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$27)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$28
 
@@ -922,11 +995,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$28 = { "$28", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$28 = { 1, "$28", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$28;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$28)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$29
 
@@ -946,11 +1021,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$29 = { "$29", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$29 = { 1, "$29", "org.joda.convert", "JDKStringConverter", 0xc010, 2, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$29;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$29)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$30
 
@@ -987,11 +1064,13 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$30 = { "$30", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$30 = { 1, "$30", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$30;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$30)
 
 @implementation OrgJodaConvertJDKStringConverterEnum_$31
 
@@ -1038,8 +1117,10 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL },
     { "initWithIOSClass:withNSString:withInt:", "init", NULL, 0x0, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$31 = { "$31", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum_$31 = { 1, "$31", "org.joda.convert", "JDKStringConverter", 0xc010, 3, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertJDKStringConverterEnum_$31;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum_$31)

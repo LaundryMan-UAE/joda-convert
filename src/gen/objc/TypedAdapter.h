@@ -9,7 +9,7 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "TypedStringConverter.h"
 
 /**
@@ -18,16 +18,10 @@
  @since 1.7
  */
 @interface OrgJodaConvertTypedAdapter : NSObject < OrgJodaConvertTypedStringConverter > {
- @public
-  id<OrgJodaConvertStringConverter> conv_;
-  IOSClass *effectiveType_;
 }
 
 + (id<OrgJodaConvertTypedStringConverter>)adaptWithIOSClass:(IOSClass *)cls
                           withOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)converter;
-
-- (instancetype)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
-                                         withIOSClass:(IOSClass *)effectiveType;
 
 - (NSString *)convertToStringWithId:(id)object;
 
@@ -38,16 +32,15 @@
 
 - (NSString *)description;
 
-- (void)dealloc;
-
-- (void)copyAllFieldsTo:(OrgJodaConvertTypedAdapter *)other;
-
 @end
 
-__attribute__((always_inline)) inline void OrgJodaConvertTypedAdapter_init() {}
+J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertTypedAdapter)
 
-J2OBJC_FIELD_SETTER(OrgJodaConvertTypedAdapter, conv_, id<OrgJodaConvertStringConverter>)
-J2OBJC_FIELD_SETTER(OrgJodaConvertTypedAdapter, effectiveType_, IOSClass *)
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT id<OrgJodaConvertTypedStringConverter> OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(IOSClass *cls, id<OrgJodaConvertStringConverter> converter);
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertTypedAdapter)
 
 #endif // _OrgJodaConvertTypedAdapter_H_

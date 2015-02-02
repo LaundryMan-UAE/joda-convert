@@ -4,6 +4,7 @@
 //
 
 #include "IOSClass.h"
+#include "J2ObjC_source.h"
 #include "StringConverter.h"
 #include "StringConverterFactory.h"
 
@@ -16,9 +17,10 @@
   static const J2ObjcMethodInfo methods[] = {
     { "findConverterWithIOSClass:", "findConverter", "Lorg.joda.convert.StringConverter;", 0x401, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertStringConverterFactory = { "StringConverterFactory", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertStringConverterFactory = { 1, "StringConverterFactory", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertStringConverterFactory;
 }
 
 @end
 
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConverterFactory)

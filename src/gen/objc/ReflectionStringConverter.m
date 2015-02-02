@@ -5,6 +5,7 @@
 
 #include "IOSClass.h"
 #include "IOSObjectArray.h"
+#include "J2ObjC_source.h"
 #include "ReflectionStringConverter.h"
 #include "java/lang/IllegalAccessException.h"
 #include "java/lang/IllegalStateException.h"
@@ -15,6 +16,22 @@
 
 #pragma clang diagnostic ignored "-Wprotocol"
 
+@interface OrgJodaConvertReflectionStringConverter () {
+ @public
+  /**
+   @brief The converted class.
+   */
+  IOSClass *cls_;
+  /**
+   @brief Conversion to a string.
+   */
+  JavaLangReflectMethod *toString__;
+}
+@end
+
+J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, cls_, IOSClass *)
+J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString__, JavaLangReflectMethod *)
+
 @implementation OrgJodaConvertReflectionStringConverter
 
 - (instancetype)initWithIOSClass:(IOSClass *)cls
@@ -23,7 +40,7 @@
     if (((IOSObjectArray *) nil_chk([((JavaLangReflectMethod *) nil_chk(toString)) getParameterTypes]))->size_ != 0) {
       @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must have no parameters: ", toString)] autorelease];
     }
-    if ([toString getReturnType] != [IOSClass classWithClass:[NSString class]]) {
+    if ([toString getReturnType] != NSString_class_()) {
       @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"ToString method must return a String: ", toString)] autorelease];
     }
     OrgJodaConvertReflectionStringConverter_set_cls_(self, cls);
@@ -34,7 +51,7 @@
 
 - (NSString *)convertToStringWithId:(id)object {
   @try {
-    return (NSString *) check_class_cast([((JavaLangReflectMethod *) nil_chk(toString__)) invokeWithId:object withNSObjectArray:[IOSObjectArray arrayWithLength:0 type:[IOSClass classWithClass:[NSObject class]]]], [NSString class]);
+    return (NSString *) check_class_cast([((JavaLangReflectMethod *) nil_chk(toString__)) invokeWithId:object withNSObjectArray:[IOSObjectArray arrayWithLength:0 type:NSObject_class_()]], [NSString class]);
   }
   @catch (JavaLangIllegalAccessException *ex) {
     @throw [[[JavaLangIllegalStateException alloc] initWithNSString:JreStrcat("$@", @"Method is not accessible: ", toString__)] autorelease];
@@ -52,8 +69,8 @@
 }
 
 - (void)dealloc {
-  OrgJodaConvertReflectionStringConverter_set_cls_(self, nil);
-  OrgJodaConvertReflectionStringConverter_set_toString__(self, nil);
+  RELEASE_(cls_);
+  RELEASE_(toString__);
   [super dealloc];
 }
 
@@ -73,8 +90,10 @@
     { "cls_", NULL, 0x12, "Ljava.lang.Class;", NULL,  },
     { "toString__", "toString", 0x12, "Ljava.lang.reflect.Method;", NULL,  },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertReflectionStringConverter = { "ReflectionStringConverter", "org.joda.convert", NULL, 0x400, 3, methods, 2, fields, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertReflectionStringConverter = { 1, "ReflectionStringConverter", "org.joda.convert", NULL, 0x400, 3, methods, 2, fields, 0, NULL};
   return &_OrgJodaConvertReflectionStringConverter;
 }
 
 @end
+
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertReflectionStringConverter)

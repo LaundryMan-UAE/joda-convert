@@ -4,6 +4,7 @@
 //
 
 #include "IOSClass.h"
+#include "J2ObjC_source.h"
 #include "TypedStringConverter.h"
 
 @interface OrgJodaConvertTypedStringConverter : NSObject
@@ -15,9 +16,10 @@
   static const J2ObjcMethodInfo methods[] = {
     { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x401, NULL },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertTypedStringConverter = { "TypedStringConverter", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
+  static const J2ObjcClassInfo _OrgJodaConvertTypedStringConverter = { 1, "TypedStringConverter", "org.joda.convert", NULL, 0x201, 1, methods, 0, NULL, 0, NULL};
   return &_OrgJodaConvertTypedStringConverter;
 }
 
 @end
 
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertTypedStringConverter)

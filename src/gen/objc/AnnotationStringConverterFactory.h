@@ -12,7 +12,7 @@
 @class OrgJodaConvertMethodsStringConverter;
 @protocol OrgJodaConvertStringConverter;
 
-#import "JreEmulation.h"
+#include "J2ObjC_header.h"
 #include "StringConverterFactory.h"
 
 /**
@@ -24,68 +24,12 @@
 }
 
 /**
- @brief Restricted constructor.
- */
-- (instancetype)init;
-
-/**
  @brief Finds a converter by type.
  @param cls the type to lookup, not null
  @return the converter, null if not found
  @throws RuntimeException (or subclass) if source code is invalid
  */
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls;
-
-/**
- @brief Finds a converter searching annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @return the converter, not null
- @throws RuntimeException if none found
- */
-- (id<OrgJodaConvertStringConverter>)findAnnotatedConverterWithIOSClass:(IOSClass *)cls;
-
-/**
- @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @return the method to call, null means use <code>toString</code>
- @throws RuntimeException if invalid
- */
-- (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls;
-
-/**
- @brief Finds the conversion method.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @param toString the toString method, not null
- @return the method to call, null means none found
- @throws RuntimeException if invalid
- */
-- (OrgJodaConvertMethodConstructorStringConverter *)findFromStringConstructorWithIOSClass:(IOSClass *)cls
-                                                                withJavaLangReflectMethod:(JavaLangReflectMethod *)toString;
-
-/**
- @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param toString the toString method, not null
- @param searchSuperclasses whether to search superclasses
- @return the method to call, null means not found
- @throws RuntimeException if invalid
- */
-- (OrgJodaConvertMethodsStringConverter *)findFromStringMethodWithIOSClass:(IOSClass *)cls
-                                                 withJavaLangReflectMethod:(JavaLangReflectMethod *)toString
-                                                               withBoolean:(jboolean)searchSuperclasses;
-
-/**
- @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param matched the matched method, may be null
- @return the method to call, null means not found
- @throws RuntimeException if invalid
- */
-- (JavaLangReflectMethod *)findFromStringWithIOSClass:(IOSClass *)cls;
-
-- (IOSClass *)eliminateEnumSubclassWithIOSClass:(IOSClass *)cls;
 
 - (NSString *)description;
 
@@ -94,7 +38,12 @@
 FOUNDATION_EXPORT BOOL OrgJodaConvertAnnotationStringConverterFactory_initialized;
 J2OBJC_STATIC_INIT(OrgJodaConvertAnnotationStringConverterFactory)
 
+CF_EXTERN_C_BEGIN
+
 FOUNDATION_EXPORT id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_;
 J2OBJC_STATIC_FIELD_GETTER(OrgJodaConvertAnnotationStringConverterFactory, INSTANCE_, id<OrgJodaConvertStringConverterFactory>)
+CF_EXTERN_C_END
+
+J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertAnnotationStringConverterFactory)
 
 #endif // _OrgJodaConvertAnnotationStringConverterFactory_H_
