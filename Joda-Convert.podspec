@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Joda-Convert"
   s.version          = '1.7'
-  s.author           = { "Andrew Ebling" => "andrew@laundrapp.com" }
+  s.author           = { "Michael Voong" => "michael@laundrapp.com" }
   s.source           = { :git => "https://github.com/hambroperks/joda-convert.git" }
   s.summary 	       = "Java library to enable conversion to and from standard string formats. Converted to Objective-C using J2ObjC."
   s.homepage         = "http://www.joda.org/joda-convert/"
