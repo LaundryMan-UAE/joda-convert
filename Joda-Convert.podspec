@@ -8,7 +8,6 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.txt' }
 
   s.ios.deployment_target = '7.0'
-  s.osx.deployment_target = '10.7'
   s.requires_arc = false
 
   s.dependency 'J2ObjC/lib/jre', '~> 0.9.6.1'
