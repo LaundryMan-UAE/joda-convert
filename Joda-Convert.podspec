@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = "Joda-Convert"
   s.version          = '1.7'
   s.author           = { "Michael Voong" => "michael@laundrapp.com" }
-  s.source           = { :git => "https://github.com/hambroperks/joda-convert.git", :tag => "v1.7-j2objc" }
+  s.source           = { :git => "https://github.com/hambroperks/joda-convert.git", :tag => "v1.7-j2objc0.9.7" }
   s.summary 	       = "Java library to enable conversion to and from standard string formats. Converted to Objective-C using J2ObjC."
   s.homepage         = "http://www.joda.org/joda-convert/"
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.txt' }
