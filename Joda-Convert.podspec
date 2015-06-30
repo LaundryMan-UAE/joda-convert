@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = false
 
-  s.dependency 'J2ObjC/lib/jre', '~> 0.9.6.1'
-  s.dependency 'J2ObjC/lib/jsr305', '~> 0.9.6.1'
-  s.dependency 'J2ObjC/lib/guava', '~> 0.9.6.1'
+  s.dependency 'J2ObjC/lib/jre', '~> 0.9.7'
+  s.dependency 'J2ObjC/lib/jsr305', '~> 0.9.7'
+  s.dependency 'J2ObjC/lib/guava', '~> 0.9.7'
 
   s.source_files = 'src/gen/objc/**/*.{h,m}'
 
