@@ -14,18 +14,24 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-/**
- @brief Factory for <code>StringConverter</code> providing support for Byte object array as a sequence of two letter hex codes for each byte plus '--' for null.
- <p> This is intended as a human readable format, not a compact format. <p> To use, simply register the instance with a <code>StringConvert</code> instance. <p> This class is immutable and thread-safe.
+/*!
+ @brief Factory for <code>StringConverter</code> providing support for Byte object array
+ as a sequence of two letter hex codes for each byte plus '--' for null.
+ <p>
+ This is intended as a human readable format, not a compact format.
+ <p>
+ To use, simply register the instance with a <code>StringConvert</code> instance.
+ <p>
+ This class is immutable and thread-safe.
  @since 1.5
  */
 @interface OrgJodaConvertFactoryByteObjectArrayStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory >
 
 #pragma mark Public
 
-/**
+/*!
  @brief Finds a converter by type.
- @param cls the type to lookup, not null
+ @param cls  the type to lookup, not null
  @return the converter, null if not found
  @throws RuntimeException (or subclass) if source code is invalid
  */

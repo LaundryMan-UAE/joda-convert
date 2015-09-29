@@ -13,7 +13,7 @@
 
 @interface OrgJodaConvertEnumStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -39,10 +39,12 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 
 @implementation OrgJodaConvertEnumStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertEnumStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   IOSClass *sup = [((IOSClass *) nil_chk(cls)) getSuperclass];
@@ -61,7 +63,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 
 + (void)initialize {
   if (self == [OrgJodaConvertEnumStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertEnumStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertEnumStringConverterFactory_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertEnumStringConverterFactory_INSTANCE_, new_OrgJodaConvertEnumStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertEnumStringConverterFactory)
   }
 }
@@ -73,7 +75,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x18, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertEnumStringConverterFactory_INSTANCE_, NULL,  },
+    { "INSTANCE_", NULL, 0x18, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertEnumStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
   };
   static const char *inner_classes[] = {"Lorg.joda.convert.EnumStringConverterFactory$EnumStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertEnumStringConverterFactory = { 2, "EnumStringConverterFactory", "org.joda.convert", NULL, 0x10, 3, methods, 1, fields, 0, NULL, 1, inner_classes, NULL, NULL };
@@ -108,7 +110,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
 
 - (JavaLangEnum *)convertFromStringWithIOSClass:(IOSClass *)cls
                                    withNSString:(NSString *)str {
-  return [((OrgJodaConvertRenameHandler *) nil_chk(OrgJodaConvertRenameHandler_get_INSTANCE_())) lookupEnumWithIOSClass:cls withNSString:str];
+  return [((OrgJodaConvertRenameHandler *) nil_chk(JreLoadStatic(OrgJodaConvertRenameHandler, INSTANCE_))) lookupEnumWithIOSClass:cls withNSString:str];
 }
 
 - (IOSClass *)getEffectiveType {
@@ -128,7 +130,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
     { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;",  },
+    { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;", .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertEnumStringConverterFactory_EnumStringConverter = { 2, "EnumStringConverter", "org.joda.convert", "EnumStringConverterFactory", 0x10, 4, methods, 1, fields, 0, NULL, 0, NULL, NULL, "Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<Ljava/lang/Enum<*>;>;" };
   return &_OrgJodaConvertEnumStringConverterFactory_EnumStringConverter;
@@ -138,7 +140,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
 
 void OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *self, OrgJodaConvertEnumStringConverterFactory *outer$, IOSClass *effectiveType) {
   NSObject_init(self);
-  OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_set_effectiveType_(self, effectiveType);
+  JreStrongAssign(&self->effectiveType_, effectiveType);
 }
 
 OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *new_OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(OrgJodaConvertEnumStringConverterFactory *outer$, IOSClass *effectiveType) {

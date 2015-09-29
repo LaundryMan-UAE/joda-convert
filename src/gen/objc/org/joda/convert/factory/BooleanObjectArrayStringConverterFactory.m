@@ -18,7 +18,7 @@
 
 @interface OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -59,14 +59,16 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanObjectArray
 
 @implementation OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   if (cls == IOSClass_arrayType(JavaLangBoolean_class_(), 1)) {
-    return OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_get_INSTANCE();
+    return JreLoadStatic(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum, INSTANCE);
   }
   return nil;
 }
@@ -77,7 +79,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanObjectArray
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_, new_OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory)
   }
 }
@@ -89,7 +91,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanObjectArray
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_, NULL,  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
   };
   static const char *inner_classes[] = {"Lorg.joda.convert.factory.BooleanObjectArrayStringConverterFactory$BooleanArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory = { 2, "BooleanObjectArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 1, fields, 0, NULL, 1, inner_classes, NULL, NULL };
@@ -154,15 +156,15 @@ OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayString
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangBoolean_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangBoolean_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.BooleanObjectArrayStringConverterFactory$BooleanArrayStringConverter;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Boolean;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.BooleanObjectArrayStringConverterFactory$BooleanArrayStringConverter;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Boolean;", &OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.BooleanObjectArrayStringConverterFactory$BooleanArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum = { 2, "BooleanArrayStringConverter", "org.joda.convert.factory", "BooleanObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/BooleanObjectArrayStringConverterFactory$BooleanArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Boolean;;>;" };
@@ -193,16 +195,16 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_BooleanArrayStringConverterEnum, EMPTY_);
   }
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((jint) [str length]) type:JavaLangBoolean_class_()];
   for (jint i = 0; i < array->size_; i++) {
     jchar ch = [str charAtWithInt:i];
     if (ch == 'T') {
-      IOSObjectArray_Set(array, i, JavaLangBoolean_get_TRUE__());
+      IOSObjectArray_Set(array, i, JreLoadStatic(JavaLangBoolean, TRUE__));
     }
     else if (ch == 'F') {
-      IOSObjectArray_Set(array, i, JavaLangBoolean_get_FALSE__());
+      IOSObjectArray_Set(array, i, JreLoadStatic(JavaLangBoolean, FALSE__));
     }
     else if (ch == '-') {
       IOSObjectArray_Set(array, i, nil);

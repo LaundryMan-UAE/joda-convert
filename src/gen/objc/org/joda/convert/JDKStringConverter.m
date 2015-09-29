@@ -51,7 +51,7 @@
 
 @interface OrgJodaConvertJDKStringConverterEnum () {
  @public
-  /**
+  /*!
    @brief The type.
    */
   IOSClass *type_;
@@ -642,38 +642,38 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
     { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "STRING", "STRING", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING, NULL,  },
-    { "CHAR_SEQUENCE", "CHAR_SEQUENCE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHAR_SEQUENCE, NULL,  },
-    { "STRING_BUFFER", "STRING_BUFFER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING_BUFFER, NULL,  },
-    { "STRING_BUILDER", "STRING_BUILDER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING_BUILDER, NULL,  },
-    { "LONG", "LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_LONG, NULL,  },
-    { "INTEGER", "INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_INTEGER, NULL,  },
-    { "SHORT", "SHORT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_SHORT, NULL,  },
-    { "BYTE", "BYTE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BYTE, NULL,  },
-    { "BYTE_ARRAY", "BYTE_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BYTE_ARRAY, NULL,  },
-    { "CHARACTER", "CHARACTER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHARACTER, NULL,  },
-    { "CHAR_ARRAY", "CHAR_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHAR_ARRAY, NULL,  },
-    { "BOOLEAN", "BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BOOLEAN, NULL,  },
-    { "DOUBLE", "DOUBLE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_DOUBLE, NULL,  },
-    { "FLOAT", "FLOAT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FLOAT, NULL,  },
-    { "BIG_INTEGER", "BIG_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BIG_INTEGER, NULL,  },
-    { "BIG_DECIMAL", "BIG_DECIMAL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BIG_DECIMAL, NULL,  },
-    { "ATOMIC_LONG", "ATOMIC_LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_LONG, NULL,  },
-    { "ATOMIC_INTEGER", "ATOMIC_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_INTEGER, NULL,  },
-    { "ATOMIC_BOOLEAN", "ATOMIC_BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_BOOLEAN, NULL,  },
-    { "LOCALE", "LOCALE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_LOCALE, NULL,  },
-    { "CLASS", "CLASS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CLASS, NULL,  },
-    { "PACKAGE", "PACKAGE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_PACKAGE, NULL,  },
-    { "CURRENCY", "CURRENCY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CURRENCY, NULL,  },
-    { "TIME_ZONE", "TIME_ZONE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_TIME_ZONE, NULL,  },
-    { "UUID", "UUID", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_UUID, NULL,  },
-    { "URL", "URL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URL, NULL,  },
-    { "URI", "URI", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URI, NULL,  },
-    { "INET_ADDRESS", "INET_ADDRESS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS, NULL,  },
-    { "FILE", "FILE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FILE, NULL,  },
-    { "DATE", "DATE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_DATE, NULL,  },
-    { "CALENDAR", "CALENDAR", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CALENDAR, NULL,  },
-    { "type_", NULL, 0x2, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;",  },
+    { "STRING", "STRING", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING, NULL, .constantValue.asLong = 0 },
+    { "CHAR_SEQUENCE", "CHAR_SEQUENCE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHAR_SEQUENCE, NULL, .constantValue.asLong = 0 },
+    { "STRING_BUFFER", "STRING_BUFFER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING_BUFFER, NULL, .constantValue.asLong = 0 },
+    { "STRING_BUILDER", "STRING_BUILDER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_STRING_BUILDER, NULL, .constantValue.asLong = 0 },
+    { "LONG", "LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_LONG, NULL, .constantValue.asLong = 0 },
+    { "INTEGER", "INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_INTEGER, NULL, .constantValue.asLong = 0 },
+    { "SHORT", "SHORT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_SHORT, NULL, .constantValue.asLong = 0 },
+    { "BYTE", "BYTE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BYTE, NULL, .constantValue.asLong = 0 },
+    { "BYTE_ARRAY", "BYTE_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BYTE_ARRAY, NULL, .constantValue.asLong = 0 },
+    { "CHARACTER", "CHARACTER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHARACTER, NULL, .constantValue.asLong = 0 },
+    { "CHAR_ARRAY", "CHAR_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CHAR_ARRAY, NULL, .constantValue.asLong = 0 },
+    { "BOOLEAN", "BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BOOLEAN, NULL, .constantValue.asLong = 0 },
+    { "DOUBLE", "DOUBLE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_DOUBLE, NULL, .constantValue.asLong = 0 },
+    { "FLOAT", "FLOAT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FLOAT, NULL, .constantValue.asLong = 0 },
+    { "BIG_INTEGER", "BIG_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BIG_INTEGER, NULL, .constantValue.asLong = 0 },
+    { "BIG_DECIMAL", "BIG_DECIMAL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_BIG_DECIMAL, NULL, .constantValue.asLong = 0 },
+    { "ATOMIC_LONG", "ATOMIC_LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_LONG, NULL, .constantValue.asLong = 0 },
+    { "ATOMIC_INTEGER", "ATOMIC_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_INTEGER, NULL, .constantValue.asLong = 0 },
+    { "ATOMIC_BOOLEAN", "ATOMIC_BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_ATOMIC_BOOLEAN, NULL, .constantValue.asLong = 0 },
+    { "LOCALE", "LOCALE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_LOCALE, NULL, .constantValue.asLong = 0 },
+    { "CLASS", "CLASS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CLASS, NULL, .constantValue.asLong = 0 },
+    { "PACKAGE", "PACKAGE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_PACKAGE, NULL, .constantValue.asLong = 0 },
+    { "CURRENCY", "CURRENCY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CURRENCY, NULL, .constantValue.asLong = 0 },
+    { "TIME_ZONE", "TIME_ZONE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_TIME_ZONE, NULL, .constantValue.asLong = 0 },
+    { "UUID", "UUID", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_UUID, NULL, .constantValue.asLong = 0 },
+    { "URL", "URL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URL, NULL, .constantValue.asLong = 0 },
+    { "URI", "URI", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_URI, NULL, .constantValue.asLong = 0 },
+    { "INET_ADDRESS", "INET_ADDRESS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_INET_ADDRESS, NULL, .constantValue.asLong = 0 },
+    { "FILE", "FILE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_FILE, NULL, .constantValue.asLong = 0 },
+    { "DATE", "DATE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_DATE, NULL, .constantValue.asLong = 0 },
+    { "CALENDAR", "CALENDAR", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &OrgJodaConvertJDKStringConverterEnum_CALENDAR, NULL, .constantValue.asLong = 0 },
+    { "type_", NULL, 0x2, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;", .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.JDKStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverterEnum = { 2, "JDKStringConverter", "org.joda.convert", NULL, 0x4400, 3, methods, 32, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/JDKStringConverter;>;Lorg/joda/convert/TypedStringConverter<Ljava/lang/Object;>;" };
@@ -684,7 +684,7 @@ OrgJodaConvertJDKStringConverterEnum *OrgJodaConvertJDKStringConverterEnum_value
 
 void OrgJodaConvertJDKStringConverterEnum_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverterEnum *self, IOSClass *type, NSString *__name, jint __ordinal) {
   JavaLangEnum_initWithNSString_withInt_(self, __name, __ordinal);
-  OrgJodaConvertJDKStringConverterEnum_set_type_(self, type);
+  JreStrongAssign(&self->type_, type);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverterEnum)
@@ -1103,10 +1103,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11Enum)
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if ([@"true" equalsIgnoreCase:str]) {
-    return JavaLangBoolean_get_TRUE__();
+    return JreLoadStatic(JavaLangBoolean, TRUE__);
   }
   if ([@"false" equalsIgnoreCase:str]) {
-    return JavaLangBoolean_get_FALSE__();
+    return JreLoadStatic(JavaLangBoolean, FALSE__);
   }
   @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
 }
@@ -1363,10 +1363,10 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18Enum)
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if ([@"true" equalsIgnoreCase:str]) {
-    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(YES) autorelease];
+    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(true) autorelease];
   }
   if ([@"false" equalsIgnoreCase:str]) {
-    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(NO) autorelease];
+    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(false) autorelease];
   }
   @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
 }
@@ -1454,7 +1454,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20Enum)
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   @try {
-    return [((OrgJodaConvertRenameHandler *) nil_chk(OrgJodaConvertRenameHandler_get_INSTANCE_())) lookupTypeWithNSString:str];
+    return [((OrgJodaConvertRenameHandler *) nil_chk(JreLoadStatic(OrgJodaConvertRenameHandler, INSTANCE_))) lookupTypeWithNSString:str];
   }
   @catch (JavaLangClassNotFoundException *ex) {
     @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_(JreStrcat("$$", @"Unable to create type: ", str), ex) autorelease];
@@ -1860,7 +1860,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30Enum)
 @implementation OrgJodaConvertJDKStringConverter_$31Enum
 
 - (NSString *)convertToStringWithId:(id)object {
-  if ([object isKindOfClass:[JavaUtilGregorianCalendar class]] == NO) {
+  if ([object isKindOfClass:[JavaUtilGregorianCalendar class]] == false) {
     @throw [new_JavaLangRuntimeException_initWithNSString_(@"Unable to convert calendar as it is not a GregorianCalendar") autorelease];
   }
   JavaUtilGregorianCalendar *cal = (JavaUtilGregorianCalendar *) check_class_cast(object, [JavaUtilGregorianCalendar class]);

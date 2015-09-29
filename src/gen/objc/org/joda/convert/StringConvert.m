@@ -50,63 +50,60 @@
 
 @interface OrgJodaConvertStringConvert () {
  @public
-  /**
+  /*!
    @brief The list of factories.
    */
   JavaUtilConcurrentCopyOnWriteArrayList *factories_;
-  /**
+  /*!
    @brief The cache of converters.
    */
   id<JavaUtilConcurrentConcurrentMap> registered_;
 }
 
-/**
+/*!
  @brief Tries to register a class using the standard toString/parse pattern.
- @param className the class name, not null
+ @param className_  the class name, not null
  */
 - (void)tryRegisterWithNSString:(NSString *)className_
                    withNSString:(NSString *)fromStringMethodName;
 
-/**
+/*!
  @brief Finds a converter searching registered and annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
+ @param cls  the class to find a method for, not null
  @return the converter, null if no converter
  @throws RuntimeException if invalid
  */
 - (id<OrgJodaConvertTypedStringConverter>)findConverterQuietWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds a converter searching registered and annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
+ @param cls  the class to find a method for, not null
  @return the converter, not null
  @throws RuntimeException if invalid
  */
 - (id<OrgJodaConvertTypedStringConverter>)findAnyConverterWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param methodName the name of the method to find, not null
+ @param cls  the class to find a method for, not null
+ @param methodName  the name of the method to find, not null
  @return the method to call, null means use <code>toString</code>
  */
 - (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls
                                              withNSString:(NSString *)methodName;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param methodName the name of the method to find, not null
+ @param cls  the class to find a method for, not null
+ @param methodName  the name of the method to find, not null
  @return the method to call, null means use <code>toString</code>
  */
 - (JavaLangReflectMethod *)findFromStringMethodWithIOSClass:(IOSClass *)cls
                                                withNSString:(NSString *)methodName;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
+ @param cls  the class to find a method for, not null
  @return the method to call, null means use <code>toString</code>
  */
 - (JavaLangReflectConstructor *)findFromStringConstructorByTypeWithIOSClass:(IOSClass *)cls;
@@ -194,10 +191,12 @@ OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_INSTANCE_;
   return OrgJodaConvertStringConvert_create();
 }
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertStringConvert_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (instancetype)initWithBoolean:(jboolean)includeJdkConverters
 withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
@@ -242,7 +241,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
     return cls != nil && OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls) != nil;
   }
   @catch (JavaLangRuntimeException *ex) {
-    return NO;
+    return false;
   }
 }
 
@@ -263,7 +262,7 @@ withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
 }
 
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterNoGenericsWithIOSClass:(IOSClass *)cls {
-  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls), @protocol(OrgJodaConvertTypedStringConverter));
+  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(OrgJodaConvertStringConvert_findConverterQuietWithIOSClass_(self, cls), OrgJodaConvertTypedStringConverter_class_());
   if (conv == nil) {
     @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"No registered converter found: ", cls)) autorelease];
   }
@@ -372,8 +371,8 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
 
 + (void)initialize {
   if (self == [OrgJodaConvertStringConvert class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertStringConvert_INSTANCE_, nil, new_OrgJodaConvertStringConvert_init());
-    JreStrongAssignAndConsume(&OrgJodaConvertStringConvert_CACHED_NULL_, nil, new_OrgJodaConvertStringConvert_$1_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertStringConvert_INSTANCE_, new_OrgJodaConvertStringConvert_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertStringConvert_CACHED_NULL_, new_OrgJodaConvertStringConvert_$1_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertStringConvert)
   }
 }
@@ -405,10 +404,10 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConvert;", &OrgJodaConvertStringConvert_INSTANCE_, NULL,  },
-    { "CACHED_NULL_", NULL, 0x1a, "Lorg.joda.convert.TypedStringConverter;", &OrgJodaConvertStringConvert_CACHED_NULL_, "Lorg/joda/convert/TypedStringConverter<*>;",  },
-    { "factories_", NULL, 0x12, "Ljava.util.concurrent.CopyOnWriteArrayList;", NULL, "Ljava/util/concurrent/CopyOnWriteArrayList<Lorg/joda/convert/StringConverterFactory;>;",  },
-    { "registered_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentMap;", NULL, "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Class<*>;Lorg/joda/convert/TypedStringConverter<*>;>;",  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConvert;", &OrgJodaConvertStringConvert_INSTANCE_, NULL, .constantValue.asLong = 0 },
+    { "CACHED_NULL_", NULL, 0x1a, "Lorg.joda.convert.TypedStringConverter;", &OrgJodaConvertStringConvert_CACHED_NULL_, "Lorg/joda/convert/TypedStringConverter<*>;", .constantValue.asLong = 0 },
+    { "factories_", NULL, 0x12, "Ljava.util.concurrent.CopyOnWriteArrayList;", NULL, "Ljava/util/concurrent/CopyOnWriteArrayList<Lorg/joda/convert/StringConverterFactory;>;", .constantValue.asLong = 0 },
+    { "registered_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentMap;", NULL, "Ljava/util/concurrent/ConcurrentMap<Ljava/lang/Class<*>;Lorg/joda/convert/TypedStringConverter<*>;>;", .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertStringConvert = { 2, "StringConvert", "org.joda.convert", NULL, 0x11, 23, methods, 4, fields, 0, NULL, 0, NULL, NULL, NULL };
   return &_OrgJodaConvertStringConvert;
@@ -418,11 +417,11 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
 
 OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_create() {
   OrgJodaConvertStringConvert_initialize();
-  return [new_OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(YES, [IOSObjectArray arrayWithObjects:(id[]){ OrgJodaConvertFactoryNumericArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanArrayStringConverterFactory_get_INSTANCE_(), OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory_get_INSTANCE_() } count:6 type:OrgJodaConvertStringConverterFactory_class_()]) autorelease];
+  return [new_OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(true, [IOSObjectArray arrayWithObjects:(id[]){ JreLoadStatic(OrgJodaConvertFactoryNumericArrayStringConverterFactory, INSTANCE_), JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, INSTANCE_), JreLoadStatic(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory, INSTANCE_), JreLoadStatic(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory, INSTANCE_), JreLoadStatic(OrgJodaConvertFactoryBooleanArrayStringConverterFactory, INSTANCE_), JreLoadStatic(OrgJodaConvertFactoryBooleanObjectArrayStringConverterFactory, INSTANCE_) } count:6 type:OrgJodaConvertStringConverterFactory_class_()]) autorelease];
 }
 
 void OrgJodaConvertStringConvert_init(OrgJodaConvertStringConvert *self) {
-  OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(self, YES, [IOSObjectArray arrayWithLength:0 type:OrgJodaConvertStringConverterFactory_class_()]);
+  OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(self, true, [IOSObjectArray arrayWithLength:0 type:OrgJodaConvertStringConverterFactory_class_()]);
 }
 
 OrgJodaConvertStringConvert *new_OrgJodaConvertStringConvert_init() {
@@ -433,8 +432,8 @@ OrgJodaConvertStringConvert *new_OrgJodaConvertStringConvert_init() {
 
 void OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(OrgJodaConvertStringConvert *self, jboolean includeJdkConverters, IOSObjectArray *factories) {
   NSObject_init(self);
-  OrgJodaConvertStringConvert_setAndConsume_factories_(self, new_JavaUtilConcurrentCopyOnWriteArrayList_init());
-  OrgJodaConvertStringConvert_setAndConsume_registered_(self, new_JavaUtilConcurrentConcurrentHashMap_init());
+  JreStrongAssignAndConsume(&self->factories_, new_JavaUtilConcurrentCopyOnWriteArrayList_init());
+  JreStrongAssignAndConsume(&self->registered_, new_JavaUtilConcurrentConcurrentHashMap_init());
   if (factories == nil) {
     @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"StringConverterFactory array must not be null") autorelease];
   }
@@ -453,14 +452,14 @@ void OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConvert
         [self->registered_ putWithId:[((OrgJodaConvertJDKStringConverterEnum *) nil_chk(conv)) getType] withId:conv];
       }
     }
-    [self->registered_ putWithId:JavaLangBoolean_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_BOOLEAN()];
-    [self->registered_ putWithId:JavaLangByte_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_BYTE()];
-    [self->registered_ putWithId:JavaLangShort_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_SHORT()];
-    [self->registered_ putWithId:JavaLangInteger_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_INTEGER()];
-    [self->registered_ putWithId:JavaLangLong_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_LONG()];
-    [self->registered_ putWithId:JavaLangFloat_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_FLOAT()];
-    [self->registered_ putWithId:JavaLangDouble_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_DOUBLE()];
-    [self->registered_ putWithId:JavaLangCharacter_get_TYPE_() withId:OrgJodaConvertJDKStringConverterEnum_get_CHARACTER()];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangBoolean, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, BOOLEAN)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangByte, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, BYTE)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangShort, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, SHORT)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangInteger, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, INTEGER)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangLong, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, LONG)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangFloat, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, FLOAT)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangDouble, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, DOUBLE)];
+    [self->registered_ putWithId:JreLoadStatic(JavaLangCharacter, TYPE_) withId:JreLoadStatic(OrgJodaConvertJDKStringConverterEnum, CHARACTER)];
     OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Instant", @"parse");
     OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.Duration", @"parse");
     OrgJodaConvertStringConvert_tryRegisterWithNSString_withNSString_(self, @"java.time.LocalDate", @"parse");
@@ -509,9 +508,9 @@ void OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConvert
   if (factories->size_ > 0) {
     [self->factories_ addAllWithJavaUtilCollection:JavaUtilArrays_asListWithNSObjectArray_(factories)];
   }
-  [self->factories_ addWithId:OrgJodaConvertAnnotationStringConverterFactory_get_INSTANCE_()];
+  [self->factories_ addWithId:JreLoadStatic(OrgJodaConvertAnnotationStringConverterFactory, INSTANCE_)];
   if (includeJdkConverters) {
-    [self->factories_ addWithId:OrgJodaConvertEnumStringConverterFactory_get_INSTANCE_()];
+    [self->factories_ addWithId:JreLoadStatic(OrgJodaConvertEnumStringConverterFactory, INSTANCE_)];
   }
 }
 
@@ -534,7 +533,7 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findConverter
   if (cls == nil) {
     @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Class must not be null") autorelease];
   }
-  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:cls], @protocol(OrgJodaConvertTypedStringConverter));
+  id<OrgJodaConvertTypedStringConverter> conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:cls], OrgJodaConvertTypedStringConverter_class_());
   if (conv == OrgJodaConvertStringConvert_CACHED_NULL_) {
     return nil;
   }
@@ -559,7 +558,7 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findAnyConver
   id<OrgJodaConvertTypedStringConverter> conv = nil;
   IOSClass *loopCls = [((IOSClass *) nil_chk(cls)) getSuperclass];
   while (loopCls != nil && conv == nil) {
-    conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopCls], @protocol(OrgJodaConvertTypedStringConverter));
+    conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopCls], OrgJodaConvertTypedStringConverter_class_());
     if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
       return conv;
     }
@@ -571,14 +570,14 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertStringConvert_findAnyConver
     IOSClass * const *e__ = b__ + a__->size_;
     while (b__ < e__) {
       IOSClass *loopIfc = *b__++;
-      conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopIfc], @protocol(OrgJodaConvertTypedStringConverter));
+      conv = (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast([((id<JavaUtilConcurrentConcurrentMap>) nil_chk(self->registered_)) getWithId:loopIfc], OrgJodaConvertTypedStringConverter_class_());
       if (conv != nil && conv != OrgJodaConvertStringConvert_CACHED_NULL_) {
         return conv;
       }
     }
   }
   for (id<OrgJodaConvertStringConverterFactory> __strong factory in nil_chk(self->factories_)) {
-    id<OrgJodaConvertStringConverter> factoryConv = (id<OrgJodaConvertStringConverter>) check_protocol_cast([((id<OrgJodaConvertStringConverterFactory>) nil_chk(factory)) findConverterWithIOSClass:cls], @protocol(OrgJodaConvertStringConverter));
+    id<OrgJodaConvertStringConverter> factoryConv = (id<OrgJodaConvertStringConverter>) check_protocol_cast([((id<OrgJodaConvertStringConverterFactory>) nil_chk(factory)) findConverterWithIOSClass:cls], OrgJodaConvertStringConverter_class_());
     if (factoryConv != nil) {
       return OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(cls, factoryConv);
     }
@@ -613,7 +612,7 @@ JavaLangReflectMethod *OrgJodaConvertStringConvert_findFromStringMethodWithIOSCl
       @throw [new_JavaLangIllegalArgumentException_initWithNSString_withJavaLangThrowable_(@"Method not found", ex2) autorelease];
     }
   }
-  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers]) == NO) {
+  if (JavaLangReflectModifier_isStaticWithInt_([((JavaLangReflectMethod *) nil_chk(m)) getModifiers]) == false) {
     @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Method must be static: ", methodName)) autorelease];
   }
   return m;
@@ -650,10 +649,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert)
   return nil;
 }
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertStringConvert_$1_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcMethodInfo methods[] = {
@@ -703,8 +704,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert_$1)
 }
 
 - (void)dealloc {
-  if (val$toString_ != self) RELEASE_(val$toString_);
-  if (val$fromString_ != self) RELEASE_(val$fromString_);
+  RELEASE_(val$toString_);
+  RELEASE_(val$fromString_);
   RELEASE_(val$cls_);
   [super dealloc];
 }
@@ -717,9 +718,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert_$1)
     { "initWithOrgJodaConvertToStringConverter:withOrgJodaConvertFromStringConverter:withIOSClass:", "", NULL, 0x0, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "val$toString_", NULL, 0x1012, "Lorg.joda.convert.ToStringConverter;", NULL, "Lorg/joda/convert/ToStringConverter<TT;>;",  },
-    { "val$fromString_", NULL, 0x1012, "Lorg.joda.convert.FromStringConverter;", NULL, "Lorg/joda/convert/FromStringConverter<TT;>;",  },
-    { "val$cls_", NULL, 0x1012, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<TT;>;",  },
+    { "val$toString_", NULL, 0x1012, "Lorg.joda.convert.ToStringConverter;", NULL, "Lorg/joda/convert/ToStringConverter<TT;>;", .constantValue.asLong = 0 },
+    { "val$fromString_", NULL, 0x1012, "Lorg.joda.convert.FromStringConverter;", NULL, "Lorg/joda/convert/FromStringConverter<TT;>;", .constantValue.asLong = 0 },
+    { "val$cls_", NULL, 0x1012, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<TT;>;", .constantValue.asLong = 0 },
   };
   static const J2ObjCEnclosingMethodInfo enclosing_method = { "OrgJodaConvertStringConvert", "register__WithIOSClass:withOrgJodaConvertToStringConverter:withOrgJodaConvertFromStringConverter:" };
   static const J2ObjcClassInfo _OrgJodaConvertStringConvert_$2 = { 2, "", "org.joda.convert", "StringConvert", 0x8008, 4, methods, 3, fields, 0, NULL, 0, NULL, &enclosing_method, "Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<TT;>;" };
@@ -729,9 +730,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert_$1)
 @end
 
 void OrgJodaConvertStringConvert_$2_initWithOrgJodaConvertToStringConverter_withOrgJodaConvertFromStringConverter_withIOSClass_(OrgJodaConvertStringConvert_$2 *self, id<OrgJodaConvertToStringConverter> capture$0, id<OrgJodaConvertFromStringConverter> capture$1, IOSClass *capture$2) {
-  OrgJodaConvertStringConvert_$2_set_val$toString_(self, capture$0);
-  OrgJodaConvertStringConvert_$2_set_val$fromString_(self, capture$1);
-  OrgJodaConvertStringConvert_$2_set_val$cls_(self, capture$2);
+  JreStrongAssign(&self->val$toString_, capture$0);
+  JreStrongAssign(&self->val$fromString_, capture$1);
+  JreStrongAssign(&self->val$cls_, capture$2);
   NSObject_init(self);
 }
 

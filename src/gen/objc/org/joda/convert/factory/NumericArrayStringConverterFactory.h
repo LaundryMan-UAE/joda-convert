@@ -15,18 +15,22 @@
 @class JavaUtilRegexPattern;
 @protocol OrgJodaConvertStringConverter;
 
-/**
- @brief Factory for <code>StringConverter</code> providing support for primitive arrays as a comma separated list.
- <p> To use, simply register the instance with a <code>StringConvert</code> instance. <p> This class is immutable and thread-safe.
+/*!
+ @brief Factory for <code>StringConverter</code> providing support for primitive arrays
+ as a comma separated list.
+ <p>
+ To use, simply register the instance with a <code>StringConvert</code> instance.
+ <p>
+ This class is immutable and thread-safe.
  @since 1.5
  */
 @interface OrgJodaConvertFactoryNumericArrayStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory >
 
 #pragma mark Public
 
-/**
+/*!
  @brief Finds a converter by type.
- @param cls the type to lookup, not null
+ @param cls  the type to lookup, not null
  @return the converter, null if not found
  @throws RuntimeException (or subclass) if source code is invalid
  */

@@ -11,9 +11,18 @@
 
 @class IOSClass;
 
-/**
- @brief Annotation used on a type to indicate that another class, the factory, provides the 'from string' method.
- <p> This annotation is applied at the type level, typically to an interface. It indicates the class which contains the relevant <code>FromString</code> annotation, which follows the normal rules. <p> For example, the interface <code>Foo</code> could be annotated to define its associated factory as being <code>FooFactory</code> . The <code>FooFactory</code> class would then be expected to provide a method returning <code>Foo</code> with a single <code>String</code> parameter, annotated with <code>FromString</code> .
+/*!
+ @brief Annotation used on a type to indicate that another class, the factory,
+ provides the 'from string' method.
+ <p>
+ This annotation is applied at the type level, typically to an interface.
+ It indicates the class which contains the relevant <code>FromString</code>
+ annotation, which follows the normal rules.
+ <p>
+ For example, the interface <code>Foo</code> could be annotated to define its
+ associated factory as being <code>FooFactory</code>. The <code>FooFactory</code>
+ class would then be expected to provide a method returning <code>Foo</code>
+ with a single <code>String</code> parameter, annotated with <code>FromString</code>.
  @since 1.4
  */
 @protocol OrgJodaConvertFromStringFactory < JavaLangAnnotationAnnotation >

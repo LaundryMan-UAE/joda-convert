@@ -21,7 +21,7 @@
 
 @interface OrgJodaConvertMethodConstructorStringConverter () {
  @public
-  /**
+  /*!
    @brief Conversion from a string.
    */
   JavaLangReflectConstructor *fromString_;
@@ -75,7 +75,7 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_,
     { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "fromString_", NULL, 0x12, "Ljava.lang.reflect.Constructor;", NULL, "Ljava/lang/reflect/Constructor<TT;>;",  },
+    { "fromString_", NULL, 0x12, "Ljava.lang.reflect.Constructor;", NULL, "Ljava/lang/reflect/Constructor<TT;>;", .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"TT;"};
   static const J2ObjcClassInfo _OrgJodaConvertMethodConstructorStringConverter = { 2, "MethodConstructorStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 1, fields, 1, superclass_type_args, 0, NULL, NULL, "<T:Ljava/lang/Object;>Lorg/joda/convert/ReflectionStringConverter<TT;>;" };
@@ -92,7 +92,7 @@ void OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLan
   if ([((JavaLangReflectConstructor *) nil_chk(fromString)) getDeclaringClass] != cls) {
     @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"FromString constructor must be defined on specified class: ", fromString)) autorelease];
   }
-  OrgJodaConvertMethodConstructorStringConverter_set_fromString_(self, fromString);
+  JreStrongAssign(&self->fromString_, fromString);
 }
 
 OrgJodaConvertMethodConstructorStringConverter *new_OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {

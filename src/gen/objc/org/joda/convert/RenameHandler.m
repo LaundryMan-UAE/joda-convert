@@ -19,17 +19,17 @@
 
 @interface OrgJodaConvertRenameHandler () {
  @public
-  /**
+  /*!
    @brief The type renames.
    */
   JavaUtilConcurrentConcurrentHashMap *typeRenames_;
-  /**
+  /*!
    @brief The enum renames.
    */
   JavaUtilConcurrentConcurrentHashMap *enumRenames_;
 }
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -57,10 +57,12 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_INSTANCE_;
   return OrgJodaConvertRenameHandler_create();
 }
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertRenameHandler_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)renamedTypeWithNSString:(NSString *)oldName
                    withIOSClass:(IOSClass *)currentValue {
@@ -137,7 +139,7 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_INSTANCE_;
   if (value != nil) {
     return [((IOSClass *) nil_chk(type)) cast:value];
   }
-  return ((JavaLangEnum *) JavaLangEnum_valueOfWithIOSClass_withNSString_(type, name));
+  return JavaLangEnum_valueOfWithIOSClass_withNSString_(type, name);
 }
 
 - (NSString *)description {
@@ -152,7 +154,7 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_INSTANCE_;
 
 + (void)initialize {
   if (self == [OrgJodaConvertRenameHandler class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertRenameHandler_INSTANCE_, nil, new_OrgJodaConvertRenameHandler_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertRenameHandler_INSTANCE_, new_OrgJodaConvertRenameHandler_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertRenameHandler)
   }
 }
@@ -172,9 +174,9 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_INSTANCE_;
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.RenameHandler;", &OrgJodaConvertRenameHandler_INSTANCE_, NULL,  },
-    { "typeRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Class<*>;>;",  },
-    { "enumRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Class<*>;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Enum<*>;>;>;",  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.RenameHandler;", &OrgJodaConvertRenameHandler_INSTANCE_, NULL, .constantValue.asLong = 0 },
+    { "typeRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/String;Ljava/lang/Class<*>;>;", .constantValue.asLong = 0 },
+    { "enumRenames_", NULL, 0x12, "Ljava.util.concurrent.ConcurrentHashMap;", NULL, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Class<*>;Ljava/util/Map<Ljava/lang/String;Ljava/lang/Enum<*>;>;>;", .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertRenameHandler = { 2, "RenameHandler", "org.joda.convert", NULL, 0x11, 11, methods, 3, fields, 0, NULL, 0, NULL, NULL, NULL };
   return &_OrgJodaConvertRenameHandler;
@@ -189,8 +191,8 @@ OrgJodaConvertRenameHandler *OrgJodaConvertRenameHandler_create() {
 
 void OrgJodaConvertRenameHandler_init(OrgJodaConvertRenameHandler *self) {
   NSObject_init(self);
-  OrgJodaConvertRenameHandler_setAndConsume_typeRenames_(self, new_JavaUtilConcurrentConcurrentHashMap_initWithInt_withFloat_withInt_(16, 0.75f, 2));
-  OrgJodaConvertRenameHandler_setAndConsume_enumRenames_(self, new_JavaUtilConcurrentConcurrentHashMap_initWithInt_withFloat_withInt_(16, 0.75f, 2));
+  JreStrongAssignAndConsume(&self->typeRenames_, new_JavaUtilConcurrentConcurrentHashMap_initWithInt_withFloat_withInt_(16, 0.75f, 2));
+  JreStrongAssignAndConsume(&self->enumRenames_, new_JavaUtilConcurrentConcurrentHashMap_initWithInt_withFloat_withInt_(16, 0.75f, 2));
 }
 
 OrgJodaConvertRenameHandler *new_OrgJodaConvertRenameHandler_init() {

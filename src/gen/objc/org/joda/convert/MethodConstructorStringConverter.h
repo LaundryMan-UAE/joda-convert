@@ -13,19 +13,24 @@
 @class JavaLangReflectConstructor;
 @class JavaLangReflectMethod;
 
-/**
+/*!
  @brief Conversion to and from a string using a toString method and a fromString constructor.
- <p> The toString method must meet the following signature:<br /> <code>String anyName()</code> on Class T. <p> The fromString constructor must take a single <code>String</code> parameter. <p> MethodConstructorStringConverter is thread-safe and immutable.
- @param < T > the type of the converter
+ <p>
+ The toString method must meet the following signature:<br />
+ <code>String anyName()</code> on Class T.
+ <p>
+ The fromString constructor must take a single <code>String</code> parameter.
+ <p>
+ MethodConstructorStringConverter is thread-safe and immutable.
  */
 @interface OrgJodaConvertMethodConstructorStringConverter : OrgJodaConvertReflectionStringConverter
 
 #pragma mark Public
 
-/**
+/*!
  @brief Converts the <code>String</code> to an object.
- @param cls the class to convert to, not null
- @param str the string to convert, not null
+ @param cls  the class to convert to, not null
+ @param str  the string to convert, not null
  @return the converted object, may be null but generally not
  */
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -35,11 +40,11 @@
 
 #pragma mark Package-Private
 
-/**
+/*!
  @brief Creates an instance using a method and a constructor.
- @param cls the class this converts for, not null
- @param toString the toString method, not null
- @param fromString the fromString method, not null
+ @param cls  the class this converts for, not null
+ @param toString  the toString method, not null
+ @param fromString  the fromString method, not null
  @throws RuntimeException (or subclass) if the method signatures are invalid
  */
 - (instancetype)initWithIOSClass:(IOSClass *)cls

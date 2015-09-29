@@ -9,9 +9,15 @@
 #include "J2ObjC_header.h"
 #include "java/lang/annotation/Annotation.h"
 
-/**
- @brief Annotation used to mark a method as being suitable for converting an object to a standard format <code>String</code> .
- <p> This annotation should be applied to one method on a class. The method must not be static. It must take no parameters and return a <code>String</code> . The string format must be able to be parsed by the matching @@FromString on the same class. The format should be human readable and an industry standard where possible, for example ISO-8601 for dates and times.
+/*!
+ @brief Annotation used to mark a method as being suitable for converting an
+ object to a standard format <code>String</code>.
+ <p>
+ This annotation should be applied to one method on a class.
+ The method must not be static. It must take no parameters and return a <code>String</code>.
+ The string format must be able to be parsed by the matching @@FromString on
+ the same class. The format should be human readable and an industry standard
+ where possible, for example ISO-8601 for dates and times.
  */
 @protocol OrgJodaConvertToString < JavaLangAnnotationAnnotation >
 

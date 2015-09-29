@@ -58,7 +58,7 @@ __attribute__((unused)) static OrgJodaConvertTypedAdapter *new_OrgJodaConvertTyp
 }
 
 - (void)dealloc {
-  if (conv_ != self) RELEASE_(conv_);
+  RELEASE_(conv_);
   RELEASE_(effectiveType_);
   [super dealloc];
 }
@@ -73,8 +73,8 @@ __attribute__((unused)) static OrgJodaConvertTypedAdapter *new_OrgJodaConvertTyp
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "conv_", NULL, 0x12, "Lorg.joda.convert.StringConverter;", NULL, "Lorg/joda/convert/StringConverter<TT;>;",  },
-    { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;",  },
+    { "conv_", NULL, 0x12, "Lorg.joda.convert.StringConverter;", NULL, "Lorg/joda/convert/StringConverter<TT;>;", .constantValue.asLong = 0 },
+    { "effectiveType_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;", .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertTypedAdapter = { 2, "TypedAdapter", "org.joda.convert", NULL, 0x10, 6, methods, 2, fields, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<TT;>;" };
   return &_OrgJodaConvertTypedAdapter;
@@ -85,7 +85,7 @@ __attribute__((unused)) static OrgJodaConvertTypedAdapter *new_OrgJodaConvertTyp
 id<OrgJodaConvertTypedStringConverter> OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(IOSClass *cls, id<OrgJodaConvertStringConverter> converter) {
   OrgJodaConvertTypedAdapter_initialize();
   if ([OrgJodaConvertTypedStringConverter_class_() isInstance:converter]) {
-    return (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(converter, @protocol(OrgJodaConvertTypedStringConverter));
+    return (id<OrgJodaConvertTypedStringConverter>) check_protocol_cast(converter, OrgJodaConvertTypedStringConverter_class_());
   }
   else {
     return [new_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(converter, cls) autorelease];
@@ -94,8 +94,8 @@ id<OrgJodaConvertTypedStringConverter> OrgJodaConvertTypedAdapter_adaptWithIOSCl
 
 void OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(OrgJodaConvertTypedAdapter *self, id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType) {
   NSObject_init(self);
-  OrgJodaConvertTypedAdapter_set_conv_(self, conv);
-  OrgJodaConvertTypedAdapter_set_effectiveType_(self, effectiveType);
+  JreStrongAssign(&self->conv_, conv);
+  JreStrongAssign(&self->effectiveType_, effectiveType);
 }
 
 OrgJodaConvertTypedAdapter *new_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType) {

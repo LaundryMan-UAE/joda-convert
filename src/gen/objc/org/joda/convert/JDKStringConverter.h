@@ -46,8 +46,8 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter) {
   OrgJodaConvertJDKStringConverter_CALENDAR = 30,
 };
 
-/**
- @brief Conversion between JDK classes and a <code>String</code> .
+/*!
+ @brief Conversion between JDK classes and a <code>String</code>.
  */
 @interface OrgJodaConvertJDKStringConverterEnum : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter) {
 
 - (NSString *)convertToStringWithId:(id)object;
 
-/**
+/*!
  @brief Gets the type of the converter.
  @return the type, not null
  */
@@ -63,7 +63,7 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter) {
 
 #pragma mark Package-Private
 
-/**
+/*!
  @brief Gets the type of the converter.
  @return the type, not null
  */

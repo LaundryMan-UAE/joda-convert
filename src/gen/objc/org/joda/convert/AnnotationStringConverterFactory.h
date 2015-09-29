@@ -12,18 +12,19 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-/**
+/*!
  @brief Factory for <code>StringConverter</code> looking up annotations.
- <p> This class is immutable and thread-safe.
+ <p>
+ This class is immutable and thread-safe.
  @since 1.5
  */
 @interface OrgJodaConvertAnnotationStringConverterFactory : NSObject < OrgJodaConvertStringConverterFactory >
 
 #pragma mark Public
 
-/**
+/*!
  @brief Finds a converter by type.
- @param cls the type to lookup, not null
+ @param cls  the type to lookup, not null
  @return the converter, null if not found
  @throws RuntimeException (or subclass) if source code is invalid
  */

@@ -24,7 +24,7 @@
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -162,27 +162,29 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryNumericObjectArrayStringConverterFact
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   if ([((IOSClass *) nil_chk(cls)) isArray]) {
     if (cls == IOSClass_arrayType(JavaLangLong_class_(), 1)) {
-      return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_get_INSTANCE();
+      return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum, INSTANCE);
     }
     if (cls == IOSClass_arrayType(JavaLangInteger_class_(), 1)) {
-      return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_get_INSTANCE();
+      return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum, INSTANCE);
     }
     if (cls == IOSClass_arrayType(JavaLangShort_class_(), 1)) {
-      return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_get_INSTANCE();
+      return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum, INSTANCE);
     }
     if (cls == IOSClass_arrayType(JavaLangDouble_class_(), 1)) {
-      return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_get_INSTANCE();
+      return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum, INSTANCE);
     }
     if (cls == IOSClass_arrayType(JavaLangFloat_class_(), 1)) {
-      return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_get_INSTANCE();
+      return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum, INSTANCE);
     }
   }
   return nil;
@@ -194,8 +196,8 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryNumericObjectArrayStringConverterFact
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init());
-    JreStrongAssign(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_, nil, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_, new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init());
+    JreStrongAssign(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory)
   }
 }
@@ -207,8 +209,8 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryNumericObjectArrayStringConverterFact
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_, NULL,  },
-    { "DELIMITER_", NULL, 0x18, "Ljava.util.regex.Pattern;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_, NULL,  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
+    { "DELIMITER_", NULL, 0x18, "Ljava.util.regex.Pattern;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DELIMITER_, NULL, .constantValue.asLong = 0 },
   };
   static const char *inner_classes[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$LongArrayStringConverter;", "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$IntArrayStringConverter;", "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$ShortArrayStringConverter;", "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$DoubleArrayStringConverter;", "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$FloatArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory = { 2, "NumericObjectArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 2, fields, 0, NULL, 5, inner_classes, NULL, NULL };
@@ -273,15 +275,15 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringCon
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangLong_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangLong_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$LongArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Long;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$LongArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Long;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$LongArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum = { 2, "LongArrayStringConverter", "org.joda.convert.factory", "NumericObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/NumericObjectArrayStringConverterFactory$LongArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Long;;>;" };
@@ -313,12 +315,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverterEnum, EMPTY_);
   }
-  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_DELIMITER_())) splitWithJavaLangCharSequence:str];
+  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, DELIMITER_))) splitWithJavaLangCharSequence:str];
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((IOSObjectArray *) nil_chk(split))->size_ type:JavaLangLong_class_()];
   for (jint i = 0; i < split->size_; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == NO) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == false) {
       IOSObjectArray_Set(array, i, JavaLangLong_valueOfWithLong_(JavaLangLong_parseLongWithNSString_(IOSObjectArray_Get(split, i))));
     }
   }
@@ -403,15 +405,15 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConv
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangInteger_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangInteger_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$IntArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Integer;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$IntArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Integer;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$IntArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum = { 2, "IntArrayStringConverter", "org.joda.convert.factory", "NumericObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/NumericObjectArrayStringConverterFactory$IntArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Integer;;>;" };
@@ -443,12 +445,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverterEnum, EMPTY_);
   }
-  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_DELIMITER_())) splitWithJavaLangCharSequence:str];
+  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, DELIMITER_))) splitWithJavaLangCharSequence:str];
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((IOSObjectArray *) nil_chk(split))->size_ type:JavaLangInteger_class_()];
   for (jint i = 0; i < split->size_; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == NO) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == false) {
       IOSObjectArray_Set(array, i, JavaLangInteger_valueOfWithInt_(JavaLangInteger_parseIntWithNSString_(IOSObjectArray_Get(split, i))));
     }
   }
@@ -533,15 +535,15 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringCo
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangShort_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangShort_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$ShortArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Short;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$ShortArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Short;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$ShortArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum = { 2, "ShortArrayStringConverter", "org.joda.convert.factory", "NumericObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/NumericObjectArrayStringConverterFactory$ShortArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Short;;>;" };
@@ -573,12 +575,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverterEnum, EMPTY_);
   }
-  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_DELIMITER_())) splitWithJavaLangCharSequence:str];
+  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, DELIMITER_))) splitWithJavaLangCharSequence:str];
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((IOSObjectArray *) nil_chk(split))->size_ type:JavaLangShort_class_()];
   for (jint i = 0; i < split->size_; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == NO) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == false) {
       IOSObjectArray_Set(array, i, JavaLangShort_valueOfWithShort_(JavaLangShort_parseShortWithNSString_(IOSObjectArray_Get(split, i))));
     }
   }
@@ -663,15 +665,15 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringC
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangDouble_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangDouble_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$DoubleArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Double;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$DoubleArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Double;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$DoubleArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum = { 2, "DoubleArrayStringConverter", "org.joda.convert.factory", "NumericObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/NumericObjectArrayStringConverterFactory$DoubleArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Double;;>;" };
@@ -703,12 +705,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverterEnum, EMPTY_);
   }
-  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_DELIMITER_())) splitWithJavaLangCharSequence:str];
+  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, DELIMITER_))) splitWithJavaLangCharSequence:str];
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((IOSObjectArray *) nil_chk(split))->size_ type:JavaLangDouble_class_()];
   for (jint i = 0; i < split->size_; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == NO) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == false) {
       IOSObjectArray_Set(array, i, JavaLangDouble_valueOfWithDouble_(JavaLangDouble_parseDoubleWithNSString_(IOSObjectArray_Get(split, i))));
     }
   }
@@ -793,15 +795,15 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringCo
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangFloat_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangFloat_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$FloatArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Float;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$FloatArrayStringConverter;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Float;", &OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.NumericObjectArrayStringConverterFactory$FloatArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum = { 2, "FloatArrayStringConverter", "org.joda.convert.factory", "NumericObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/NumericObjectArrayStringConverterFactory$FloatArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Float;;>;" };
@@ -833,12 +835,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverterEnum, EMPTY_);
   }
-  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_get_DELIMITER_())) splitWithJavaLangCharSequence:str];
+  IOSObjectArray *split = [((JavaUtilRegexPattern *) nil_chk(JreLoadStatic(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory, DELIMITER_))) splitWithJavaLangCharSequence:str];
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((IOSObjectArray *) nil_chk(split))->size_ type:JavaLangFloat_class_()];
   for (jint i = 0; i < split->size_; i++) {
-    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == NO) {
+    if ([((NSString *) nil_chk(IOSObjectArray_Get(split, i))) isEqual:@"-"] == false) {
       IOSObjectArray_Set(array, i, JavaLangFloat_valueOfWithFloat_(JavaLangFloat_parseFloatWithNSString_(IOSObjectArray_Get(split, i))));
     }
   }

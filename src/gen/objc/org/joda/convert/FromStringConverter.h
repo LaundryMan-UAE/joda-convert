@@ -10,17 +10,18 @@
 
 @class IOSClass;
 
-/**
- @brief Interface defining conversion from a <code>String</code> .
- <p> FromStringConverter is an interface and must be implemented with care. Implementations must be immutable and thread-safe.
- @param < T > the type of the converter
+/*!
+ @brief Interface defining conversion from a <code>String</code>.
+ <p>
+ FromStringConverter is an interface and must be implemented with care.
+ Implementations must be immutable and thread-safe.
  */
 @protocol OrgJodaConvertFromStringConverter < NSObject, JavaObject >
 
-/**
- @brief Converts the specified object from a <code>String</code> .
- @param cls the class to convert to, not null
- @param str the string to convert, not null
+/*!
+ @brief Converts the specified object from a <code>String</code>.
+ @param cls  the class to convert to, not null
+ @param str  the string to convert, not null
  @return the converted object, may be null but generally not
  */
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls

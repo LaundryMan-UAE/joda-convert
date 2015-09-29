@@ -19,7 +19,7 @@
 
 @interface OrgJodaConvertFactoryByteObjectArrayStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -63,14 +63,16 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStr
 
 @implementation OrgJodaConvertFactoryByteObjectArrayStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   if (cls == IOSClass_arrayType(JavaLangByte_class_(), 1)) {
-    return OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_INSTANCE();
+    return JreLoadStatic(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, INSTANCE);
   }
   return nil;
 }
@@ -81,7 +83,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStr
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_, new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
   }
 }
@@ -93,7 +95,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStr
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_, NULL,  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
   };
   static const char *inner_classes[] = {"Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory = { 2, "ByteObjectArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 1, fields, 0, NULL, 1, inner_classes, NULL, NULL };
@@ -158,16 +160,16 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangByte_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangByte_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Byte;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_, NULL,  },
-    { "HEX_", NULL, 0x1a, "Ljava.lang.String;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_HEX_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Byte;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
+    { "HEX_", NULL, 0x1a, "Ljava.lang.String;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_HEX_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum = { 2, "ByteArrayStringConverter", "org.joda.convert.factory", "ByteObjectArrayStringConverterFactory", 0x4408, 0, NULL, 3, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Byte;;>;" };
@@ -195,7 +197,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
     }
     else {
       jint b = [((JavaLangByte *) nil_chk(IOSObjectArray_Get(array, i))) charValue];
-      [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:[((NSString *) nil_chk(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_())) charAtWithInt:URShift32((b & (jint) 0xF0), 4)]])) appendWithChar:[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_HEX_() charAtWithInt:b & (jint) 0x0F]];
+      [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:[((NSString *) nil_chk(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_HEX_)) charAtWithInt:JreURShift32((b & (jint) 0xF0), 4)]])) appendWithChar:[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_HEX_ charAtWithInt:b & (jint) 0x0F]];
     }
   }
   return [buf description];
@@ -204,7 +206,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverterEnum, EMPTY_);
   }
   if (((jint) [str length]) % 2 == 1) {
     @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Invalid Byte[] string") autorelease];

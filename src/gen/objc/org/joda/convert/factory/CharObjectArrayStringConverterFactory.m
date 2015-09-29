@@ -20,7 +20,7 @@
 
 @interface OrgJodaConvertFactoryCharObjectArrayStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
@@ -62,14 +62,16 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
 
 @implementation OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   if (cls == IOSClass_arrayType(JavaLangCharacter_class_(), 1)) {
-    return OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_get_INSTANCE();
+    return JreLoadStatic(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum, INSTANCE);
   }
   return nil;
 }
@@ -80,8 +82,8 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryCharObjectArrayStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_init());
-    JreStrongAssign(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_, nil, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_, new_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_init());
+    JreStrongAssign(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_, JavaUtilRegexPattern_compileWithNSString_(@"[,]"));
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory)
   }
 }
@@ -93,8 +95,8 @@ JavaUtilRegexPattern *OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_, NULL,  },
-    { "DELIMITER_", NULL, 0x18, "Ljava.util.regex.Pattern;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_, NULL,  },
+    { "INSTANCE_", NULL, 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
+    { "DELIMITER_", NULL, 0x18, "Ljava.util.regex.Pattern;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_DELIMITER_, NULL, .constantValue.asLong = 0 },
   };
   static const char *inner_classes[] = {"Lorg.joda.convert.factory.CharObjectArrayStringConverterFactory$CharecterArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryCharObjectArrayStringConverterFactory = { 2, "CharObjectArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 2, fields, 0, NULL, 1, inner_classes, NULL, NULL };
@@ -159,15 +161,15 @@ OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringC
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum class]) {
     OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_INSTANCE = new_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_$1Enum_initWithNSString_withInt_(@"INSTANCE", 0);
-    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_, nil, [IOSObjectArray newArrayWithLength:0 type:JavaLangCharacter_class_()]);
+    JreStrongAssignAndConsume(&OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_, [IOSObjectArray newArrayWithLength:0 type:JavaLangCharacter_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum)
   }
 }
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.CharObjectArrayStringConverterFactory$CharecterArrayStringConverter;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_INSTANCE, NULL,  },
-    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Character;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_, NULL,  },
+    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.CharObjectArrayStringConverterFactory$CharecterArrayStringConverter;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_INSTANCE, NULL, .constantValue.asLong = 0 },
+    { "EMPTY_", NULL, 0x1a, "[Ljava.lang.Character;", &OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_EMPTY_, NULL, .constantValue.asLong = 0 },
   };
   static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.CharObjectArrayStringConverterFactory$CharecterArrayStringConverter;"};
   static const J2ObjcClassInfo _OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum = { 2, "CharecterArrayStringConverter", "org.joda.convert.factory", "CharObjectArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/CharObjectArrayStringConverterFactory$CharecterArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Character;;>;" };
@@ -209,7 +211,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryCharObjectArrayStringConve
 - (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)cls
                                      withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) == 0) {
-    return OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum_get_EMPTY_();
+    return JreLoadStatic(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverterEnum, EMPTY_);
   }
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((jint) [str length]) type:JavaLangCharacter_class_()];
   jint arrayPos = 0;

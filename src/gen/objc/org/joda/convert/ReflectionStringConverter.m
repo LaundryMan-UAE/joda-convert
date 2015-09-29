@@ -18,11 +18,11 @@
 
 @interface OrgJodaConvertReflectionStringConverter () {
  @public
-  /**
+  /*!
    @brief The converted class.
    */
   IOSClass *cls_;
-  /**
+  /*!
    @brief Conversion to a string.
    */
   JavaLangReflectMethod *toString_;
@@ -73,8 +73,8 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "cls_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<TT;>;",  },
-    { "toString_", NULL, 0x12, "Ljava.lang.reflect.Method;", NULL, NULL,  },
+    { "cls_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<TT;>;", .constantValue.asLong = 0 },
+    { "toString_", NULL, 0x12, "Ljava.lang.reflect.Method;", NULL, NULL, .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertReflectionStringConverter = { 2, "ReflectionStringConverter", "org.joda.convert", NULL, 0x400, 3, methods, 2, fields, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<TT;>;" };
   return &_OrgJodaConvertReflectionStringConverter;
@@ -90,8 +90,8 @@ void OrgJodaConvertReflectionStringConverter_initWithIOSClass_withJavaLangReflec
   if ([toString getReturnType] != NSString_class_()) {
     @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"ToString method must return a String: ", toString)) autorelease];
   }
-  OrgJodaConvertReflectionStringConverter_set_cls_(self, cls);
-  OrgJodaConvertReflectionStringConverter_set_toString_(self, toString);
+  JreStrongAssign(&self->cls_, cls);
+  JreStrongAssign(&self->toString_, toString);
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertReflectionStringConverter)

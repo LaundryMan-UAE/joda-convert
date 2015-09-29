@@ -16,138 +16,233 @@
 @protocol OrgJodaConvertToStringConverter;
 @protocol OrgJodaConvertTypedStringConverter;
 
-/**
- @brief Manager for conversion to and from a <code>String</code> , acting as the main client interface.
- <p> Support is provided for conversions based on the StringConverter interface or the ToString and FromString annotations. <p> StringConvert is thread-safe with concurrent caches.
+/*!
+ @brief Manager for conversion to and from a <code>String</code>, acting as the main client interface.
+ <p>
+ Support is provided for conversions based on the <code>StringConverter</code> interface
+ or the <code>ToString</code> and <code>FromString</code> annotations.
+ <p>
+ StringConvert is thread-safe with concurrent caches.
  */
 @interface OrgJodaConvertStringConvert : NSObject
 
 #pragma mark Public
 
-/**
+/*!
  @brief Creates a new conversion manager including the JDK converters.
- <p> The convert instance is mutable in a thread-safe manner. Converters may be altered at any time, including the JDK converters. It is strongly recommended to only alter the converters before performing actual conversions.
+ <p>
+ The convert instance is mutable in a thread-safe manner.
+ Converters may be altered at any time, including the JDK converters.
+ It is strongly recommended to only alter the converters before performing
+ actual conversions.
  */
 - (instancetype)init;
 
-/**
+/*!
  @brief Creates a new conversion manager.
- <p> The convert instance is mutable in a thread-safe manner. Converters may be altered at any time, including the JDK converters. It is strongly recommended to only alter the converters before performing actual conversions. <p> If specified, the factories will be queried in the order specified.
- @param includeJdkConverters true to include the JDK converters
- @param factories optional array of factories to use, not null
+ <p>
+ The convert instance is mutable in a thread-safe manner.
+ Converters may be altered at any time, including the JDK converters.
+ It is strongly recommended to only alter the converters before performing
+ actual conversions.
+ <p>
+ If specified, the factories will be queried in the order specified.
+ @param includeJdkConverters  true to include the JDK converters
+ @param factories  optional array of factories to use, not null
  */
 - (instancetype)initWithBoolean:(jboolean)includeJdkConverters
 withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories;
 
-/**
- @brief Converts the specified object from a <code>String</code> .
- <p> This uses #findConverter to provide the converter.
- @param < T > the type to convert to
- @param cls the class to convert to, not null
- @param str the string to convert, null returns null
+/*!
+ @brief Converts the specified object from a <code>String</code>.
+ <p>
+ This uses <code>findConverter</code> to provide the converter.
+ @param cls  the class to convert to, not null
+ @param str  the string to convert, null returns null
  @return the converted object, may be null
  @throws RuntimeException (or subclass) if unable to convert
  */
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str;
 
-/**
- @brief Converts the specified object to a <code>String</code> .
- <p> This uses #findConverter to provide the converter. The class can be provided to select a more specific converter.
- @param cls the class to convert from, not null
- @param object the object to convert, null returns null
+/*!
+ @brief Converts the specified object to a <code>String</code>.
+ <p>
+ This uses <code>findConverter</code> to provide the converter.
+ The class can be provided to select a more specific converter.
+ @param cls  the class to convert from, not null
+ @param object  the object to convert, null returns null
  @return the converted string, may be null
  @throws RuntimeException (or subclass) if unable to convert
  */
 - (NSString *)convertToStringWithIOSClass:(IOSClass *)cls
                                    withId:(id)object;
 
-/**
- @brief Converts the specified object to a <code>String</code> .
- <p> This uses #findConverter to provide the converter.
- @param object the object to convert, null returns null
+/*!
+ @brief Converts the specified object to a <code>String</code>.
+ <p>
+ This uses <code>findConverter</code> to provide the converter.
+ @param object  the object to convert, null returns null
  @return the converted string, may be null
  @throws RuntimeException (or subclass) if unable to convert
  */
 - (NSString *)convertToStringWithId:(id)object;
 
-/**
+/*!
  @brief Creates a new conversion manager including the extended standard set of converters.
- <p> The returned converter is a new instance that includes additional converters: <ul> <li>JDK converters <li> NumericArrayStringConverterFactory <li> NumericObjectArrayStringConverterFactory <li> CharObjectArrayStringConverterFactory <li> ByteObjectArrayStringConverterFactory <li> BooleanArrayStringConverterFactory <li> BooleanObjectArrayStringConverterFactory </ul> <p> The convert instance is mutable in a thread-safe manner. Converters may be altered at any time, including the JDK converters. It is strongly recommended to only alter the converters before performing actual conversions.
+ <p>
+ The returned converter is a new instance that includes additional converters:
+ <ul>
+ <li>JDK converters
+ <li><code>NumericArrayStringConverterFactory</code>
+ <li><code>NumericObjectArrayStringConverterFactory</code>
+ <li><code>CharObjectArrayStringConverterFactory</code>
+ <li><code>ByteObjectArrayStringConverterFactory</code>
+ <li><code>BooleanArrayStringConverterFactory</code>
+ <li><code>BooleanObjectArrayStringConverterFactory</code>
+ </ul>
+ <p>
+ The convert instance is mutable in a thread-safe manner.
+ Converters may be altered at any time, including the JDK converters.
+ It is strongly recommended to only alter the converters before performing
+ actual conversions.
  @return the new converter, not null
  @since 1.5
  */
 + (OrgJodaConvertStringConvert *)create;
 
-/**
+/*!
  @brief Finds a suitable converter for the type.
- <p> This returns an instance of <code>StringConverter</code> for the specified class. This is designed for user code where the <code>Class</code> object generics is known. <p> The search algorithm first searches the registered converters in the class hierarchy and immediate parent interfaces. It then searches for <code>ToString</code> and <code>FromString</code> annotations on the specified class, class hierarchy or immediate parent interfaces. Finally, it handles <code>Enum</code> instances.
- @param < T > the type of the converter
- @param cls the class to find a converter for, not null
+ <p>
+ This returns an instance of <code>StringConverter</code> for the specified class.
+ This is designed for user code where the <code>Class</code> object generics is known.
+ <p>
+ The search algorithm first searches the registered converters in the
+ class hierarchy and immediate parent interfaces.
+ It then searches for <code>ToString</code> and <code>FromString</code> annotations on the
+ specified class, class hierarchy or immediate parent interfaces.
+ Finally, it handles <code>Enum</code> instances.
+ @param cls  the class to find a converter for, not null
  @return the converter, not null
  @throws RuntimeException (or subclass) if no converter found
  */
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds a suitable converter for the type with open generics.
- <p> This returns an instance of <code>StringConverter</code> for the specified class. This is designed for framework usage where the <code>Class</code> object generics are unknown'?'. The returned type is declared with <code>Object</code> instead of '?' to allow the ToStringConverter to be invoked. <p> The search algorithm first searches the registered converters in the class hierarchy and immediate parent interfaces. It then searches for <code>ToString</code> and <code>FromString</code> annotations on the specified class, class hierarchy or immediate parent interfaces. Finally, it handles <code>Enum</code> instances.
- @param cls the class to find a converter for, not null
+ <p>
+ This returns an instance of <code>StringConverter</code> for the specified class.
+ This is designed for framework usage where the <code>Class</code> object generics are unknown'?'.
+ The returned type is declared with <code>Object</code> instead of '?' to
+ allow the <code>ToStringConverter</code> to be invoked.
+ <p>
+ The search algorithm first searches the registered converters in the
+ class hierarchy and immediate parent interfaces.
+ It then searches for <code>ToString</code> and <code>FromString</code> annotations on the
+ specified class, class hierarchy or immediate parent interfaces.
+ Finally, it handles <code>Enum</code> instances.
+ @param cls  the class to find a converter for, not null
  @return the converter, using <code>Object</code> to avoid generics, not null
  @throws RuntimeException (or subclass) if no converter found
  @since 1.5
  */
 - (id<OrgJodaConvertStringConverter>)findConverterNoGenericsWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds a suitable converter for the type.
- <p> This returns an instance of <code>TypedStringConverter</code> for the specified class. This is designed for user code where the <code>Class</code> object generics is known. <p> The search algorithm first searches the registered converters in the class hierarchy and immediate parent interfaces. It then searches for <code>ToString</code> and <code>FromString</code> annotations on the specified class, class hierarchy or immediate parent interfaces. Finally, it handles <code>Enum</code> instances. <p> The returned converter may be queried for the effective type of the conversion. This can be used to find the best type to send in a serialized form. <p> NOTE: Changing the method return type of #findConverter(Class) would be source compatible but not binary compatible. As this is a low-level library, binary compatibility is important, hence the addition of this method.
- @param < T > the type of the converter
- @param cls the class to find a converter for, not null
+ <p>
+ This returns an instance of <code>TypedStringConverter</code> for the specified class.
+ This is designed for user code where the <code>Class</code> object generics is known.
+ <p>
+ The search algorithm first searches the registered converters in the
+ class hierarchy and immediate parent interfaces.
+ It then searches for <code>ToString</code> and <code>FromString</code> annotations on the
+ specified class, class hierarchy or immediate parent interfaces.
+ Finally, it handles <code>Enum</code> instances.
+ <p>
+ The returned converter may be queried for the effective type of the conversion.
+ This can be used to find the best type to send in a serialized form.
+ <p>
+ NOTE: Changing the method return type of <code>findConverter(Class)</code>
+ would be source compatible but not binary compatible. As this is a low-level
+ library, binary compatibility is important, hence the addition of this method.
+ @param cls  the class to find a converter for, not null
  @return the converter, not null
  @throws RuntimeException (or subclass) if no converter found
  @since 1.7
  */
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds a suitable converter for the type with open generics.
- <p> This returns an instance of <code>TypedStringConverter</code> for the specified class. This is designed for framework usage where the <code>Class</code> object generics are unknown'?'. The returned type is declared with <code>Object</code> instead of '?' to allow the ToStringConverter to be invoked. <p> The search algorithm first searches the registered converters in the class hierarchy and immediate parent interfaces. It then searches for <code>ToString</code> and <code>FromString</code> annotations on the specified class, class hierarchy or immediate parent interfaces. Finally, it handles <code>Enum</code> instances. <p> The returned converter may be queried for the effective type of the conversion. This can be used to find the best type to send in a serialized form. <p> NOTE: Changing the method return type of #findConverterNoGenerics(Class) would be source compatible but not binary compatible. As this is a low-level library, binary compatibility is important, hence the addition of this method.
- @param cls the class to find a converter for, not null
+ <p>
+ This returns an instance of <code>TypedStringConverter</code> for the specified class.
+ This is designed for framework usage where the <code>Class</code> object generics are unknown'?'.
+ The returned type is declared with <code>Object</code> instead of '?' to
+ allow the <code>ToStringConverter</code> to be invoked.
+ <p>
+ The search algorithm first searches the registered converters in the
+ class hierarchy and immediate parent interfaces.
+ It then searches for <code>ToString</code> and <code>FromString</code> annotations on the
+ specified class, class hierarchy or immediate parent interfaces.
+ Finally, it handles <code>Enum</code> instances.
+ <p>
+ The returned converter may be queried for the effective type of the conversion.
+ This can be used to find the best type to send in a serialized form.
+ <p>
+ NOTE: Changing the method return type of <code>findConverterNoGenerics(Class)</code>
+ would be source compatible but not binary compatible. As this is a low-level
+ library, binary compatibility is important, hence the addition of this method.
+ @param cls  the class to find a converter for, not null
  @return the converter, using <code>Object</code> to avoid generics, not null
  @throws RuntimeException (or subclass) if no converter found
  @since 1.7
  */
 - (id<OrgJodaConvertTypedStringConverter>)findTypedConverterNoGenericsWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Checks if a suitable converter exists for the type.
- <p> This performs the same checks as the <code>findConverter</code> methods. Calling this before <code>findConverter</code> will cache the converter. <p> Note that all exceptions, including developer errors are caught and hidden.
- @param cls the class to find a converter for, null returns false
+ <p>
+ This performs the same checks as the <code>findConverter</code> methods.
+ Calling this before <code>findConverter</code> will cache the converter.
+ <p>
+ Note that all exceptions, including developer errors are caught and hidden.
+ @param cls  the class to find a converter for, null returns false
  @return true if convertible
  @since 1.5
  */
 - (jboolean)isConvertibleWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Registers a converter for a specific type.
- <p> The converter will be used for subclasses unless overidden. <p> No new converters may be registered for the global singleton.
- @param < T > the type of the converter
- @param cls the class to register a converter for, not null
- @param converter the String converter, not null
+ <p>
+ The converter will be used for subclasses unless overidden.
+ <p>
+ No new converters may be registered for the global singleton.
+ @param cls  the class to register a converter for, not null
+ @param converter  the String converter, not null
  @throws IllegalArgumentException if the class or converter are null
  @throws IllegalStateException if trying to alter the global singleton
  */
 - (void)register__WithIOSClass:(IOSClass *)cls
 withOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)converter;
 
-/**
+/*!
  @brief Registers a converter for a specific type using two separate converters.
- <p> This method registers a converter for the specified class. It is primarily intended for use with JDK 1.8 method references or lambdas: <pre> sc.register(Distance.class, Distance::toString, Distance::parse); </pre> The converter will be used for subclasses unless overidden. <p> No new converters may be registered for the global singleton.
- @param < T > the type of the converter
- @param cls the class to register a converter for, not null
- @param toString the to String converter, typically a method reference, not null
- @param fromString the from String converter, typically a method reference, not null
+ <p>
+ This method registers a converter for the specified class.
+ It is primarily intended for use with JDK 1.8 method references or lambdas:
+ @code
+
+  sc.register(Distance.class, Distance::toString, Distance::parse);
+  
+@endcode
+ The converter will be used for subclasses unless overidden.
+ <p>
+ No new converters may be registered for the global singleton.
+ @param cls  the class to register a converter for, not null
+ @param toString  the to String converter, typically a method reference, not null
+ @param fromString  the from String converter, typically a method reference, not null
  @throws IllegalArgumentException if the class or converter are null
  @throws IllegalStateException if trying to alter the global singleton
  @since 1.3
@@ -156,34 +251,51 @@ withOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)converter;
 withOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)toString
 withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fromString;
 
-/**
+/*!
  @brief Registers a converter factory.
- <p> This will be registered ahead of all existing factories. <p> No new factories may be registered for the global singleton.
- @param factory the converter factory, not null
+ <p>
+ This will be registered ahead of all existing factories.
+ <p>
+ No new factories may be registered for the global singleton.
+ @param factory  the converter factory, not null
  @throws IllegalStateException if trying to alter the global singleton
  @since 1.5
  */
 - (void)registerFactoryWithOrgJodaConvertStringConverterFactory:(id<OrgJodaConvertStringConverterFactory>)factory;
 
-/**
+/*!
  @brief Registers a converter for a specific type by method and constructor.
- <p> This method allows the converter to be used when the target class cannot have annotations added. The two method name and constructor must obey the same rules as defined by the annotations ToString and FromString . The converter will be used for subclasses unless overidden. <p> No new converters may be registered for the global singleton. <p> For example, <code>convert.registerMethodConstructor(Distance.class, "toString");</code>
- @param < T > the type of the converter
- @param cls the class to register a converter for, not null
- @param toStringMethodName the name of the method converting to a string, not null
+ <p>
+ This method allows the converter to be used when the target class cannot have annotations added.
+ The two method name and constructor must obey the same rules as defined by the annotations
+ <code>ToString</code> and <code>FromString</code>.
+ The converter will be used for subclasses unless overidden.
+ <p>
+ No new converters may be registered for the global singleton.
+ <p>
+ For example, <code>convert.registerMethodConstructor(Distance.class, "toString");</code>
+ @param cls  the class to register a converter for, not null
+ @param toStringMethodName  the name of the method converting to a string, not null
  @throws IllegalArgumentException if the class or method name are null or invalid
  @throws IllegalStateException if trying to alter the global singleton
  */
 - (void)registerMethodConstructorWithIOSClass:(IOSClass *)cls
                                  withNSString:(NSString *)toStringMethodName;
 
-/**
+/*!
  @brief Registers a converter for a specific type by method names.
- <p> This method allows the converter to be used when the target class cannot have annotations added. The two method names must obey the same rules as defined by the annotations ToString and FromString . The converter will be used for subclasses unless overidden. <p> No new converters may be registered for the global singleton. <p> For example, <code>convert.registerMethods(Distance.class, "toString", "parse");</code>
- @param < T > the type of the converter
- @param cls the class to register a converter for, not null
- @param toStringMethodName the name of the method converting to a string, not null
- @param fromStringMethodName the name of the method converting from a string, not null
+ <p>
+ This method allows the converter to be used when the target class cannot have annotations added.
+ The two method names must obey the same rules as defined by the annotations
+ <code>ToString</code> and <code>FromString</code>.
+ The converter will be used for subclasses unless overidden.
+ <p>
+ No new converters may be registered for the global singleton.
+ <p>
+ For example, <code>convert.registerMethods(Distance.class, "toString", "parse");</code>
+ @param cls  the class to register a converter for, not null
+ @param toStringMethodName  the name of the method converting to a string, not null
+ @param fromStringMethodName  the name of the method converting from a string, not null
  @throws IllegalArgumentException if the class or method name are null or invalid
  @throws IllegalStateException if trying to alter the global singleton
  */
@@ -191,7 +303,7 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
                        withNSString:(NSString *)toStringMethodName
                        withNSString:(NSString *)fromStringMethodName;
 
-/**
+/*!
  @brief Returns a simple string representation of the object.
  @return the string representation, never null
  */

@@ -11,16 +11,18 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-/**
- @brief Factory for <code>StringConverter</code> that allows converters to be created dynamically or easily initialised.
- <p> Implementations must be immutable and thread-safe.
+/*!
+ @brief Factory for <code>StringConverter</code> that allows converters to be
+ created dynamically or easily initialised.
+ <p>
+ Implementations must be immutable and thread-safe.
  @since 1.5
  */
 @protocol OrgJodaConvertStringConverterFactory < NSObject, JavaObject >
 
-/**
+/*!
  @brief Finds a converter by type.
- @param cls the type to lookup, not null
+ @param cls  the type to lookup, not null
  @return the converter, null if not found
  @throws RuntimeException (or subclass) if source code is invalid
  */

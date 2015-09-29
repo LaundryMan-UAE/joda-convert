@@ -10,10 +10,11 @@
 #include "org/joda/convert/FromStringConverter.h"
 #include "org/joda/convert/ToStringConverter.h"
 
-/**
- @brief Interface defining conversion to and from a <code>String</code> .
- <p> StringConverter is an interface and must be implemented with care. Implementations must be immutable and thread-safe.
- @param < T > the type of the converter
+/*!
+ @brief Interface defining conversion to and from a <code>String</code>.
+ <p>
+ StringConverter is an interface and must be implemented with care.
+ Implementations must be immutable and thread-safe.
  */
 @protocol OrgJodaConvertStringConverter < OrgJodaConvertToStringConverter, OrgJodaConvertFromStringConverter, NSObject, JavaObject >
 

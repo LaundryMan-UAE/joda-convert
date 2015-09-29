@@ -23,44 +23,42 @@
 
 @interface OrgJodaConvertAnnotationStringConverterFactory ()
 
-/**
+/*!
  @brief Restricted constructor.
  */
 - (instancetype)init;
 
-/**
+/*!
  @brief Finds a converter searching annotated.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
+ @param cls  the class to find a method for, not null
  @return the converter, not null
  @throws RuntimeException if none found
  */
 - (id<OrgJodaConvertStringConverter>)findAnnotatedConverterWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param cls the class to find a method for, not null
+ @param cls  the class to find a method for, not null
  @return the method to call, null means use <code>toString</code>
  @throws RuntimeException if invalid
  */
 - (JavaLangReflectMethod *)findToStringMethodWithIOSClass:(IOSClass *)cls;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param < T > the type of the converter
- @param cls the class to find a method for, not null
- @param toString the toString method, not null
+ @param cls  the class to find a method for, not null
+ @param toString  the toString method, not null
  @return the method to call, null means none found
  @throws RuntimeException if invalid
  */
 - (OrgJodaConvertMethodConstructorStringConverter *)findFromStringConstructorWithIOSClass:(IOSClass *)cls
                                                                 withJavaLangReflectMethod:(JavaLangReflectMethod *)toString;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param toString the toString method, not null
- @param searchSuperclasses whether to search superclasses
+ @param cls  the class to find a method for, not null
+ @param toString  the toString method, not null
+ @param searchSuperclasses  whether to search superclasses
  @return the method to call, null means not found
  @throws RuntimeException if invalid
  */
@@ -68,10 +66,10 @@
                                                  withJavaLangReflectMethod:(JavaLangReflectMethod *)toString
                                                                withBoolean:(jboolean)searchSuperclasses;
 
-/**
+/*!
  @brief Finds the conversion method.
- @param cls the class to find a method for, not null
- @param matched the matched method, may be null
+ @param cls  the class to find a method for, not null
+ @param matched  the matched method, may be null
  @return the method to call, null means not found
  @throws RuntimeException if invalid
  */
@@ -103,10 +101,12 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
 
 @implementation OrgJodaConvertAnnotationStringConverterFactory
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   OrgJodaConvertAnnotationStringConverterFactory_init(self);
   return self;
 }
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (id<OrgJodaConvertStringConverter>)findConverterWithIOSClass:(IOSClass *)cls {
   return OrgJodaConvertAnnotationStringConverterFactory_findAnnotatedConverterWithIOSClass_(self, cls);
@@ -145,7 +145,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
 
 + (void)initialize {
   if (self == [OrgJodaConvertAnnotationStringConverterFactory class]) {
-    JreStrongAssignAndConsume(&OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_, nil, new_OrgJodaConvertAnnotationStringConverterFactory_init());
+    JreStrongAssignAndConsume(&OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_, new_OrgJodaConvertAnnotationStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertAnnotationStringConverterFactory)
   }
 }
@@ -163,7 +163,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
     { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE_", NULL, 0x18, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_, NULL,  },
+    { "INSTANCE_", NULL, 0x18, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertAnnotationStringConverterFactory_INSTANCE_, NULL, .constantValue.asLong = 0 },
   };
   static const J2ObjcClassInfo _OrgJodaConvertAnnotationStringConverterFactory = { 2, "AnnotationStringConverterFactory", "org.joda.convert", NULL, 0x10, 9, methods, 1, fields, 0, NULL, 0, NULL, NULL, NULL };
   return &_OrgJodaConvertAnnotationStringConverterFactory;
@@ -275,7 +275,7 @@ OrgJodaConvertMethodsStringConverter *OrgJodaConvertAnnotationStringConverterFac
     if (fromString != nil) {
       return [new_OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectMethod_withIOSClass_(cls, toString, fromString, loopCls) autorelease];
     }
-    if (searchSuperclasses == NO) {
+    if (searchSuperclasses == false) {
       break;
     }
     loopCls = [((IOSClass *) nil_chk(loopCls)) getSuperclass];

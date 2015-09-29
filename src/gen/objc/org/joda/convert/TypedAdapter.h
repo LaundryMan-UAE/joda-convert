@@ -12,9 +12,8 @@
 @class IOSClass;
 @protocol OrgJodaConvertStringConverter;
 
-/**
- @brief Adapts <code>StringConverter</code> to <code>TypedStringConverter</code> .
- @param < T > the type of the converter
+/*!
+ @brief Adapts <code>StringConverter</code> to <code>TypedStringConverter</code>.
  @since 1.7
  */
 @interface OrgJodaConvertTypedAdapter : NSObject < OrgJodaConvertTypedStringConverter >

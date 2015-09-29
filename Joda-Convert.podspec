@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             = "Joda-Convert"
   s.version          = '1.7'
   s.author           = { "Michael Voong" => "michael@laundrapp.com" }
-  s.source           = { :git => "https://github.com/hambroperks/joda-convert.git", :tag => "v1.7-j2objc0.9.7" }
+  s.source           = { :git => "https://github.com/hambroperks/joda-convert.git", :tag => "v1.7-j2objc0.9.8.2" }
   s.summary 	       = "Java library to enable conversion to and from standard string formats. Converted to Objective-C using J2ObjC."
   s.homepage         = "http://www.joda.org/joda-convert/"
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.txt' }
@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = false
 
-  s.dependency 'J2ObjC/lib/jre', '~> 0.9.7'
-  s.dependency 'J2ObjC/lib/jsr305', '~> 0.9.7'
-  s.dependency 'J2ObjC/lib/guava', '~> 0.9.7'
+  s.dependency 'J2ObjC/lib/jre', '~> 0.9.8.2'
+  s.dependency 'J2ObjC/lib/jsr305', '~> 0.9.8.2'
+  s.dependency 'J2ObjC/lib/guava', '~> 0.9.8.2'
 
   s.source_files = 'src/gen/objc/**/*.{h,m}'
 

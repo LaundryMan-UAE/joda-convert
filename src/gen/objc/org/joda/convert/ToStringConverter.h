@@ -8,16 +8,17 @@
 
 #include "J2ObjC_header.h"
 
-/**
- @brief Interface defining conversion to a <code>String</code> .
- <p> ToStringConverter is an interface and must be implemented with care. Implementations must be immutable and thread-safe.
- @param < T > the type of the converter
+/*!
+ @brief Interface defining conversion to a <code>String</code>.
+ <p>
+ ToStringConverter is an interface and must be implemented with care.
+ Implementations must be immutable and thread-safe.
  */
 @protocol OrgJodaConvertToStringConverter < NSObject, JavaObject >
 
-/**
- @brief Converts the specified object to a <code>String</code> .
- @param object the object to convert, not null
+/*!
+ @brief Converts the specified object to a <code>String</code>.
+ @param object  the object to convert, not null
  @return the converted string, may be null but generally not
  */
 - (NSString *)convertToStringWithId:(id)object;

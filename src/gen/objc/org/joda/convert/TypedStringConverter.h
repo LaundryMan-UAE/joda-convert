@@ -11,17 +11,21 @@
 
 @class IOSClass;
 
-/**
+/*!
  @brief Interface defining conversion to and from a <code>String</code> together with the type.
- <p> TypedStringConverter is an interface and must be implemented with care. Implementations must be immutable and thread-safe.
- @param < T > the type of the converter
+ <p>
+ TypedStringConverter is an interface and must be implemented with care.
+ Implementations must be immutable and thread-safe.
  @since 1.7
  */
 @protocol OrgJodaConvertTypedStringConverter < OrgJodaConvertStringConverter, NSObject, JavaObject >
 
-/**
+/*!
  @brief Gets the effective type that the converter works on.
- <p> For example, if a class declares the <code>FromString</code> and <code>ToString</code> then the effective type of the converter is that class. If a subclass is queried for a converter, then the effective type is that of the superclass.
+ <p>
+ For example, if a class declares the <code>FromString</code> and  <code>ToString</code>
+ then the effective type of the converter is that class. If a subclass is
+ queried for a converter, then the effective type is that of the superclass.
  @return the effective type
  */
 - (IOSClass *)getEffectiveType;
