@@ -28,6 +28,8 @@ __attribute__((unused)) static void OrgJodaConvertFactoryBooleanArrayStringConve
 
 __attribute__((unused)) static OrgJodaConvertFactoryBooleanArrayStringConverterFactory *new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertFactoryBooleanArrayStringConverterFactory *create_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init();
+
 inline IOSBooleanArray *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_get_EMPTY();
 static IOSBooleanArray *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, EMPTY, IOSBooleanArray *)
@@ -48,8 +50,6 @@ __attribute__((unused)) static void OrgJodaConvertFactoryBooleanArrayStringConve
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1)
 
@@ -110,6 +110,12 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory *new_OrgJodaConvertFacto
   return self;
 }
 
+OrgJodaConvertFactoryBooleanArrayStringConverterFactory *create_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init() {
+  OrgJodaConvertFactoryBooleanArrayStringConverterFactory *self = [[OrgJodaConvertFactoryBooleanArrayStringConverterFactory alloc] autorelease];
+  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init(self);
+  return self;
+}
+
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter)
@@ -117,12 +123,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_
 OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter *OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_values();
@@ -138,7 +138,13 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY, [IOSBooleanArray newArrayWithLength:0]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter)
   }
@@ -225,10 +231,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
   return IOSClass_booleanArray(1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -245,12 +250,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
 
 void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *self, NSString *__name, jint __ordinal) {
   OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-}
-
-OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *self = [OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1)

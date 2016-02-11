@@ -83,6 +83,8 @@ __attribute__((unused)) static void OrgJodaConvertAnnotationStringConverterFacto
 
 __attribute__((unused)) static OrgJodaConvertAnnotationStringConverterFactory *new_OrgJodaConvertAnnotationStringConverterFactory_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertAnnotationStringConverterFactory *create_OrgJodaConvertAnnotationStringConverterFactory_init();
+
 __attribute__((unused)) static id<OrgJodaConvertStringConverter> OrgJodaConvertAnnotationStringConverterFactory_findAnnotatedConverterWithIOSClass_(OrgJodaConvertAnnotationStringConverterFactory *self, IOSClass *cls);
 
 __attribute__((unused)) static JavaLangReflectMethod *OrgJodaConvertAnnotationStringConverterFactory_findToStringMethodWithIOSClass_(OrgJodaConvertAnnotationStringConverterFactory *self, IOSClass *cls);
@@ -177,6 +179,12 @@ void OrgJodaConvertAnnotationStringConverterFactory_init(OrgJodaConvertAnnotatio
 
 OrgJodaConvertAnnotationStringConverterFactory *new_OrgJodaConvertAnnotationStringConverterFactory_init() {
   OrgJodaConvertAnnotationStringConverterFactory *self = [OrgJodaConvertAnnotationStringConverterFactory alloc];
+  OrgJodaConvertAnnotationStringConverterFactory_init(self);
+  return self;
+}
+
+OrgJodaConvertAnnotationStringConverterFactory *create_OrgJodaConvertAnnotationStringConverterFactory_init() {
+  OrgJodaConvertAnnotationStringConverterFactory *self = [[OrgJodaConvertAnnotationStringConverterFactory alloc] autorelease];
   OrgJodaConvertAnnotationStringConverterFactory_init(self);
   return self;
 }

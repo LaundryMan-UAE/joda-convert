@@ -30,6 +30,8 @@ __attribute__((unused)) static void OrgJodaConvertFactoryByteObjectArrayStringCo
 
 __attribute__((unused)) static OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *create_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init();
+
 inline IOSObjectArray *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_get_EMPTY();
 static IOSObjectArray *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_EMPTY;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, EMPTY, IOSObjectArray *)
@@ -54,8 +56,6 @@ __attribute__((unused)) static void OrgJodaConvertFactoryByteObjectArrayStringCo
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1)
 
@@ -116,6 +116,12 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *new_OrgJodaConvertFa
   return self;
 }
 
+OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *create_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init() {
+  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *self = [[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory alloc] autorelease];
+  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init(self);
+  return self;
+}
+
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter)
@@ -123,12 +129,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryByteObjectArrayStringConverterFacto
 OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter *OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_values();
@@ -144,7 +144,13 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangByte_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter)
   }
@@ -238,10 +244,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
   return IOSClass_arrayType(JavaLangByte_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -258,12 +263,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
 
 void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *self, NSString *__name, jint __ordinal) {
   OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-}
-
-OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *self = [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1)

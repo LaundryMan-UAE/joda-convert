@@ -45,6 +45,8 @@ __attribute__((unused)) static void OrgJodaConvertRenameHandler_init(OrgJodaConv
 
 __attribute__((unused)) static OrgJodaConvertRenameHandler *new_OrgJodaConvertRenameHandler_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertRenameHandler *create_OrgJodaConvertRenameHandler_init();
+
 __attribute__((unused)) static IOSClass *OrgJodaConvertRenameHandler_loadTypeWithNSString_(OrgJodaConvertRenameHandler *self, NSString *fullName);
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertRenameHandler)
@@ -197,6 +199,12 @@ void OrgJodaConvertRenameHandler_init(OrgJodaConvertRenameHandler *self) {
 
 OrgJodaConvertRenameHandler *new_OrgJodaConvertRenameHandler_init() {
   OrgJodaConvertRenameHandler *self = [OrgJodaConvertRenameHandler alloc];
+  OrgJodaConvertRenameHandler_init(self);
+  return self;
+}
+
+OrgJodaConvertRenameHandler *create_OrgJodaConvertRenameHandler_init() {
+  OrgJodaConvertRenameHandler *self = [[OrgJodaConvertRenameHandler alloc] autorelease];
   OrgJodaConvertRenameHandler_init(self);
   return self;
 }

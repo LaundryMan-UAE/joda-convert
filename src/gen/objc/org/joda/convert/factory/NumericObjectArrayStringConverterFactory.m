@@ -35,6 +35,8 @@ __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStrin
 
 __attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory *create_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init();
+
 inline IOSObjectArray *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_get_EMPTY();
 static IOSObjectArray *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_EMPTY;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter, EMPTY, IOSObjectArray *)
@@ -55,8 +57,6 @@ __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStrin
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1)
 
@@ -81,8 +81,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryNumericObjectArrayStringConverterF
 
 __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1)
 
 inline IOSObjectArray *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_get_EMPTY();
@@ -105,8 +103,6 @@ __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStrin
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1)
 
@@ -131,8 +127,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryNumericObjectArrayStringConverterF
 
 __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1)
 
 inline IOSObjectArray *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_get_EMPTY();
@@ -155,8 +149,6 @@ __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStrin
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1)
 
@@ -234,6 +226,12 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory *new_OrgJodaConver
   return self;
 }
 
+OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory *create_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init() {
+  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory *self = [[OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory alloc] autorelease];
+  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_init(self);
+  return self;
+}
+
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter)
@@ -241,12 +239,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFa
 OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_values();
@@ -262,7 +254,13 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringCon
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangLong_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter)
   }
@@ -344,10 +342,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
   return IOSClass_arrayType(JavaLangLong_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -366,12 +363,6 @@ void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStri
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 *self = [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_$1)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter)
@@ -379,12 +370,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFa
 OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_values();
@@ -400,7 +385,13 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConv
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangInteger_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter)
   }
@@ -482,10 +473,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
   return IOSClass_arrayType(JavaLangInteger_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -504,12 +494,6 @@ void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStrin
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 *self = [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_$1)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter)
@@ -517,12 +501,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFa
 OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_values();
@@ -538,7 +516,13 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringCo
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangShort_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter)
   }
@@ -620,10 +604,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
   return IOSClass_arrayType(JavaLangShort_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -642,12 +625,6 @@ void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStr
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 *self = [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_$1)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter)
@@ -655,12 +632,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFa
 OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_values();
@@ -676,7 +647,13 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringC
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangDouble_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter)
   }
@@ -758,10 +735,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
   return IOSClass_arrayType(JavaLangDouble_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -780,12 +756,6 @@ void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArraySt
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
 
-OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 *self = [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_$1)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter)
@@ -793,12 +763,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryNumericObjectArrayStringConverterFa
 OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter *OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_values_[1];
 
 @implementation OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter
-
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
-}
 
 + (IOSObjectArray *)values {
   return OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_values();
@@ -814,7 +778,13 @@ OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringCo
 
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter class]) {
-    JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter, INSTANCE) = new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(@"INSTANCE", 0);
+    size_t allocSize = 0;
+    size_t objSize_INSTANCE = class_getInstanceSize([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 class]);
+    allocSize += objSize_INSTANCE;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangFloat_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter)
   }
@@ -896,10 +866,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
   return IOSClass_arrayType(JavaLangFloat_class_(), 1);
 }
 
-- (instancetype)initWithNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -916,12 +885,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringCo
 
 void OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 *self, NSString *__name, jint __ordinal) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
-}
-
-OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 *new_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(NSString *__name, jint __ordinal) {
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 *self = [OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1 alloc];
-  OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1_initWithNSString_withInt_(self, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_$1)

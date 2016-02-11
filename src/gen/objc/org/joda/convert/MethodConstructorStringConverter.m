@@ -11,7 +11,6 @@
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/InstantiationException.h"
 #include "java/lang/RuntimeException.h"
-#include "java/lang/Throwable.h"
 #include "java/lang/reflect/Constructor.h"
 #include "java/lang/reflect/InvocationTargetException.h"
 #include "java/lang/reflect/Method.h"
@@ -55,7 +54,7 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_,
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) cast_chk([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_([ex getMessage], [ex getCause]) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]) autorelease];
   }
 }
 
@@ -97,6 +96,12 @@ void OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLan
 
 OrgJodaConvertMethodConstructorStringConverter *new_OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {
   OrgJodaConvertMethodConstructorStringConverter *self = [OrgJodaConvertMethodConstructorStringConverter alloc];
+  OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(self, cls, toString, fromString);
+  return self;
+}
+
+OrgJodaConvertMethodConstructorStringConverter *create_OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {
+  OrgJodaConvertMethodConstructorStringConverter *self = [[OrgJodaConvertMethodConstructorStringConverter alloc] autorelease];
   OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(self, cls, toString, fromString);
   return self;
 }

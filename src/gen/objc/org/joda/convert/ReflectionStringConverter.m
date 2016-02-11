@@ -9,7 +9,6 @@
 #include "java/lang/IllegalAccessException.h"
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/RuntimeException.h"
-#include "java/lang/Throwable.h"
 #include "java/lang/reflect/InvocationTargetException.h"
 #include "java/lang/reflect/Method.h"
 #include "org/joda/convert/ReflectionStringConverter.h"
@@ -52,7 +51,7 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) cast_chk([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_([ex getMessage], [ex getCause]) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]) autorelease];
   }
 }
 

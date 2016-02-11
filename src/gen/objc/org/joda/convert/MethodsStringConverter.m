@@ -10,7 +10,6 @@
 #include "java/lang/IllegalAccessException.h"
 #include "java/lang/IllegalStateException.h"
 #include "java/lang/RuntimeException.h"
-#include "java/lang/Throwable.h"
 #include "java/lang/reflect/InvocationTargetException.h"
 #include "java/lang/reflect/Method.h"
 #include "java/lang/reflect/Modifier.h"
@@ -56,7 +55,7 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodsStringConverter, effectiveType_, IOSCla
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) cast_chk([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_([ex getMessage], [ex getCause]) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]) autorelease];
   }
 }
 
@@ -108,6 +107,12 @@ void OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMe
 
 OrgJodaConvertMethodsStringConverter *new_OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectMethod_withIOSClass_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectMethod *fromString, IOSClass *effectiveType) {
   OrgJodaConvertMethodsStringConverter *self = [OrgJodaConvertMethodsStringConverter alloc];
+  OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectMethod_withIOSClass_(self, cls, toString, fromString, effectiveType);
+  return self;
+}
+
+OrgJodaConvertMethodsStringConverter *create_OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectMethod_withIOSClass_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectMethod *fromString, IOSClass *effectiveType) {
+  OrgJodaConvertMethodsStringConverter *self = [[OrgJodaConvertMethodsStringConverter alloc] autorelease];
   OrgJodaConvertMethodsStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectMethod_withIOSClass_(self, cls, toString, fromString, effectiveType);
   return self;
 }

@@ -24,6 +24,8 @@ __attribute__((unused)) static void OrgJodaConvertEnumStringConverterFactory_ini
 
 __attribute__((unused)) static OrgJodaConvertEnumStringConverterFactory *new_OrgJodaConvertEnumStringConverterFactory_init() NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertEnumStringConverterFactory *create_OrgJodaConvertEnumStringConverterFactory_init();
+
 @interface OrgJodaConvertEnumStringConverterFactory_EnumStringConverter () {
  @public
   IOSClass *effectiveType_;
@@ -94,6 +96,12 @@ OrgJodaConvertEnumStringConverterFactory *new_OrgJodaConvertEnumStringConverterF
   return self;
 }
 
+OrgJodaConvertEnumStringConverterFactory *create_OrgJodaConvertEnumStringConverterFactory_init() {
+  OrgJodaConvertEnumStringConverterFactory *self = [[OrgJodaConvertEnumStringConverterFactory alloc] autorelease];
+  OrgJodaConvertEnumStringConverterFactory_init(self);
+  return self;
+}
+
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
 
 @implementation OrgJodaConvertEnumStringConverterFactory_EnumStringConverter
@@ -145,6 +153,12 @@ void OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJod
 
 OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *new_OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(OrgJodaConvertEnumStringConverterFactory *outer$, IOSClass *effectiveType) {
   OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *self = [OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc];
+  OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(self, outer$, effectiveType);
+  return self;
+}
+
+OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *create_OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(OrgJodaConvertEnumStringConverterFactory *outer$, IOSClass *effectiveType) {
+  OrgJodaConvertEnumStringConverterFactory_EnumStringConverter *self = [[OrgJodaConvertEnumStringConverterFactory_EnumStringConverter alloc] autorelease];
   OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(self, outer$, effectiveType);
   return self;
 }

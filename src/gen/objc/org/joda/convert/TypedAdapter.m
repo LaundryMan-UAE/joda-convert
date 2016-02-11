@@ -27,6 +27,8 @@ __attribute__((unused)) static void OrgJodaConvertTypedAdapter_initWithOrgJodaCo
 
 __attribute__((unused)) static OrgJodaConvertTypedAdapter *new_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType) NS_RETURNS_RETAINED;
 
+__attribute__((unused)) static OrgJodaConvertTypedAdapter *create_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType);
+
 @implementation OrgJodaConvertTypedAdapter
 
 + (id<OrgJodaConvertTypedStringConverter>)adaptWithIOSClass:(IOSClass *)cls
@@ -100,6 +102,12 @@ void OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSCla
 
 OrgJodaConvertTypedAdapter *new_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType) {
   OrgJodaConvertTypedAdapter *self = [OrgJodaConvertTypedAdapter alloc];
+  OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(self, conv, effectiveType);
+  return self;
+}
+
+OrgJodaConvertTypedAdapter *create_OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(id<OrgJodaConvertStringConverter> conv, IOSClass *effectiveType) {
+  OrgJodaConvertTypedAdapter *self = [[OrgJodaConvertTypedAdapter alloc] autorelease];
   OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(self, conv, effectiveType);
   return self;
 }

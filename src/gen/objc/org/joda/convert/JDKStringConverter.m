@@ -74,8 +74,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$1 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$1 *new_OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$1)
 
 @interface OrgJodaConvertJDKStringConverter_$2 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -88,8 +86,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$1)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$2)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$2 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$2 *new_OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$2)
 
@@ -104,8 +100,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$3)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$3 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$3 *new_OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$3)
 
 @interface OrgJodaConvertJDKStringConverter_$4 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -118,8 +112,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$3)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$4)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$4 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$4 *new_OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$4)
 
@@ -134,8 +126,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$5)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$5 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$5 *new_OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$5)
 
 @interface OrgJodaConvertJDKStringConverter_$6 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -148,8 +138,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$5)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$6)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$6 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$6 *new_OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$6)
 
@@ -164,8 +152,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$7)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$7 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$7 *new_OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$7)
 
 @interface OrgJodaConvertJDKStringConverter_$8 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -178,8 +164,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$7)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$8)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$8 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$8 *new_OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$8)
 
@@ -196,8 +180,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$9)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$9 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$9 *new_OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$9)
 
 @interface OrgJodaConvertJDKStringConverter_$10 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -210,8 +192,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$9)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$10)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$10 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$10 *new_OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$10)
 
@@ -228,8 +208,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$11)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$11 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$11 *new_OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$11)
 
 @interface OrgJodaConvertJDKStringConverter_$12 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -242,8 +220,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$11)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$12)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$12 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$12 *new_OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$12)
 
@@ -258,8 +234,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$13)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$13 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$13 *new_OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$13)
 
 @interface OrgJodaConvertJDKStringConverter_$14 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -272,8 +246,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$13)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$14)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$14 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$14 *new_OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$14)
 
@@ -288,8 +260,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$15)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$15 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$15 *new_OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$15)
 
 @interface OrgJodaConvertJDKStringConverter_$16 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -302,8 +272,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$15)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$16)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$16 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$16 *new_OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$16)
 
@@ -318,8 +286,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$17)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$17 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$17 *new_OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$17)
 
 @interface OrgJodaConvertJDKStringConverter_$18 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -332,8 +298,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$17)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$18)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$18 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$18 *new_OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$18)
 
@@ -348,8 +312,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$19)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$19 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$19 *new_OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$19)
 
 @interface OrgJodaConvertJDKStringConverter_$20 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -362,8 +324,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$19)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$20)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$20 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$20 *new_OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$20)
 
@@ -380,8 +340,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$21)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$21 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$21 *new_OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$21)
 
 @interface OrgJodaConvertJDKStringConverter_$22 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -397,8 +355,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$22)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$22 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$22 *new_OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$22)
 
 @interface OrgJodaConvertJDKStringConverter_$23 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -411,8 +367,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$22)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$23)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$23 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$23 *new_OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$23)
 
@@ -429,8 +383,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$24)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$24 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$24 *new_OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$24)
 
 @interface OrgJodaConvertJDKStringConverter_$25 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -443,8 +395,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$24)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$25)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$25 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$25 *new_OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$25)
 
@@ -459,8 +409,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$26)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$26 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$26 *new_OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$26)
 
 @interface OrgJodaConvertJDKStringConverter_$27 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -473,8 +421,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$26)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$27)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$27 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$27 *new_OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$27)
 
@@ -491,8 +437,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$28)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$28 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$28 *new_OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$28)
 
 @interface OrgJodaConvertJDKStringConverter_$29 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -505,8 +449,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$28)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$29)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$29 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$29 *new_OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
 
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$29)
 
@@ -523,8 +465,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$30)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$30 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$30 *new_OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$30)
 
 @interface OrgJodaConvertJDKStringConverter_$31 : OrgJodaConvertJDKStringConverter < NSCopying >
@@ -540,8 +480,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$31)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$31 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-__attribute__((unused)) static OrgJodaConvertJDKStringConverter_$31 *new_OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) NS_RETURNS_RETAINED;
-
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$31)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertJDKStringConverter)
@@ -549,13 +487,6 @@ J2OBJC_INITIALIZED_DEFN(OrgJodaConvertJDKStringConverter)
 OrgJodaConvertJDKStringConverter *OrgJodaConvertJDKStringConverter_values_[31];
 
 @implementation OrgJodaConvertJDKStringConverter
-
-- (instancetype)initWithIOSClass:(IOSClass *)type
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, type, __name, __ordinal);
-  return self;
-}
 
 - (IOSClass *)getType {
   return type_;
@@ -583,37 +514,133 @@ OrgJodaConvertJDKStringConverter *OrgJodaConvertJDKStringConverter_values_[31];
 
 + (void)initialize {
   if (self == [OrgJodaConvertJDKStringConverter class]) {
-    JreEnum(OrgJodaConvertJDKStringConverter, STRING) = new_OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(NSString_class_(), @"STRING", 0);
-    JreEnum(OrgJodaConvertJDKStringConverter, CHAR_SEQUENCE) = new_OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(JavaLangCharSequence_class_(), @"CHAR_SEQUENCE", 1);
-    JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUFFER) = new_OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(JavaLangStringBuffer_class_(), @"STRING_BUFFER", 2);
-    JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUILDER) = new_OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(JavaLangStringBuilder_class_(), @"STRING_BUILDER", 3);
-    JreEnum(OrgJodaConvertJDKStringConverter, LONG) = new_OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(JavaLangLong_class_(), @"LONG", 4);
-    JreEnum(OrgJodaConvertJDKStringConverter, INTEGER) = new_OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(JavaLangInteger_class_(), @"INTEGER", 5);
-    JreEnum(OrgJodaConvertJDKStringConverter, SHORT) = new_OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(JavaLangShort_class_(), @"SHORT", 6);
-    JreEnum(OrgJodaConvertJDKStringConverter, BYTE) = new_OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(JavaLangByte_class_(), @"BYTE", 7);
-    JreEnum(OrgJodaConvertJDKStringConverter, BYTE_ARRAY) = new_OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(IOSClass_byteArray(1), @"BYTE_ARRAY", 8);
-    JreEnum(OrgJodaConvertJDKStringConverter, CHARACTER) = new_OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(JavaLangCharacter_class_(), @"CHARACTER", 9);
-    JreEnum(OrgJodaConvertJDKStringConverter, CHAR_ARRAY) = new_OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(IOSClass_charArray(1), @"CHAR_ARRAY", 10);
-    JreEnum(OrgJodaConvertJDKStringConverter, BOOLEAN) = new_OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(JavaLangBoolean_class_(), @"BOOLEAN", 11);
-    JreEnum(OrgJodaConvertJDKStringConverter, DOUBLE) = new_OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(JavaLangDouble_class_(), @"DOUBLE", 12);
-    JreEnum(OrgJodaConvertJDKStringConverter, FLOAT) = new_OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(JavaLangFloat_class_(), @"FLOAT", 13);
-    JreEnum(OrgJodaConvertJDKStringConverter, BIG_INTEGER) = new_OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(JavaMathBigInteger_class_(), @"BIG_INTEGER", 14);
-    JreEnum(OrgJodaConvertJDKStringConverter, BIG_DECIMAL) = new_OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(JavaMathBigDecimal_class_(), @"BIG_DECIMAL", 15);
-    JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_LONG) = new_OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(JavaUtilConcurrentAtomicAtomicLong_class_(), @"ATOMIC_LONG", 16);
-    JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_INTEGER) = new_OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(JavaUtilConcurrentAtomicAtomicInteger_class_(), @"ATOMIC_INTEGER", 17);
-    JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_BOOLEAN) = new_OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(JavaUtilConcurrentAtomicAtomicBoolean_class_(), @"ATOMIC_BOOLEAN", 18);
-    JreEnum(OrgJodaConvertJDKStringConverter, LOCALE) = new_OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(JavaUtilLocale_class_(), @"LOCALE", 19);
-    JreEnum(OrgJodaConvertJDKStringConverter, CLASS) = new_OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(IOSClass_class_(), @"CLASS", 20);
-    JreEnum(OrgJodaConvertJDKStringConverter, PACKAGE) = new_OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(JavaLangPackage_class_(), @"PACKAGE", 21);
-    JreEnum(OrgJodaConvertJDKStringConverter, CURRENCY) = new_OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(JavaUtilCurrency_class_(), @"CURRENCY", 22);
-    JreEnum(OrgJodaConvertJDKStringConverter, TIME_ZONE) = new_OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(JavaUtilTimeZone_class_(), @"TIME_ZONE", 23);
-    JreEnum(OrgJodaConvertJDKStringConverter, UUID) = new_OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(JavaUtilUUID_class_(), @"UUID", 24);
-    JreEnum(OrgJodaConvertJDKStringConverter, URL) = new_OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(JavaNetURL_class_(), @"URL", 25);
-    JreEnum(OrgJodaConvertJDKStringConverter, URI) = new_OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(JavaNetURI_class_(), @"URI", 26);
-    JreEnum(OrgJodaConvertJDKStringConverter, INET_ADDRESS) = new_OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(JavaNetInetAddress_class_(), @"INET_ADDRESS", 27);
-    JreEnum(OrgJodaConvertJDKStringConverter, FILE) = new_OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(JavaIoFile_class_(), @"FILE", 28);
-    JreEnum(OrgJodaConvertJDKStringConverter, DATE) = new_OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(JavaUtilDate_class_(), @"DATE", 29);
-    JreEnum(OrgJodaConvertJDKStringConverter, CALENDAR) = new_OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(JavaUtilCalendar_class_(), @"CALENDAR", 30);
+    size_t allocSize = 0;
+    size_t objSize_STRING = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$1 class]);
+    allocSize += objSize_STRING;
+    size_t objSize_CHAR_SEQUENCE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$2 class]);
+    allocSize += objSize_CHAR_SEQUENCE;
+    size_t objSize_STRING_BUFFER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$3 class]);
+    allocSize += objSize_STRING_BUFFER;
+    size_t objSize_STRING_BUILDER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$4 class]);
+    allocSize += objSize_STRING_BUILDER;
+    size_t objSize_LONG = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$5 class]);
+    allocSize += objSize_LONG;
+    size_t objSize_INTEGER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$6 class]);
+    allocSize += objSize_INTEGER;
+    size_t objSize_SHORT = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$7 class]);
+    allocSize += objSize_SHORT;
+    size_t objSize_BYTE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$8 class]);
+    allocSize += objSize_BYTE;
+    size_t objSize_BYTE_ARRAY = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$9 class]);
+    allocSize += objSize_BYTE_ARRAY;
+    size_t objSize_CHARACTER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$10 class]);
+    allocSize += objSize_CHARACTER;
+    size_t objSize_CHAR_ARRAY = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$11 class]);
+    allocSize += objSize_CHAR_ARRAY;
+    size_t objSize_BOOLEAN = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$12 class]);
+    allocSize += objSize_BOOLEAN;
+    size_t objSize_DOUBLE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$13 class]);
+    allocSize += objSize_DOUBLE;
+    size_t objSize_FLOAT = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$14 class]);
+    allocSize += objSize_FLOAT;
+    size_t objSize_BIG_INTEGER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$15 class]);
+    allocSize += objSize_BIG_INTEGER;
+    size_t objSize_BIG_DECIMAL = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$16 class]);
+    allocSize += objSize_BIG_DECIMAL;
+    size_t objSize_ATOMIC_LONG = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$17 class]);
+    allocSize += objSize_ATOMIC_LONG;
+    size_t objSize_ATOMIC_INTEGER = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$18 class]);
+    allocSize += objSize_ATOMIC_INTEGER;
+    size_t objSize_ATOMIC_BOOLEAN = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$19 class]);
+    allocSize += objSize_ATOMIC_BOOLEAN;
+    size_t objSize_LOCALE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$20 class]);
+    allocSize += objSize_LOCALE;
+    size_t objSize_CLASS = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$21 class]);
+    allocSize += objSize_CLASS;
+    size_t objSize_PACKAGE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$22 class]);
+    allocSize += objSize_PACKAGE;
+    size_t objSize_CURRENCY = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$23 class]);
+    allocSize += objSize_CURRENCY;
+    size_t objSize_TIME_ZONE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$24 class]);
+    allocSize += objSize_TIME_ZONE;
+    size_t objSize_UUID = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$25 class]);
+    allocSize += objSize_UUID;
+    size_t objSize_URL = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$26 class]);
+    allocSize += objSize_URL;
+    size_t objSize_URI = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$27 class]);
+    allocSize += objSize_URI;
+    size_t objSize_INET_ADDRESS = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$28 class]);
+    allocSize += objSize_INET_ADDRESS;
+    size_t objSize_FILE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$29 class]);
+    allocSize += objSize_FILE;
+    size_t objSize_DATE = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$30 class]);
+    allocSize += objSize_DATE;
+    size_t objSize_CALENDAR = class_getInstanceSize([OrgJodaConvertJDKStringConverter_$31 class]);
+    allocSize += objSize_CALENDAR;
+    uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
+    id e;
+    (JreEnum(OrgJodaConvertJDKStringConverter, STRING) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$1 class], (void *)ptr), ptr += objSize_STRING);
+    OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(e, NSString_class_(), @"STRING", 0);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CHAR_SEQUENCE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$2 class], (void *)ptr), ptr += objSize_CHAR_SEQUENCE);
+    OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(e, JavaLangCharSequence_class_(), @"CHAR_SEQUENCE", 1);
+    (JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUFFER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$3 class], (void *)ptr), ptr += objSize_STRING_BUFFER);
+    OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(e, JavaLangStringBuffer_class_(), @"STRING_BUFFER", 2);
+    (JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUILDER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$4 class], (void *)ptr), ptr += objSize_STRING_BUILDER);
+    OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(e, JavaLangStringBuilder_class_(), @"STRING_BUILDER", 3);
+    (JreEnum(OrgJodaConvertJDKStringConverter, LONG) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$5 class], (void *)ptr), ptr += objSize_LONG);
+    OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(e, JavaLangLong_class_(), @"LONG", 4);
+    (JreEnum(OrgJodaConvertJDKStringConverter, INTEGER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$6 class], (void *)ptr), ptr += objSize_INTEGER);
+    OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(e, JavaLangInteger_class_(), @"INTEGER", 5);
+    (JreEnum(OrgJodaConvertJDKStringConverter, SHORT) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$7 class], (void *)ptr), ptr += objSize_SHORT);
+    OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(e, JavaLangShort_class_(), @"SHORT", 6);
+    (JreEnum(OrgJodaConvertJDKStringConverter, BYTE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$8 class], (void *)ptr), ptr += objSize_BYTE);
+    OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(e, JavaLangByte_class_(), @"BYTE", 7);
+    (JreEnum(OrgJodaConvertJDKStringConverter, BYTE_ARRAY) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$9 class], (void *)ptr), ptr += objSize_BYTE_ARRAY);
+    OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(e, IOSClass_byteArray(1), @"BYTE_ARRAY", 8);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CHARACTER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$10 class], (void *)ptr), ptr += objSize_CHARACTER);
+    OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(e, JavaLangCharacter_class_(), @"CHARACTER", 9);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CHAR_ARRAY) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$11 class], (void *)ptr), ptr += objSize_CHAR_ARRAY);
+    OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(e, IOSClass_charArray(1), @"CHAR_ARRAY", 10);
+    (JreEnum(OrgJodaConvertJDKStringConverter, BOOLEAN) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$12 class], (void *)ptr), ptr += objSize_BOOLEAN);
+    OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(e, JavaLangBoolean_class_(), @"BOOLEAN", 11);
+    (JreEnum(OrgJodaConvertJDKStringConverter, DOUBLE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$13 class], (void *)ptr), ptr += objSize_DOUBLE);
+    OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(e, JavaLangDouble_class_(), @"DOUBLE", 12);
+    (JreEnum(OrgJodaConvertJDKStringConverter, FLOAT) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$14 class], (void *)ptr), ptr += objSize_FLOAT);
+    OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(e, JavaLangFloat_class_(), @"FLOAT", 13);
+    (JreEnum(OrgJodaConvertJDKStringConverter, BIG_INTEGER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$15 class], (void *)ptr), ptr += objSize_BIG_INTEGER);
+    OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(e, JavaMathBigInteger_class_(), @"BIG_INTEGER", 14);
+    (JreEnum(OrgJodaConvertJDKStringConverter, BIG_DECIMAL) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$16 class], (void *)ptr), ptr += objSize_BIG_DECIMAL);
+    OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(e, JavaMathBigDecimal_class_(), @"BIG_DECIMAL", 15);
+    (JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_LONG) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$17 class], (void *)ptr), ptr += objSize_ATOMIC_LONG);
+    OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(e, JavaUtilConcurrentAtomicAtomicLong_class_(), @"ATOMIC_LONG", 16);
+    (JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_INTEGER) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$18 class], (void *)ptr), ptr += objSize_ATOMIC_INTEGER);
+    OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(e, JavaUtilConcurrentAtomicAtomicInteger_class_(), @"ATOMIC_INTEGER", 17);
+    (JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_BOOLEAN) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$19 class], (void *)ptr), ptr += objSize_ATOMIC_BOOLEAN);
+    OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(e, JavaUtilConcurrentAtomicAtomicBoolean_class_(), @"ATOMIC_BOOLEAN", 18);
+    (JreEnum(OrgJodaConvertJDKStringConverter, LOCALE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$20 class], (void *)ptr), ptr += objSize_LOCALE);
+    OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(e, JavaUtilLocale_class_(), @"LOCALE", 19);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CLASS) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$21 class], (void *)ptr), ptr += objSize_CLASS);
+    OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(e, IOSClass_class_(), @"CLASS", 20);
+    (JreEnum(OrgJodaConvertJDKStringConverter, PACKAGE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$22 class], (void *)ptr), ptr += objSize_PACKAGE);
+    OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(e, JavaLangPackage_class_(), @"PACKAGE", 21);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CURRENCY) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$23 class], (void *)ptr), ptr += objSize_CURRENCY);
+    OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(e, JavaUtilCurrency_class_(), @"CURRENCY", 22);
+    (JreEnum(OrgJodaConvertJDKStringConverter, TIME_ZONE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$24 class], (void *)ptr), ptr += objSize_TIME_ZONE);
+    OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(e, JavaUtilTimeZone_class_(), @"TIME_ZONE", 23);
+    (JreEnum(OrgJodaConvertJDKStringConverter, UUID) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$25 class], (void *)ptr), ptr += objSize_UUID);
+    OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(e, JavaUtilUUID_class_(), @"UUID", 24);
+    (JreEnum(OrgJodaConvertJDKStringConverter, URL) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$26 class], (void *)ptr), ptr += objSize_URL);
+    OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(e, JavaNetURL_class_(), @"URL", 25);
+    (JreEnum(OrgJodaConvertJDKStringConverter, URI) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$27 class], (void *)ptr), ptr += objSize_URI);
+    OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(e, JavaNetURI_class_(), @"URI", 26);
+    (JreEnum(OrgJodaConvertJDKStringConverter, INET_ADDRESS) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$28 class], (void *)ptr), ptr += objSize_INET_ADDRESS);
+    OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(e, JavaNetInetAddress_class_(), @"INET_ADDRESS", 27);
+    (JreEnum(OrgJodaConvertJDKStringConverter, FILE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$29 class], (void *)ptr), ptr += objSize_FILE);
+    OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(e, JavaIoFile_class_(), @"FILE", 28);
+    (JreEnum(OrgJodaConvertJDKStringConverter, DATE) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$30 class], (void *)ptr), ptr += objSize_DATE);
+    OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(e, JavaUtilDate_class_(), @"DATE", 29);
+    (JreEnum(OrgJodaConvertJDKStringConverter, CALENDAR) = e = objc_constructInstance([OrgJodaConvertJDKStringConverter_$31 class], (void *)ptr), ptr += objSize_CALENDAR);
+    OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(e, JavaUtilCalendar_class_(), @"CALENDAR", 30);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertJDKStringConverter)
   }
 }
@@ -704,11 +731,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter)
   return str;
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$1 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -725,12 +750,6 @@ void OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$1 *new_OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$1 *self = [OrgJodaConvertJDKStringConverter_$1 alloc];
-  OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$1)
 
 @implementation OrgJodaConvertJDKStringConverter_$2
@@ -740,11 +759,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$1)
   return str;
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$2 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -761,12 +778,6 @@ void OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$2 *new_OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$2 *self = [OrgJodaConvertJDKStringConverter_$2 alloc];
-  OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$2)
 
 @implementation OrgJodaConvertJDKStringConverter_$3
@@ -776,11 +787,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$2)
   return [new_JavaLangStringBuffer_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$3 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -797,12 +806,6 @@ void OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$3 *new_OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$3 *self = [OrgJodaConvertJDKStringConverter_$3 alloc];
-  OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$3)
 
 @implementation OrgJodaConvertJDKStringConverter_$4
@@ -812,11 +815,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$3)
   return [new_JavaLangStringBuilder_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$4 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -833,12 +834,6 @@ void OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$4 *new_OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$4 *self = [OrgJodaConvertJDKStringConverter_$4 alloc];
-  OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$4)
 
 @implementation OrgJodaConvertJDKStringConverter_$5
@@ -848,11 +843,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$4)
   return [new_JavaLangLong_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$5 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -869,12 +862,6 @@ void OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$5 *new_OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$5 *self = [OrgJodaConvertJDKStringConverter_$5 alloc];
-  OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$5)
 
 @implementation OrgJodaConvertJDKStringConverter_$6
@@ -884,11 +871,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$5)
   return [new_JavaLangInteger_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$6 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -905,12 +890,6 @@ void OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$6 *new_OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$6 *self = [OrgJodaConvertJDKStringConverter_$6 alloc];
-  OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$6)
 
 @implementation OrgJodaConvertJDKStringConverter_$7
@@ -920,11 +899,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$6)
   return [new_JavaLangShort_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$7 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -941,12 +918,6 @@ void OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$7 *new_OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$7 *self = [OrgJodaConvertJDKStringConverter_$7 alloc];
-  OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$7)
 
 @implementation OrgJodaConvertJDKStringConverter_$8
@@ -956,11 +927,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$7)
   return [new_JavaLangByte_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$8 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -977,12 +946,6 @@ void OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$8 *new_OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$8 *self = [OrgJodaConvertJDKStringConverter_$8 alloc];
-  OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$8)
 
 @implementation OrgJodaConvertJDKStringConverter_$9
@@ -996,11 +959,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$8)
   return [((ComGoogleCommonIoBaseEncoding *) nil_chk(ComGoogleCommonIoBaseEncoding_base64())) decodeWithJavaLangCharSequence:str];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$9 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1018,12 +979,6 @@ void OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$9 *new_OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$9 *self = [OrgJodaConvertJDKStringConverter_$9 alloc];
-  OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$9)
 
 @implementation OrgJodaConvertJDKStringConverter_$10
@@ -1036,11 +991,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$9)
   return [new_JavaLangCharacter_initWithChar_([str charAtWithInt:0]) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$10 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1057,12 +1010,6 @@ void OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$10 *new_OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$10 *self = [OrgJodaConvertJDKStringConverter_$10 alloc];
-  OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$10)
 
 @implementation OrgJodaConvertJDKStringConverter_$11
@@ -1076,11 +1023,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$10)
   return [((NSString *) nil_chk(str)) toCharArray];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$11 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1098,12 +1043,6 @@ void OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$11 *new_OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$11 *self = [OrgJodaConvertJDKStringConverter_$11 alloc];
-  OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11)
 
 @implementation OrgJodaConvertJDKStringConverter_$12
@@ -1119,11 +1058,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11)
   @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$12 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1140,12 +1077,6 @@ void OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$12 *new_OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$12 *self = [OrgJodaConvertJDKStringConverter_$12 alloc];
-  OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$12)
 
 @implementation OrgJodaConvertJDKStringConverter_$13
@@ -1155,11 +1086,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$12)
   return [new_JavaLangDouble_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$13 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1176,12 +1105,6 @@ void OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$13 *new_OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$13 *self = [OrgJodaConvertJDKStringConverter_$13 alloc];
-  OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$13)
 
 @implementation OrgJodaConvertJDKStringConverter_$14
@@ -1191,11 +1114,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$13)
   return [new_JavaLangFloat_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$14 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1212,12 +1133,6 @@ void OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$14 *new_OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$14 *self = [OrgJodaConvertJDKStringConverter_$14 alloc];
-  OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$14)
 
 @implementation OrgJodaConvertJDKStringConverter_$15
@@ -1227,11 +1142,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$14)
   return [new_JavaMathBigInteger_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$15 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1248,12 +1161,6 @@ void OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$15 *new_OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$15 *self = [OrgJodaConvertJDKStringConverter_$15 alloc];
-  OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$15)
 
 @implementation OrgJodaConvertJDKStringConverter_$16
@@ -1263,11 +1170,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$15)
   return [new_JavaMathBigDecimal_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$16 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1284,12 +1189,6 @@ void OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$16 *new_OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$16 *self = [OrgJodaConvertJDKStringConverter_$16 alloc];
-  OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$16)
 
 @implementation OrgJodaConvertJDKStringConverter_$17
@@ -1300,11 +1199,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$16)
   return [new_JavaUtilConcurrentAtomicAtomicLong_initWithLong_(val) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$17 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1321,12 +1218,6 @@ void OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$17 *new_OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$17 *self = [OrgJodaConvertJDKStringConverter_$17 alloc];
-  OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$17)
 
 @implementation OrgJodaConvertJDKStringConverter_$18
@@ -1337,11 +1228,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$17)
   return [new_JavaUtilConcurrentAtomicAtomicInteger_initWithInt_(val) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$18 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1356,12 +1245,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$17)
 
 void OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$18 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-}
-
-OrgJodaConvertJDKStringConverter_$18 *new_OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$18 *self = [OrgJodaConvertJDKStringConverter_$18 alloc];
-  OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18)
@@ -1379,11 +1262,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18)
   @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$19 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1398,12 +1279,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18)
 
 void OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$19 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-}
-
-OrgJodaConvertJDKStringConverter_$19 *new_OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$19 *self = [OrgJodaConvertJDKStringConverter_$19 alloc];
-  OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
@@ -1424,11 +1299,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
   @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse Locale: ", str)) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$20 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1445,12 +1318,6 @@ void OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$20 *new_OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$20 *self = [OrgJodaConvertJDKStringConverter_$20 alloc];
-  OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
 
 @implementation OrgJodaConvertJDKStringConverter_$21
@@ -1465,15 +1332,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
     return [((OrgJodaConvertRenameHandler *) nil_chk(JreLoadStatic(OrgJodaConvertRenameHandler, INSTANCE))) lookupTypeWithNSString:str];
   }
   @catch (JavaLangClassNotFoundException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_(JreStrcat("$$", @"Unable to create type: ", str), ex) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_(JreStrcat("$$", @"Unable to create type: ", str), ex) autorelease];
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$21 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1491,12 +1356,6 @@ void OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$21 *new_OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$21 *self = [OrgJodaConvertJDKStringConverter_$21 alloc];
-  OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$21)
 
 @implementation OrgJodaConvertJDKStringConverter_$22
@@ -1510,11 +1369,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$21)
   return JavaLangPackage_getPackageWithNSString_(str);
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$22 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1532,12 +1389,6 @@ void OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$22 *new_OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$22 *self = [OrgJodaConvertJDKStringConverter_$22 alloc];
-  OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$22)
 
 @implementation OrgJodaConvertJDKStringConverter_$23
@@ -1547,11 +1398,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$22)
   return JavaUtilCurrency_getInstanceWithNSString_(str);
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$23 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1568,12 +1417,6 @@ void OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$23 *new_OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$23 *self = [OrgJodaConvertJDKStringConverter_$23 alloc];
-  OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$23)
 
 @implementation OrgJodaConvertJDKStringConverter_$24
@@ -1587,11 +1430,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$23)
   return JavaUtilTimeZone_getTimeZoneWithNSString_(str);
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$24 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1609,12 +1450,6 @@ void OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$24 *new_OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$24 *self = [OrgJodaConvertJDKStringConverter_$24 alloc];
-  OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$24)
 
 @implementation OrgJodaConvertJDKStringConverter_$25
@@ -1624,11 +1459,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$24)
   return JavaUtilUUID_fromStringWithNSString_(str);
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$25 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1645,12 +1478,6 @@ void OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$25 *new_OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$25 *self = [OrgJodaConvertJDKStringConverter_$25 alloc];
-  OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$25)
 
 @implementation OrgJodaConvertJDKStringConverter_$26
@@ -1661,15 +1488,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$25)
     return [new_JavaNetURL_initWithNSString_(str) autorelease];
   }
   @catch (JavaNetMalformedURLException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_([((JavaNetMalformedURLException *) nil_chk(ex)) getMessage], ex) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([((JavaNetMalformedURLException *) nil_chk(ex)) getMessage], ex) autorelease];
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$26 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1686,12 +1511,6 @@ void OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$26 *new_OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$26 *self = [OrgJodaConvertJDKStringConverter_$26 alloc];
-  OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$26)
 
 @implementation OrgJodaConvertJDKStringConverter_$27
@@ -1701,11 +1520,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$26)
   return JavaNetURI_createWithNSString_(str);
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$27 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1722,12 +1539,6 @@ void OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$27 *new_OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$27 *self = [OrgJodaConvertJDKStringConverter_$27 alloc];
-  OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$27)
 
 @implementation OrgJodaConvertJDKStringConverter_$28
@@ -1742,15 +1553,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$27)
     return JavaNetInetAddress_getByNameWithNSString_(str);
   }
   @catch (JavaNetUnknownHostException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithJavaLangThrowable_(ex) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$28 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1768,12 +1577,6 @@ void OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-OrgJodaConvertJDKStringConverter_$28 *new_OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$28 *self = [OrgJodaConvertJDKStringConverter_$28 alloc];
-  OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
-}
-
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$28)
 
 @implementation OrgJodaConvertJDKStringConverter_$29
@@ -1783,11 +1586,9 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$28)
   return [new_JavaIoFile_initWithNSString_(str) autorelease];
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$29 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1802,12 +1603,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$28)
 
 void OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$29 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-}
-
-OrgJodaConvertJDKStringConverter_$29 *new_OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$29 *self = [OrgJodaConvertJDKStringConverter_$29 alloc];
-  OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
@@ -1831,15 +1626,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
     return [f parseObjectWithNSString:str];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithJavaLangThrowable_(ex) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$30 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1855,12 +1648,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
 
 void OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$30 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-}
-
-OrgJodaConvertJDKStringConverter_$30 *new_OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$30 *self = [OrgJodaConvertJDKStringConverter_$30 alloc];
-  OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
@@ -1894,15 +1681,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
     return [f getCalendar];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithJavaLangThrowable_(ex) autorelease];
+    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
   }
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg$0
-                    withNSString:(NSString *)__name
-                         withInt:(jint)__ordinal {
-  OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
+- (void)dealloc {
+  JreCheckFinalize(self, [OrgJodaConvertJDKStringConverter_$31 class]);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
@@ -1918,12 +1703,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
 
 void OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$31 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-}
-
-OrgJodaConvertJDKStringConverter_$31 *new_OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(IOSClass *arg$0, NSString *__name, jint __ordinal) {
-  OrgJodaConvertJDKStringConverter_$31 *self = [OrgJodaConvertJDKStringConverter_$31 alloc];
-  OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
-  return self;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$31)
