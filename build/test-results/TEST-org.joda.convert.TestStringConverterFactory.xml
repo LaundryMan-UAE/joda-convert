@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.joda.convert.TestStringConverterFactory" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-02-17T12:07:20" hostname="Andre-F-iMac.local" time="0.007">
+  <properties/>
+  <testcase name="test_constructor" classname="org.joda.convert.TestStringConverterFactory" time="0.002"/>
+  <testcase name="test_registerFactory_null" classname="org.joda.convert.TestStringConverterFactory" time="0.002"/>
+  <testcase name="test_constructor_nullInArray" classname="org.joda.convert.TestStringConverterFactory" time="0.0"/>
+  <testcase name="test_registerFactory_cannotChangeSingleton" classname="org.joda.convert.TestStringConverterFactory" time="0.0"/>
+  <testcase name="test_registerFactory" classname="org.joda.convert.TestStringConverterFactory" time="0.002"/>
+  <testcase name="test_constructor_null" classname="org.joda.convert.TestStringConverterFactory" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

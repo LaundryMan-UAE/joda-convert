@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.joda.convert.TestNumericObjectArrayStringConverterFactory" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-02-17T12:07:20" hostname="Andre-F-iMac.local" time="0.092">
+  <properties/>
+  <testcase name="test_LongArray" classname="org.joda.convert.TestNumericObjectArrayStringConverterFactory" time="0.017"/>
+  <testcase name="test_ShortArray" classname="org.joda.convert.TestNumericObjectArrayStringConverterFactory" time="0.013"/>
+  <testcase name="test_IntegerArray" classname="org.joda.convert.TestNumericObjectArrayStringConverterFactory" time="0.015"/>
+  <testcase name="test_FloatArray" classname="org.joda.convert.TestNumericObjectArrayStringConverterFactory" time="0.028"/>
+  <testcase name="test_DoubleArray" classname="org.joda.convert.TestNumericObjectArrayStringConverterFactory" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

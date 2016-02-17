@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.joda.convert.TestBooleanArrayStringConverterFactory" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-02-17T12:07:19" hostname="Andre-F-iMac.local" time="0.04">
+  <properties/>
+  <testcase name="test_longArray" classname="org.joda.convert.TestBooleanArrayStringConverterFactory" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

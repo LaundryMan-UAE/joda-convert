@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.joda.convert.TestJDKStringConverters" tests="47" skipped="0" failures="0" errors="0" timestamp="2016-02-17T12:07:19" hostname="Andre-F-iMac.local" time="0.064">
+  <properties/>
+  <testcase name="test_Date_invalidFormat" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_Enum_invalidConstant" classname="org.joda.convert.TestJDKStringConverters" time="0.006"/>
+  <testcase name="test_Calendar_notGregorian" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_Calendar_invalidFormat" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_Boolean_fail" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Date_invalidLength" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Calendar_invalidLength" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Double" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Locale" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Calendar" classname="org.joda.convert.TestJDKStringConverters" time="0.002"/>
+  <testcase name="test_byteArray1" classname="org.joda.convert.TestJDKStringConverters" time="0.014"/>
+  <testcase name="test_byteArray2" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_StringBuffer" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Byte" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Date" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Enum" classname="org.joda.convert.TestJDKStringConverters" time="0.004"/>
+  <testcase name="test_File" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Long" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_UUID" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_String" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Int" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_URI" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_URL" classname="org.joda.convert.TestJDKStringConverters" time="0.004"/>
+  <testcase name="test_AtomicBoolean_false" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_AtomicBoolean_fail" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_AtomicBoolean_true" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Character" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Currency" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Package" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_Enum_withRename" classname="org.joda.convert.TestJDKStringConverters" time="0.005"/>
+  <testcase name="test_StringBuilder" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_BigDecimal" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_Boolean" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Class_fail" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_BigInteger" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_InetAddress" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_CharSequence" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_AtomicInteger" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_AtomicLong" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_TimeZone" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_URL_invalidFormat" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Class_withRename" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <testcase name="test_charArray" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Character_fail" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Class" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Float" classname="org.joda.convert.TestJDKStringConverters" time="0.0"/>
+  <testcase name="test_Short" classname="org.joda.convert.TestJDKStringConverters" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
