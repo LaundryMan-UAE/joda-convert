@@ -4,12 +4,16 @@
 //
 
 #include "IOSClass.h"
+#include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
+#include "java/lang/annotation/Annotation.h"
 #include "java/lang/annotation/ElementType.h"
 #include "java/lang/annotation/Retention.h"
 #include "java/lang/annotation/RetentionPolicy.h"
 #include "java/lang/annotation/Target.h"
 #include "org/joda/convert/ToString.h"
+
+__attribute__((unused)) static IOSObjectArray *OrgJodaConvertToString__Annotations$0();
 
 @implementation OrgJodaConvertToString
 
@@ -21,15 +25,21 @@
   return @"@org.joda.convert.ToString()";
 }
 
-+ (IOSObjectArray *)__annotations {
-  return [IOSObjectArray arrayWithObjects:(id[]) { [[[JavaLangAnnotationTarget alloc] initWithValue:[IOSObjectArray arrayWithObjects:(id[]) { JavaLangAnnotationElementType_get_METHOD() } count:1 type:NSObject_class_()]] autorelease], [[[JavaLangAnnotationRetention alloc] initWithValue:JavaLangAnnotationRetentionPolicy_get_RUNTIME()] autorelease] } count:2 type:JavaLangAnnotationAnnotation_class_()];
-}
-
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcClassInfo _OrgJodaConvertToString = { 2, "ToString", "org.joda.convert", NULL, 0x2609, 0, NULL, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  static const void *ptrTable[] = { (void *)&OrgJodaConvertToString__Annotations$0 };
+  static const J2ObjcClassInfo _OrgJodaConvertToString = { "ToString", "org.joda.convert", ptrTable, NULL, NULL, 7, 0x2609, 0, 0, -1, -1, -1, -1, 0 };
   return &_OrgJodaConvertToString;
 }
 
 @end
+
+id<OrgJodaConvertToString> create_OrgJodaConvertToString() {
+  OrgJodaConvertToString *self = AUTORELEASE([[OrgJodaConvertToString alloc] init]);
+  return self;
+}
+
+IOSObjectArray *OrgJodaConvertToString__Annotations$0() {
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, METHOD) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
+}
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertToString)

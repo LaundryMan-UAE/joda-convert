@@ -5,23 +5,23 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertStringConverter_RESTRICT
-#define OrgJodaConvertStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertStringConverter")
+#ifdef RESTRICT_OrgJodaConvertStringConverter
+#define INCLUDE_ALL_OrgJodaConvertStringConverter 0
 #else
-#define OrgJodaConvertStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertStringConverter 1
 #endif
-#undef OrgJodaConvertStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertStringConverter
 
-#if !defined (OrgJodaConvertStringConverter_) && (OrgJodaConvertStringConverter_INCLUDE_ALL || defined(OrgJodaConvertStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertStringConverter_) && (INCLUDE_ALL_OrgJodaConvertStringConverter || defined(INCLUDE_OrgJodaConvertStringConverter))
 #define OrgJodaConvertStringConverter_
 
-#define OrgJodaConvertToStringConverter_RESTRICT 1
-#define OrgJodaConvertToStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertToStringConverter 1
+#define INCLUDE_OrgJodaConvertToStringConverter 1
 #include "org/joda/convert/ToStringConverter.h"
 
-#define OrgJodaConvertFromStringConverter_RESTRICT 1
-#define OrgJodaConvertFromStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertFromStringConverter 1
+#define INCLUDE_OrgJodaConvertFromStringConverter 1
 #include "org/joda/convert/FromStringConverter.h"
 
 /*!
@@ -30,7 +30,7 @@
  StringConverter is an interface and must be implemented with care.
  Implementations must be immutable and thread-safe.
  */
-@protocol OrgJodaConvertStringConverter < OrgJodaConvertToStringConverter, OrgJodaConvertFromStringConverter, NSObject, JavaObject >
+@protocol OrgJodaConvertStringConverter < OrgJodaConvertToStringConverter, OrgJodaConvertFromStringConverter, JavaObject >
 
 @end
 
@@ -40,4 +40,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertStringConverter")

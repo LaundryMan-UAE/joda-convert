@@ -5,15 +5,15 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertStringConverterFactory_RESTRICT
-#define OrgJodaConvertStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertStringConverterFactory 0
 #else
-#define OrgJodaConvertStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertStringConverterFactory 1
 #endif
-#undef OrgJodaConvertStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertStringConverterFactory
 
-#if !defined (OrgJodaConvertStringConverterFactory_) && (OrgJodaConvertStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertStringConverterFactory || defined(INCLUDE_OrgJodaConvertStringConverterFactory))
 #define OrgJodaConvertStringConverterFactory_
 
 @class IOSClass;
@@ -26,7 +26,7 @@
  Implementations must be immutable and thread-safe.
  @since 1.5
  */
-@protocol OrgJodaConvertStringConverterFactory < NSObject, JavaObject >
+@protocol OrgJodaConvertStringConverterFactory < JavaObject >
 
 /*!
  @brief Finds a converter by type.
@@ -44,4 +44,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConverterFactory)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertStringConverterFactory")

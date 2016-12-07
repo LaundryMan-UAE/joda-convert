@@ -12,6 +12,12 @@ dependencies {
     compile 'com.google.guava:guava:14.0.1'
 }
 
+task testPaths{
+    String someString = sourceSets.main.allJava.srcDirs.join(':');
+    println "$someString"
+}
+
+
 task cycleFinder(type:Exec) {
     inputs.files sourceSets.main.allJava
     executable "${J2OBJC_HOME_LATEST}/cycle_finder"

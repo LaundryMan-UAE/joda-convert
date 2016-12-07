@@ -16,6 +16,7 @@
 #include "org/joda/convert/factory/ByteObjectArrayStringConverterFactory.h"
 
 #pragma clang diagnostic ignored "-Wprotocol"
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface OrgJodaConvertFactoryByteObjectArrayStringConverterFactory ()
 
@@ -57,8 +58,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryByteObjectArrayStringConverterFact
 
 __attribute__((unused)) static void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1)
-
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
 
 id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE;
@@ -83,25 +82,31 @@ J2OBJC_IGNORE_DESIGNATED_END
   return [[self getClass] getSimpleName];
 }
 
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LOrgJodaConvertStringConverter;", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(findConverterWithIOSClass:);
+  methods[2].selector = @selector(description);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "INSTANCE", "LOrgJodaConvertStringConverterFactory;", .constantValue.asLong = 0, 0x19, -1, 4, -1, -1 },
+  };
+  static const void *ptrTable[] = { "findConverter", "LIOSClass;", "(Ljava/lang/Class<*>;)Lorg/joda/convert/StringConverter<*>;", "toString", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE, "LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory = { "ByteObjectArrayStringConverterFactory", "org.joda.convert.factory", ptrTable, methods, fields, 7, 0x11, 3, 1, -1, 5, -1, -1, -1 };
+  return &_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory;
+}
+
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory class]) {
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE, new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
   }
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "init", "ByteObjectArrayStringConverterFactory", NULL, 0x2, NULL, NULL },
-    { "findConverterWithIOSClass:", "findConverter", "Lorg.joda.convert.StringConverter;", 0x1, NULL, "(Ljava/lang/Class<*>;)Lorg/joda/convert/StringConverter<*>;" },
-    { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
-  };
-  static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_INSTANCE, NULL, .constantValue.asLong = 0 },
-  };
-  static const char *inner_classes[] = {"Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory = { 2, "ByteObjectArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 1, fields, 0, NULL, 1, inner_classes, NULL, NULL };
-  return &_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory;
 }
 
 @end
@@ -111,15 +116,11 @@ void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init(OrgJodaConv
 }
 
 OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *new_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init() {
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *self = [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory alloc];
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init(self);
-  return self;
+  J2OBJC_NEW_IMPL(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory, init)
 }
 
 OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *create_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init() {
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory *self = [[OrgJodaConvertFactoryByteObjectArrayStringConverterFactory alloc] autorelease];
-  OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_init(self);
-  return self;
+  J2OBJC_CREATE_IMPL(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory)
@@ -142,6 +143,26 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
   return self;
 }
 
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "[LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;", 0x9, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;", 0x9, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(values);
+  methods[1].selector = @selector(valueOfWithNSString:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "INSTANCE", "LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 2, -1, -1 },
+    { "EMPTY", "[LJavaLangByte;", .constantValue.asLong = 0, 0x1a, -1, 3, -1, -1 },
+    { "HEX", "LNSString;", .constantValue.asLong = 0, 0x1a, -1, 4, -1, -1 },
+  };
+  static const void *ptrTable[] = { "valueOf", "LNSString;", &JreEnum(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, INSTANCE), &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_EMPTY, &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_HEX, "LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory;", "Ljava/lang/Enum<Lorg/joda/convert/factory/ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<[Ljava/lang/Byte;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter = { "ByteArrayStringConverter", "org.joda.convert.factory", ptrTable, methods, fields, 7, 0x4408, 2, 3, 5, -1, -1, 6, -1 };
+  return &_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;
+}
+
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter class]) {
     size_t allocSize = 0;
@@ -154,17 +175,6 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_EMPTY, [IOSObjectArray newArrayWithLength:0 type:JavaLangByte_class_()]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter)
   }
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;", &JreEnum(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, INSTANCE), NULL, .constantValue.asLong = 0 },
-    { "EMPTY", "EMPTY", 0x1a, "[Ljava.lang.Byte;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_EMPTY, NULL, .constantValue.asLong = 0 },
-    { "HEX", "HEX", 0x1a, "Ljava.lang.String;", &OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_HEX, NULL, .constantValue.asLong = 0 },
-  };
-  static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter = { 2, "ByteArrayStringConverter", "org.joda.convert.factory", "ByteObjectArrayStringConverterFactory", 0x4408, 0, NULL, 3, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/ByteObjectArrayStringConverterFactory$ByteArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Ljava/lang/Byte;;>;" };
-  return &_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;
 }
 
 @end
@@ -186,7 +196,7 @@ OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConver
       return e;
     }
   }
-  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(name);
   return nil;
 }
 
@@ -206,7 +216,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
   if (((IOSObjectArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [new_JavaLangStringBuilder_initWithInt_(array->size_) autorelease];
+  JavaLangStringBuilder *buf = create_JavaLangStringBuilder_initWithInt_(array->size_);
   for (jint i = 0; i < array->size_; i++) {
     if (IOSObjectArray_Get(array, i) == nil) {
       [((JavaLangStringBuilder *) nil_chk([buf appendWithChar:'-'])) appendWithChar:'-'];
@@ -225,7 +235,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
     return JreLoadStatic(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter, EMPTY);
   }
   if (((jint) [str length]) % 2 == 1) {
-    @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Invalid Byte[] string") autorelease];
+    @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Invalid Byte[] string");
   }
   IOSObjectArray *array = [IOSObjectArray arrayWithLength:((jint) [str length]) / 2 type:JavaLangByte_class_()];
   for (jint i = 0; i < array->size_; i++) {
@@ -250,12 +260,19 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "[Ljava.lang.Byte;", 0x1, NULL, "(Ljava/lang/Class<+L[Ljava/lang/Byte;;>;Ljava/lang/String;)[Ljava/lang/Byte;" },
-    { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, "()Ljava/lang/Class<*>;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "[LJavaLangByte;", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "LIOSClass;", 0x1, -1, -1, -1, 5, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 = { 2, "", "org.joda.convert.factory", "ByteObjectArrayStringConverterFactory$ByteArrayStringConverter", 0xc018, 3, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  methods[2].selector = @selector(getEffectiveType);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "[LJavaLangByte;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<+[Ljava/lang/Byte;>;Ljava/lang/String;)[Ljava/lang/Byte;", "()Ljava/lang/Class<*>;", "LOrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 = { "", "org.joda.convert.factory", ptrTable, methods, NULL, 7, 0xc018, 3, 0, 6, -1, -1, -1, -1 };
   return &_OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1;
 }
 
@@ -264,5 +281,3 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConve
 void OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1 *self, NSString *__name, jint __ordinal) {
   OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryByteObjectArrayStringConverterFactory_ByteArrayStringConverter_$1)

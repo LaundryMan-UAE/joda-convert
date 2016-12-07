@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFromStringFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertFromStringFactory_RESTRICT
-#define OrgJodaConvertFromStringFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFromStringFactory")
+#ifdef RESTRICT_OrgJodaConvertFromStringFactory
+#define INCLUDE_ALL_OrgJodaConvertFromStringFactory 0
 #else
-#define OrgJodaConvertFromStringFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFromStringFactory 1
 #endif
-#undef OrgJodaConvertFromStringFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertFromStringFactory
 
-#if !defined (OrgJodaConvertFromStringFactory_) && (OrgJodaConvertFromStringFactory_INCLUDE_ALL || defined(OrgJodaConvertFromStringFactory_INCLUDE))
+#if !defined (OrgJodaConvertFromStringFactory_) && (INCLUDE_ALL_OrgJodaConvertFromStringFactory || defined(INCLUDE_OrgJodaConvertFromStringFactory))
 #define OrgJodaConvertFromStringFactory_
 
-#define JavaLangAnnotationAnnotation_RESTRICT 1
-#define JavaLangAnnotationAnnotation_INCLUDE 1
+#define RESTRICT_JavaLangAnnotationAnnotation 1
+#define INCLUDE_JavaLangAnnotationAnnotation 1
 #include "java/lang/annotation/Annotation.h"
 
 @class IOSClass;
@@ -43,18 +43,18 @@
 @end
 
 @interface OrgJodaConvertFromStringFactory : NSObject < OrgJodaConvertFromStringFactory > {
- @private
+ @public
   IOSClass *factory_;
 }
-
-- (instancetype)initWithFactory:(IOSClass *)factory__;
 
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFromStringFactory)
 
+FOUNDATION_EXPORT id<OrgJodaConvertFromStringFactory> create_OrgJodaConvertFromStringFactory(IOSClass *factory);
+
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromStringFactory)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFromStringFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFromStringFactory")

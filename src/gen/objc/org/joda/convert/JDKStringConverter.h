@@ -5,26 +5,27 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertJDKStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertJDKStringConverter_RESTRICT
-#define OrgJodaConvertJDKStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertJDKStringConverter")
+#ifdef RESTRICT_OrgJodaConvertJDKStringConverter
+#define INCLUDE_ALL_OrgJodaConvertJDKStringConverter 0
 #else
-#define OrgJodaConvertJDKStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertJDKStringConverter 1
 #endif
-#undef OrgJodaConvertJDKStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertJDKStringConverter
 
-#if !defined (OrgJodaConvertJDKStringConverter_) && (OrgJodaConvertJDKStringConverter_INCLUDE_ALL || defined(OrgJodaConvertJDKStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertJDKStringConverter_) && (INCLUDE_ALL_OrgJodaConvertJDKStringConverter || defined(INCLUDE_OrgJodaConvertJDKStringConverter))
 #define OrgJodaConvertJDKStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
 
 @class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter_Enum) {
   OrgJodaConvertJDKStringConverter_Enum_STRING = 0,
@@ -75,6 +76,10 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter_Enum) {
  */
 - (IOSClass *)getEffectiveType;
 
++ (OrgJodaConvertJDKStringConverter *)valueOfWithNSString:(NSString *)name;
+
++ (IOSObjectArray *)values;
+
 #pragma mark Package-Private
 
 /*!
@@ -82,10 +87,6 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertJDKStringConverter_Enum) {
  @return the type, not null
  */
 - (IOSClass *)getType;
-
-+ (IOSObjectArray *)values;
-
-+ (OrgJodaConvertJDKStringConverter *)valueOfWithNSString:(NSString *)name;
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -292,4 +293,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertJDKStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertJDKStringConverter")

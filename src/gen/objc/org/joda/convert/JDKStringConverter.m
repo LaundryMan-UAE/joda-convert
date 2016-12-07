@@ -74,8 +74,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$1)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$1 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$1)
-
 @interface OrgJodaConvertJDKStringConverter_$2 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -86,8 +84,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$1)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$2)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$2 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$2)
 
 @interface OrgJodaConvertJDKStringConverter_$3 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -100,8 +96,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$3)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$3 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$3)
-
 @interface OrgJodaConvertJDKStringConverter_$4 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -112,8 +106,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$3)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$4)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$4 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$4)
 
 @interface OrgJodaConvertJDKStringConverter_$5 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -126,8 +118,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$5)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$5 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$5)
-
 @interface OrgJodaConvertJDKStringConverter_$6 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -138,8 +128,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$5)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$6)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$6 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$6)
 
 @interface OrgJodaConvertJDKStringConverter_$7 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -152,8 +140,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$7)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$7 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$7)
-
 @interface OrgJodaConvertJDKStringConverter_$8 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -164,8 +150,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$7)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$8)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$8 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$8)
 
 @interface OrgJodaConvertJDKStringConverter_$9 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -180,8 +164,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$9)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$9 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$9)
-
 @interface OrgJodaConvertJDKStringConverter_$10 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -192,8 +174,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$9)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$10)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$10 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$10)
 
 @interface OrgJodaConvertJDKStringConverter_$11 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -208,8 +188,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$11)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$11 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$11)
-
 @interface OrgJodaConvertJDKStringConverter_$12 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -220,8 +198,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$11)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$12)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$12 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$12)
 
 @interface OrgJodaConvertJDKStringConverter_$13 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -234,8 +210,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$13)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$13 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$13)
-
 @interface OrgJodaConvertJDKStringConverter_$14 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -246,8 +220,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$13)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$14)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$14 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$14)
 
 @interface OrgJodaConvertJDKStringConverter_$15 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -260,8 +232,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$15)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$15 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$15)
-
 @interface OrgJodaConvertJDKStringConverter_$16 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -272,8 +242,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$15)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$16)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$16 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$16)
 
 @interface OrgJodaConvertJDKStringConverter_$17 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -286,8 +254,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$17)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$17 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$17)
-
 @interface OrgJodaConvertJDKStringConverter_$18 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -298,8 +264,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$17)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$18)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$18 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$18)
 
 @interface OrgJodaConvertJDKStringConverter_$19 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -312,8 +276,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$19)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$19 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$19)
-
 @interface OrgJodaConvertJDKStringConverter_$20 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -324,8 +286,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$19)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$20)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$20 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$20)
 
 @interface OrgJodaConvertJDKStringConverter_$21 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -340,8 +300,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$21)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$21 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$21)
-
 @interface OrgJodaConvertJDKStringConverter_$22 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (NSString *)convertToStringWithId:(id)object;
@@ -355,8 +313,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$22)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$22 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$22)
-
 @interface OrgJodaConvertJDKStringConverter_$23 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -367,8 +323,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$22)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$23)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$23 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$23)
 
 @interface OrgJodaConvertJDKStringConverter_$24 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -383,8 +337,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$24)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$24 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$24)
-
 @interface OrgJodaConvertJDKStringConverter_$25 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -395,8 +347,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$24)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$25)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$25 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$25)
 
 @interface OrgJodaConvertJDKStringConverter_$26 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -409,8 +359,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$26)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$26 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$26)
-
 @interface OrgJodaConvertJDKStringConverter_$27 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -421,8 +369,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$26)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$27)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$27 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$27)
 
 @interface OrgJodaConvertJDKStringConverter_$28 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -437,8 +383,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$28)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$28 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$28)
-
 @interface OrgJodaConvertJDKStringConverter_$29 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -449,8 +393,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$28)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$29)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$29 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$29)
 
 @interface OrgJodaConvertJDKStringConverter_$30 : OrgJodaConvertJDKStringConverter < NSCopying >
 
@@ -465,8 +407,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$30)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$30 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$30)
-
 @interface OrgJodaConvertJDKStringConverter_$31 : OrgJodaConvertJDKStringConverter < NSCopying >
 
 - (NSString *)convertToStringWithId:(id)object;
@@ -479,8 +419,6 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$30)
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertJDKStringConverter_$31)
 
 __attribute__((unused)) static void OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$31 *self, IOSClass *arg$0, NSString *__name, jint __ordinal);
-
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertJDKStringConverter_$31)
 
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertJDKStringConverter)
 
@@ -510,6 +448,61 @@ OrgJodaConvertJDKStringConverter *OrgJodaConvertJDKStringConverter_values_[31];
 
 - (id)copyWithZone:(NSZone *)zone {
   return self;
+}
+
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LIOSClass;", 0x0, -1, -1, -1, 0, -1, -1 },
+    { NULL, "LIOSClass;", 0x1, -1, -1, -1, 0, -1, -1 },
+    { NULL, "LNSString;", 0x1, 1, 2, -1, -1, -1, -1 },
+    { NULL, "[LOrgJodaConvertJDKStringConverter;", 0x9, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LOrgJodaConvertJDKStringConverter;", 0x9, 3, 4, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(getType);
+  methods[1].selector = @selector(getEffectiveType);
+  methods[2].selector = @selector(convertToStringWithId:);
+  methods[3].selector = @selector(values);
+  methods[4].selector = @selector(valueOfWithNSString:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "STRING", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 5, -1, -1 },
+    { "CHAR_SEQUENCE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 6, -1, -1 },
+    { "STRING_BUFFER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 7, -1, -1 },
+    { "STRING_BUILDER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 8, -1, -1 },
+    { "LONG", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 9, -1, -1 },
+    { "INTEGER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 10, -1, -1 },
+    { "SHORT", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 11, -1, -1 },
+    { "BYTE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 12, -1, -1 },
+    { "BYTE_ARRAY", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 13, -1, -1 },
+    { "CHARACTER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 14, -1, -1 },
+    { "CHAR_ARRAY", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 15, -1, -1 },
+    { "BOOLEAN", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 16, -1, -1 },
+    { "DOUBLE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 17, -1, -1 },
+    { "FLOAT", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 18, -1, -1 },
+    { "BIG_INTEGER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 19, -1, -1 },
+    { "BIG_DECIMAL", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 20, -1, -1 },
+    { "ATOMIC_LONG", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 21, -1, -1 },
+    { "ATOMIC_INTEGER", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 22, -1, -1 },
+    { "ATOMIC_BOOLEAN", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 23, -1, -1 },
+    { "LOCALE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 24, -1, -1 },
+    { "CLASS", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 25, -1, -1 },
+    { "PACKAGE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 26, -1, -1 },
+    { "CURRENCY", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 27, -1, -1 },
+    { "TIME_ZONE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 28, -1, -1 },
+    { "UUID", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 29, -1, -1 },
+    { "URL", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 30, -1, -1 },
+    { "URI", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 31, -1, -1 },
+    { "INET_ADDRESS", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 32, -1, -1 },
+    { "FILE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 33, -1, -1 },
+    { "DATE", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 34, -1, -1 },
+    { "CALENDAR", "LOrgJodaConvertJDKStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 35, -1, -1 },
+    { "type_", "LIOSClass;", .constantValue.asLong = 0, 0x2, -1, -1, 36, -1 },
+  };
+  static const void *ptrTable[] = { "()Ljava/lang/Class<*>;", "convertToString", "LNSObject;", "valueOf", "LNSString;", &JreEnum(OrgJodaConvertJDKStringConverter, STRING), &JreEnum(OrgJodaConvertJDKStringConverter, CHAR_SEQUENCE), &JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUFFER), &JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUILDER), &JreEnum(OrgJodaConvertJDKStringConverter, LONG), &JreEnum(OrgJodaConvertJDKStringConverter, INTEGER), &JreEnum(OrgJodaConvertJDKStringConverter, SHORT), &JreEnum(OrgJodaConvertJDKStringConverter, BYTE), &JreEnum(OrgJodaConvertJDKStringConverter, BYTE_ARRAY), &JreEnum(OrgJodaConvertJDKStringConverter, CHARACTER), &JreEnum(OrgJodaConvertJDKStringConverter, CHAR_ARRAY), &JreEnum(OrgJodaConvertJDKStringConverter, BOOLEAN), &JreEnum(OrgJodaConvertJDKStringConverter, DOUBLE), &JreEnum(OrgJodaConvertJDKStringConverter, FLOAT), &JreEnum(OrgJodaConvertJDKStringConverter, BIG_INTEGER), &JreEnum(OrgJodaConvertJDKStringConverter, BIG_DECIMAL), &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_LONG), &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_INTEGER), &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_BOOLEAN), &JreEnum(OrgJodaConvertJDKStringConverter, LOCALE), &JreEnum(OrgJodaConvertJDKStringConverter, CLASS), &JreEnum(OrgJodaConvertJDKStringConverter, PACKAGE), &JreEnum(OrgJodaConvertJDKStringConverter, CURRENCY), &JreEnum(OrgJodaConvertJDKStringConverter, TIME_ZONE), &JreEnum(OrgJodaConvertJDKStringConverter, UUID), &JreEnum(OrgJodaConvertJDKStringConverter, URL), &JreEnum(OrgJodaConvertJDKStringConverter, URI), &JreEnum(OrgJodaConvertJDKStringConverter, INET_ADDRESS), &JreEnum(OrgJodaConvertJDKStringConverter, FILE), &JreEnum(OrgJodaConvertJDKStringConverter, DATE), &JreEnum(OrgJodaConvertJDKStringConverter, CALENDAR), "Ljava/lang/Class<*>;", "Ljava/lang/Enum<Lorg/joda/convert/JDKStringConverter;>;Lorg/joda/convert/TypedStringConverter<Ljava/lang/Object;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter = { "JDKStringConverter", "org.joda.convert", ptrTable, methods, fields, 7, 0x4400, 5, 32, -1, -1, -1, 37, -1 };
+  return &_OrgJodaConvertJDKStringConverter;
 }
 
 + (void)initialize {
@@ -645,51 +638,6 @@ OrgJodaConvertJDKStringConverter *OrgJodaConvertJDKStringConverter_values_[31];
   }
 }
 
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "getType", NULL, "Ljava.lang.Class;", 0x0, NULL, "()Ljava/lang/Class<*>;" },
-    { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, "()Ljava/lang/Class<*>;" },
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-  };
-  static const J2ObjcFieldInfo fields[] = {
-    { "STRING", "STRING", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, STRING), NULL, .constantValue.asLong = 0 },
-    { "CHAR_SEQUENCE", "CHAR_SEQUENCE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CHAR_SEQUENCE), NULL, .constantValue.asLong = 0 },
-    { "STRING_BUFFER", "STRING_BUFFER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUFFER), NULL, .constantValue.asLong = 0 },
-    { "STRING_BUILDER", "STRING_BUILDER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, STRING_BUILDER), NULL, .constantValue.asLong = 0 },
-    { "LONG", "LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, LONG), NULL, .constantValue.asLong = 0 },
-    { "INTEGER", "INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, INTEGER), NULL, .constantValue.asLong = 0 },
-    { "SHORT", "SHORT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, SHORT), NULL, .constantValue.asLong = 0 },
-    { "BYTE", "BYTE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, BYTE), NULL, .constantValue.asLong = 0 },
-    { "BYTE_ARRAY", "BYTE_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, BYTE_ARRAY), NULL, .constantValue.asLong = 0 },
-    { "CHARACTER", "CHARACTER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CHARACTER), NULL, .constantValue.asLong = 0 },
-    { "CHAR_ARRAY", "CHAR_ARRAY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CHAR_ARRAY), NULL, .constantValue.asLong = 0 },
-    { "BOOLEAN", "BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, BOOLEAN), NULL, .constantValue.asLong = 0 },
-    { "DOUBLE", "DOUBLE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, DOUBLE), NULL, .constantValue.asLong = 0 },
-    { "FLOAT", "FLOAT", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, FLOAT), NULL, .constantValue.asLong = 0 },
-    { "BIG_INTEGER", "BIG_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, BIG_INTEGER), NULL, .constantValue.asLong = 0 },
-    { "BIG_DECIMAL", "BIG_DECIMAL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, BIG_DECIMAL), NULL, .constantValue.asLong = 0 },
-    { "ATOMIC_LONG", "ATOMIC_LONG", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_LONG), NULL, .constantValue.asLong = 0 },
-    { "ATOMIC_INTEGER", "ATOMIC_INTEGER", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_INTEGER), NULL, .constantValue.asLong = 0 },
-    { "ATOMIC_BOOLEAN", "ATOMIC_BOOLEAN", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, ATOMIC_BOOLEAN), NULL, .constantValue.asLong = 0 },
-    { "LOCALE", "LOCALE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, LOCALE), NULL, .constantValue.asLong = 0 },
-    { "CLASS", "CLASS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CLASS), NULL, .constantValue.asLong = 0 },
-    { "PACKAGE", "PACKAGE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, PACKAGE), NULL, .constantValue.asLong = 0 },
-    { "CURRENCY", "CURRENCY", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CURRENCY), NULL, .constantValue.asLong = 0 },
-    { "TIME_ZONE", "TIME_ZONE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, TIME_ZONE), NULL, .constantValue.asLong = 0 },
-    { "UUID", "UUID", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, UUID), NULL, .constantValue.asLong = 0 },
-    { "URL", "URL", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, URL), NULL, .constantValue.asLong = 0 },
-    { "URI", "URI", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, URI), NULL, .constantValue.asLong = 0 },
-    { "INET_ADDRESS", "INET_ADDRESS", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, INET_ADDRESS), NULL, .constantValue.asLong = 0 },
-    { "FILE", "FILE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, FILE), NULL, .constantValue.asLong = 0 },
-    { "DATE", "DATE", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, DATE), NULL, .constantValue.asLong = 0 },
-    { "CALENDAR", "CALENDAR", 0x4019, "Lorg.joda.convert.JDKStringConverter;", &JreEnum(OrgJodaConvertJDKStringConverter, CALENDAR), NULL, .constantValue.asLong = 0 },
-    { "type_", NULL, 0x2, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<*>;", .constantValue.asLong = 0 },
-  };
-  static const char *superclass_type_args[] = {"Lorg.joda.convert.JDKStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter = { 2, "JDKStringConverter", "org.joda.convert", NULL, 0x4400, 3, methods, 32, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/JDKStringConverter;>;Lorg/joda/convert/TypedStringConverter<Ljava/lang/Object;>;" };
-  return &_OrgJodaConvertJDKStringConverter;
-}
-
 @end
 
 void OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter *self, IOSClass *type, NSString *__name, jint __ordinal) {
@@ -710,7 +658,7 @@ OrgJodaConvertJDKStringConverter *OrgJodaConvertJDKStringConverter_valueOfWithNS
       return e;
     }
   }
-  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(name);
   return nil;
 }
 
@@ -737,10 +685,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$1 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$1 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$1;
 }
 
@@ -749,8 +702,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter)
 void OrgJodaConvertJDKStringConverter_$1_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$1 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$1)
 
 @implementation OrgJodaConvertJDKStringConverter_$2
 
@@ -765,10 +716,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$1)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$2 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$2 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$2;
 }
 
@@ -778,13 +734,11 @@ void OrgJodaConvertJDKStringConverter_$2_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$2)
-
 @implementation OrgJodaConvertJDKStringConverter_$3
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangStringBuffer_initWithNSString_(str) autorelease];
+  return create_JavaLangStringBuffer_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -793,10 +747,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$2)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$3 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$3 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$3;
 }
 
@@ -806,13 +765,11 @@ void OrgJodaConvertJDKStringConverter_$3_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$3)
-
 @implementation OrgJodaConvertJDKStringConverter_$4
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangStringBuilder_initWithNSString_(str) autorelease];
+  return create_JavaLangStringBuilder_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -821,10 +778,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$3)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$4 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$4 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$4;
 }
 
@@ -834,13 +796,11 @@ void OrgJodaConvertJDKStringConverter_$4_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$4)
-
 @implementation OrgJodaConvertJDKStringConverter_$5
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangLong_initWithNSString_(str) autorelease];
+  return create_JavaLangLong_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -849,10 +809,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$4)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$5 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$5 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$5;
 }
 
@@ -862,13 +827,11 @@ void OrgJodaConvertJDKStringConverter_$5_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$5)
-
 @implementation OrgJodaConvertJDKStringConverter_$6
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangInteger_initWithNSString_(str) autorelease];
+  return create_JavaLangInteger_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -877,10 +840,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$5)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$6 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$6 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$6;
 }
 
@@ -890,13 +858,11 @@ void OrgJodaConvertJDKStringConverter_$6_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$6)
-
 @implementation OrgJodaConvertJDKStringConverter_$7
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangShort_initWithNSString_(str) autorelease];
+  return create_JavaLangShort_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -905,10 +871,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$6)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$7 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$7 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$7;
 }
 
@@ -918,13 +889,11 @@ void OrgJodaConvertJDKStringConverter_$7_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$7)
-
 @implementation OrgJodaConvertJDKStringConverter_$8
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangByte_initWithNSString_(str) autorelease];
+  return create_JavaLangByte_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -933,10 +902,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$7)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$8 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$8 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$8;
 }
 
@@ -945,8 +919,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$7)
 void OrgJodaConvertJDKStringConverter_$8_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$8 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$8)
 
 @implementation OrgJodaConvertJDKStringConverter_$9
 
@@ -965,11 +937,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$8)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$9 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$9 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$9;
 }
 
@@ -979,16 +957,14 @@ void OrgJodaConvertJDKStringConverter_$9_initWithIOSClass_withNSString_withInt_(
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$9)
-
 @implementation OrgJodaConvertJDKStringConverter_$10
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) != 1) {
-    @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Character value must be a string length 1") autorelease];
+    @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Character value must be a string length 1");
   }
-  return [new_JavaLangCharacter_initWithChar_([str charAtWithInt:0]) autorelease];
+  return create_JavaLangCharacter_initWithChar_([str charAtWithInt:0]);
 }
 
 - (void)dealloc {
@@ -997,10 +973,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$9)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$10 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$10 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$10;
 }
 
@@ -1009,8 +990,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$9)
 void OrgJodaConvertJDKStringConverter_$10_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$10 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$10)
 
 @implementation OrgJodaConvertJDKStringConverter_$11
 
@@ -1029,11 +1008,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$10)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$11 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$11 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$11;
 }
 
@@ -1042,8 +1027,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$10)
 void OrgJodaConvertJDKStringConverter_$11_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$11 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11)
 
 @implementation OrgJodaConvertJDKStringConverter_$12
 
@@ -1055,7 +1038,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11)
   if ([@"false" equalsIgnoreCase:str]) {
     return JreLoadStatic(JavaLangBoolean, FALSE);
   }
-  @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive");
 }
 
 - (void)dealloc {
@@ -1064,10 +1047,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$11)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$12 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$12 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$12;
 }
 
@@ -1077,13 +1065,11 @@ void OrgJodaConvertJDKStringConverter_$12_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$12)
-
 @implementation OrgJodaConvertJDKStringConverter_$13
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangDouble_initWithNSString_(str) autorelease];
+  return create_JavaLangDouble_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -1092,10 +1078,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$12)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$13 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$13 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$13;
 }
 
@@ -1105,13 +1096,11 @@ void OrgJodaConvertJDKStringConverter_$13_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$13)
-
 @implementation OrgJodaConvertJDKStringConverter_$14
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaLangFloat_initWithNSString_(str) autorelease];
+  return create_JavaLangFloat_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -1120,10 +1109,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$13)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$14 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$14 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$14;
 }
 
@@ -1133,13 +1127,11 @@ void OrgJodaConvertJDKStringConverter_$14_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$14)
-
 @implementation OrgJodaConvertJDKStringConverter_$15
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaMathBigInteger_initWithNSString_(str) autorelease];
+  return create_JavaMathBigInteger_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -1148,10 +1140,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$14)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$15 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$15 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$15;
 }
 
@@ -1161,13 +1158,11 @@ void OrgJodaConvertJDKStringConverter_$15_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$15)
-
 @implementation OrgJodaConvertJDKStringConverter_$16
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaMathBigDecimal_initWithNSString_(str) autorelease];
+  return create_JavaMathBigDecimal_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -1176,10 +1171,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$15)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$16 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$16 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$16;
 }
 
@@ -1189,14 +1189,12 @@ void OrgJodaConvertJDKStringConverter_$16_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$16)
-
 @implementation OrgJodaConvertJDKStringConverter_$17
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   jlong val = JavaLangLong_parseLongWithNSString_(str);
-  return [new_JavaUtilConcurrentAtomicAtomicLong_initWithLong_(val) autorelease];
+  return create_JavaUtilConcurrentAtomicAtomicLong_initWithLong_(val);
 }
 
 - (void)dealloc {
@@ -1205,10 +1203,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$16)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$17 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$17 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$17;
 }
 
@@ -1218,14 +1221,12 @@ void OrgJodaConvertJDKStringConverter_$17_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$17)
-
 @implementation OrgJodaConvertJDKStringConverter_$18
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   jint val = JavaLangInteger_parseIntWithNSString_(str);
-  return [new_JavaUtilConcurrentAtomicAtomicInteger_initWithInt_(val) autorelease];
+  return create_JavaUtilConcurrentAtomicAtomicInteger_initWithInt_(val);
 }
 
 - (void)dealloc {
@@ -1234,10 +1235,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$17)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$18 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$18 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$18;
 }
 
@@ -1247,19 +1253,17 @@ void OrgJodaConvertJDKStringConverter_$18_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18)
-
 @implementation OrgJodaConvertJDKStringConverter_$19
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if ([@"true" equalsIgnoreCase:str]) {
-    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(true) autorelease];
+    return create_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(true);
   }
   if ([@"false" equalsIgnoreCase:str]) {
-    return [new_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(false) autorelease];
+    return create_JavaUtilConcurrentAtomicAtomicBoolean_initWithBoolean_(false);
   }
-  @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive") autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Boolean value must be 'true' or 'false', case insensitive");
 }
 
 - (void)dealloc {
@@ -1268,10 +1272,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$18)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$19 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$19 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$19;
 }
 
@@ -1281,8 +1290,6 @@ void OrgJodaConvertJDKStringConverter_$19_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
-
 @implementation OrgJodaConvertJDKStringConverter_$20
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
@@ -1290,13 +1297,13 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
   IOSObjectArray *split = [((NSString *) nil_chk(str)) split:@"_" limit:3];
   switch (((IOSObjectArray *) nil_chk(split))->size_) {
     case 1:
-    return [new_JavaUtilLocale_initWithNSString_(IOSObjectArray_Get(split, 0)) autorelease];
+    return create_JavaUtilLocale_initWithNSString_(IOSObjectArray_Get(split, 0));
     case 2:
-    return [new_JavaUtilLocale_initWithNSString_withNSString_(IOSObjectArray_Get(split, 0), IOSObjectArray_Get(split, 1)) autorelease];
+    return create_JavaUtilLocale_initWithNSString_withNSString_(IOSObjectArray_Get(split, 0), IOSObjectArray_Get(split, 1));
     case 3:
-    return [new_JavaUtilLocale_initWithNSString_withNSString_withNSString_(IOSObjectArray_Get(split, 0), IOSObjectArray_Get(split, 1), IOSObjectArray_Get(split, 2)) autorelease];
+    return create_JavaUtilLocale_initWithNSString_withNSString_withNSString_(IOSObjectArray_Get(split, 0), IOSObjectArray_Get(split, 1), IOSObjectArray_Get(split, 2));
   }
-  @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse Locale: ", str)) autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse Locale: ", str));
 }
 
 - (void)dealloc {
@@ -1305,10 +1312,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$20 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$20 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$20;
 }
 
@@ -1317,8 +1329,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$19)
 void OrgJodaConvertJDKStringConverter_$20_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$20 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
 
 @implementation OrgJodaConvertJDKStringConverter_$21
 
@@ -1332,7 +1342,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
     return [((OrgJodaConvertRenameHandler *) nil_chk(JreLoadStatic(OrgJodaConvertRenameHandler, INSTANCE))) lookupTypeWithNSString:str];
   }
   @catch (JavaLangClassNotFoundException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_(JreStrcat("$$", @"Unable to create type: ", str), ex) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(JreStrcat("$$", @"Unable to create type: ", str), ex);
   }
 }
 
@@ -1342,11 +1352,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$21 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$21 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$21;
 }
 
@@ -1355,8 +1371,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$20)
 void OrgJodaConvertJDKStringConverter_$21_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$21 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$21)
 
 @implementation OrgJodaConvertJDKStringConverter_$22
 
@@ -1375,11 +1389,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$21)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$22 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$22 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$22;
 }
 
@@ -1388,8 +1408,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$21)
 void OrgJodaConvertJDKStringConverter_$22_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$22 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$22)
 
 @implementation OrgJodaConvertJDKStringConverter_$23
 
@@ -1404,10 +1422,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$22)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$23 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$23 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$23;
 }
 
@@ -1416,8 +1439,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$22)
 void OrgJodaConvertJDKStringConverter_$23_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$23 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$23)
 
 @implementation OrgJodaConvertJDKStringConverter_$24
 
@@ -1436,11 +1457,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$23)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$24 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$24 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$24;
 }
 
@@ -1449,8 +1476,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$23)
 void OrgJodaConvertJDKStringConverter_$24_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$24 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$24)
 
 @implementation OrgJodaConvertJDKStringConverter_$25
 
@@ -1465,10 +1490,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$24)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$25 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$25 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$25;
 }
 
@@ -1478,17 +1508,15 @@ void OrgJodaConvertJDKStringConverter_$25_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$25)
-
 @implementation OrgJodaConvertJDKStringConverter_$26
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   @try {
-    return [new_JavaNetURL_initWithNSString_(str) autorelease];
+    return create_JavaNetURL_initWithNSString_(str);
   }
   @catch (JavaNetMalformedURLException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([((JavaNetMalformedURLException *) nil_chk(ex)) getMessage], ex) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSString_withNSException_([((JavaNetMalformedURLException *) nil_chk(ex)) getMessage], ex);
   }
 }
 
@@ -1498,10 +1526,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$25)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$26 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$26 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$26;
 }
 
@@ -1510,8 +1543,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$25)
 void OrgJodaConvertJDKStringConverter_$26_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$26 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$26)
 
 @implementation OrgJodaConvertJDKStringConverter_$27
 
@@ -1526,10 +1557,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$26)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$27 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$27 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$27;
 }
 
@@ -1538,8 +1574,6 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$26)
 void OrgJodaConvertJDKStringConverter_$27_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$27 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$27)
 
 @implementation OrgJodaConvertJDKStringConverter_$28
 
@@ -1553,7 +1587,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$27)
     return JavaNetInetAddress_getByNameWithNSString_(str);
   }
   @catch (JavaNetUnknownHostException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSException_(ex);
   }
 }
 
@@ -1563,11 +1597,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$27)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$28 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$28 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$28;
 }
 
@@ -1577,13 +1617,11 @@ void OrgJodaConvertJDKStringConverter_$28_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$28)
-
 @implementation OrgJodaConvertJDKStringConverter_$29
 
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
-  return [new_JavaIoFile_initWithNSString_(str) autorelease];
+  return create_JavaIoFile_initWithNSString_(str);
 }
 
 - (void)dealloc {
@@ -1592,10 +1630,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$28)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x1, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$29 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$29 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 1, 0, 3, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$29;
 }
 
@@ -1605,12 +1648,10 @@ void OrgJodaConvertJDKStringConverter_$29_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
-
 @implementation OrgJodaConvertJDKStringConverter_$30
 
 - (NSString *)convertToStringWithId:(id)object {
-  JavaTextSimpleDateFormat *f = [new_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ") autorelease];
+  JavaTextSimpleDateFormat *f = create_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ");
   NSString *str = [f formatWithId:object];
   return JreStrcat("$C$", [((NSString *) nil_chk(str)) substring:0 endIndex:26], ':', [str substring:26]);
 }
@@ -1618,15 +1659,15 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) != 29) {
-    @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse date: ", str)) autorelease];
+    @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse date: ", str));
   }
   str = JreStrcat("$$", [str substring:0 endIndex:26], [str substring:27]);
-  JavaTextSimpleDateFormat *f = [new_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ") autorelease];
+  JavaTextSimpleDateFormat *f = create_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ");
   @try {
     return [f parseObjectWithNSString:str];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSException_(ex);
   }
 }
 
@@ -1636,11 +1677,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$29)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$30 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$30 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$30;
 }
 
@@ -1650,16 +1697,14 @@ void OrgJodaConvertJDKStringConverter_$30_initWithIOSClass_withNSString_withInt_
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
-
 @implementation OrgJodaConvertJDKStringConverter_$31
 
 - (NSString *)convertToStringWithId:(id)object {
   if ([object isKindOfClass:[JavaUtilGregorianCalendar class]] == false) {
-    @throw [new_JavaLangRuntimeException_initWithNSString_(@"Unable to convert calendar as it is not a GregorianCalendar") autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSString_(@"Unable to convert calendar as it is not a GregorianCalendar");
   }
   JavaUtilGregorianCalendar *cal = (JavaUtilGregorianCalendar *) cast_chk(object, [JavaUtilGregorianCalendar class]);
-  JavaTextSimpleDateFormat *f = [new_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ") autorelease];
+  JavaTextSimpleDateFormat *f = create_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ");
   [f setCalendarWithJavaUtilCalendar:cal];
   NSString *str = [f formatWithJavaUtilDate:[((JavaUtilGregorianCalendar *) nil_chk(cal)) getTime]];
   return JreStrcat("$C$C$C", [((NSString *) nil_chk(str)) substring:0 endIndex:26], ':', [str substring:26], '[', [((JavaUtilTimeZone *) nil_chk([cal getTimeZone])) getID], ']');
@@ -1668,12 +1713,12 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
 - (id)convertFromStringWithIOSClass:(IOSClass *)cls
                        withNSString:(NSString *)str {
   if (((jint) [((NSString *) nil_chk(str)) length]) < 31 || [str charAtWithInt:26] != ':' || [str charAtWithInt:29] != '[' || [str charAtWithInt:((jint) [str length]) - 1] != ']') {
-    @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse date: ", str)) autorelease];
+    @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$$", @"Unable to parse date: ", str));
   }
   JavaUtilTimeZone *zone = JavaUtilTimeZone_getTimeZoneWithNSString_([str substring:30 endIndex:((jint) [str length]) - 1]);
   str = JreStrcat("$$", [str substring:0 endIndex:26], [str substring:27 endIndex:29]);
-  JavaTextSimpleDateFormat *f = [new_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ") autorelease];
-  JavaUtilGregorianCalendar *cal = [new_JavaUtilGregorianCalendar_initWithJavaUtilTimeZone_(zone) autorelease];
+  JavaTextSimpleDateFormat *f = create_JavaTextSimpleDateFormat_initWithNSString_(@"yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+  JavaUtilGregorianCalendar *cal = create_JavaUtilGregorianCalendar_initWithJavaUtilTimeZone_(zone);
   [cal setTimeInMillisWithLong:0];
   [f setCalendarWithJavaUtilCalendar:cal];
   @try {
@@ -1681,7 +1726,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
     return [f getCalendar];
   }
   @catch (JavaTextParseException *ex) {
-    @throw [new_JavaLangRuntimeException_initWithNSException_(ex) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSException_(ex);
   }
 }
 
@@ -1691,11 +1736,17 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "Ljava.lang.Object;", 0x1, NULL, "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$31 = { 2, "", "org.joda.convert", "JDKStringConverter", 0xc018, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "LNSObject;", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<*>;Ljava/lang/String;)Ljava/lang/Object;", "LOrgJodaConvertJDKStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertJDKStringConverter_$31 = { "", "org.joda.convert", ptrTable, methods, NULL, 7, 0xc018, 2, 0, 5, -1, -1, -1, -1 };
   return &_OrgJodaConvertJDKStringConverter_$31;
 }
 
@@ -1704,5 +1755,3 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$30)
 void OrgJodaConvertJDKStringConverter_$31_initWithIOSClass_withNSString_withInt_(OrgJodaConvertJDKStringConverter_$31 *self, IOSClass *arg$0, NSString *__name, jint __ordinal) {
   OrgJodaConvertJDKStringConverter_initWithIOSClass_withNSString_withInt_(self, arg$0, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertJDKStringConverter_$31)

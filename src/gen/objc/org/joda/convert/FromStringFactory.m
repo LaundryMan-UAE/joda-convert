@@ -4,23 +4,20 @@
 //
 
 #include "IOSClass.h"
+#include "IOSObjectArray.h"
 #include "J2ObjC_source.h"
+#include "java/lang/annotation/Annotation.h"
 #include "java/lang/annotation/ElementType.h"
 #include "java/lang/annotation/Retention.h"
 #include "java/lang/annotation/RetentionPolicy.h"
 #include "java/lang/annotation/Target.h"
 #include "org/joda/convert/FromStringFactory.h"
 
+__attribute__((unused)) static IOSObjectArray *OrgJodaConvertFromStringFactory__Annotations$0();
+
 @implementation OrgJodaConvertFromStringFactory
 
 @synthesize factory = factory_;
-
-- (instancetype)initWithFactory:(IOSClass *)factory__ {
-  if ((self = [super init])) {
-    self->factory_ = RETAIN_(factory__);
-  }
-  return self;
-}
 
 - (IOSClass *)annotationType {
   return OrgJodaConvertFromStringFactory_class_();
@@ -30,19 +27,34 @@
   return @"@org.joda.convert.FromStringFactory()";
 }
 
-+ (IOSObjectArray *)__annotations {
-  return [IOSObjectArray arrayWithObjects:(id[]) { [[[JavaLangAnnotationTarget alloc] initWithValue:[IOSObjectArray arrayWithObjects:(id[]) { JavaLangAnnotationElementType_get_TYPE() } count:1 type:NSObject_class_()]] autorelease], [[[JavaLangAnnotationRetention alloc] initWithValue:JavaLangAnnotationRetentionPolicy_get_RUNTIME()] autorelease] } count:2 type:JavaLangAnnotationAnnotation_class_()];
+- (void)dealloc {
+  RELEASE_(factory_);
+  [super dealloc];
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "factory", "factory", "Ljava.lang.Class;", 0x401, NULL, NULL },
-    { "factoryDefault", "factory", "Ljava.lang.Class;", 0x100a, NULL, NULL },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LIOSClass;", 0x401, -1, -1, -1, -1, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertFromStringFactory = { 2, "FromStringFactory", "org.joda.convert", NULL, 0x2609, 2, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(factory);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { (void *)&OrgJodaConvertFromStringFactory__Annotations$0 };
+  static const J2ObjcClassInfo _OrgJodaConvertFromStringFactory = { "FromStringFactory", "org.joda.convert", ptrTable, methods, NULL, 7, 0x2609, 1, 0, -1, -1, -1, -1, 0 };
   return &_OrgJodaConvertFromStringFactory;
 }
 
 @end
+
+id<OrgJodaConvertFromStringFactory> create_OrgJodaConvertFromStringFactory(IOSClass *factory) {
+  OrgJodaConvertFromStringFactory *self = AUTORELEASE([[OrgJodaConvertFromStringFactory alloc] init]);
+  self->factory_ = RETAIN_(factory);
+  return self;
+}
+
+IOSObjectArray *OrgJodaConvertFromStringFactory__Annotations$0() {
+  return [IOSObjectArray arrayWithObjects:(id[]){ create_JavaLangAnnotationTarget([IOSObjectArray arrayWithObjects:(id[]){ JreLoadEnum(JavaLangAnnotationElementType, TYPE) } count:1 type:NSObject_class_()]), create_JavaLangAnnotationRetention(JreLoadEnum(JavaLangAnnotationRetentionPolicy, RUNTIME)) } count:2 type:JavaLangAnnotationAnnotation_class_()];
+}
 
 J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(OrgJodaConvertFromStringFactory)

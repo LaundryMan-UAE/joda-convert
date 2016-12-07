@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertMethodConstructorStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertMethodConstructorStringConverter_RESTRICT
-#define OrgJodaConvertMethodConstructorStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter")
+#ifdef RESTRICT_OrgJodaConvertMethodConstructorStringConverter
+#define INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter 0
 #else
-#define OrgJodaConvertMethodConstructorStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter 1
 #endif
-#undef OrgJodaConvertMethodConstructorStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertMethodConstructorStringConverter
 
-#if !defined (OrgJodaConvertMethodConstructorStringConverter_) && (OrgJodaConvertMethodConstructorStringConverter_INCLUDE_ALL || defined(OrgJodaConvertMethodConstructorStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertMethodConstructorStringConverter_) && (INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter || defined(INCLUDE_OrgJodaConvertMethodConstructorStringConverter))
 #define OrgJodaConvertMethodConstructorStringConverter_
 
-#define OrgJodaConvertReflectionStringConverter_RESTRICT 1
-#define OrgJodaConvertReflectionStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertReflectionStringConverter 1
+#define INCLUDE_OrgJodaConvertReflectionStringConverter 1
 #include "org/joda/convert/ReflectionStringConverter.h"
 
 @class IOSClass;
@@ -76,4 +76,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertMethodConstructorStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertMethodConstructorStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter")

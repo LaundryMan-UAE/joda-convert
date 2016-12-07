@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_RESTRICT
-#define OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory 0
 #else
-#define OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory 1
 #endif
-#undef OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory
 
-#if !defined (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_) && (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory))
 #define OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_
 
-#define OrgJodaConvertStringConverterFactory_RESTRICT 1
-#define OrgJodaConvertStringConverterFactory_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverterFactory 1
+#define INCLUDE_OrgJodaConvertStringConverterFactory 1
 #include "org/joda/convert/StringConverterFactory.h"
 
 @class IOSClass;
@@ -74,16 +74,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryCharObjectArrayStringConverterFa
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_) && (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter))
 #define OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_Enum) {
   OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter_Enum_INSTANCE = 0,
@@ -91,11 +94,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryCharObjectArrayStringConverterF
 
 @interface OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_CharecterArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -119,4 +127,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryCharObjectArrayStringConverterFa
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFactoryCharObjectArrayStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFactoryCharObjectArrayStringConverterFactory")

@@ -5,15 +5,15 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFromStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertFromStringConverter_RESTRICT
-#define OrgJodaConvertFromStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFromStringConverter")
+#ifdef RESTRICT_OrgJodaConvertFromStringConverter
+#define INCLUDE_ALL_OrgJodaConvertFromStringConverter 0
 #else
-#define OrgJodaConvertFromStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFromStringConverter 1
 #endif
-#undef OrgJodaConvertFromStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertFromStringConverter
 
-#if !defined (OrgJodaConvertFromStringConverter_) && (OrgJodaConvertFromStringConverter_INCLUDE_ALL || defined(OrgJodaConvertFromStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFromStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFromStringConverter || defined(INCLUDE_OrgJodaConvertFromStringConverter))
 #define OrgJodaConvertFromStringConverter_
 
 @class IOSClass;
@@ -24,7 +24,7 @@
  FromStringConverter is an interface and must be implemented with care.
  Implementations must be immutable and thread-safe.
  */
-@protocol OrgJodaConvertFromStringConverter < NSObject, JavaObject >
+@protocol OrgJodaConvertFromStringConverter < JavaObject >
 
 /*!
  @brief Converts the specified object from a <code>String</code>.
@@ -43,4 +43,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFromStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFromStringConverter")

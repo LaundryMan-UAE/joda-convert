@@ -13,7 +13,8 @@
 @implementation OrgJodaConvertStringConverter
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcClassInfo _OrgJodaConvertStringConverter = { 2, "StringConverter", "org.joda.convert", NULL, 0x609, 0, NULL, 0, NULL, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/ToStringConverter<TT;>;Lorg/joda/convert/FromStringConverter<TT;>;" };
+  static const void *ptrTable[] = { "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/ToStringConverter<TT;>;Lorg/joda/convert/FromStringConverter<TT;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertStringConverter = { "StringConverter", "org.joda.convert", ptrTable, NULL, NULL, 7, 0x609, 0, 0, -1, -1, -1, 0, -1 };
   return &_OrgJodaConvertStringConverter;
 }
 

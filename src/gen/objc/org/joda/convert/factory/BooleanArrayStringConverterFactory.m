@@ -4,6 +4,7 @@
 //
 
 #include "IOSClass.h"
+#include "IOSObjectArray.h"
 #include "IOSPrimitiveArray.h"
 #include "J2ObjC_source.h"
 #include "java/lang/Enum.h"
@@ -14,6 +15,7 @@
 #include "org/joda/convert/factory/BooleanArrayStringConverterFactory.h"
 
 #pragma clang diagnostic ignored "-Wprotocol"
+#pragma clang diagnostic ignored "-Wincomplete-implementation"
 
 @interface OrgJodaConvertFactoryBooleanArrayStringConverterFactory ()
 
@@ -51,8 +53,6 @@ J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFactoryBooleanArrayStringConverterFactory
 
 __attribute__((unused)) static void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *self, NSString *__name, jint __ordinal);
 
-J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1)
-
 J2OBJC_INITIALIZED_DEFN(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
 
 id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INSTANCE;
@@ -77,25 +77,31 @@ J2OBJC_IGNORE_DESIGNATED_END
   return [[self getClass] getSimpleName];
 }
 
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x2, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LOrgJodaConvertStringConverter;", 0x1, 0, 1, -1, 2, -1, -1 },
+    { NULL, "LNSString;", 0x1, 3, -1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(init);
+  methods[1].selector = @selector(findConverterWithIOSClass:);
+  methods[2].selector = @selector(description);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "INSTANCE", "LOrgJodaConvertStringConverterFactory;", .constantValue.asLong = 0, 0x19, -1, 4, -1, -1 },
+  };
+  static const void *ptrTable[] = { "findConverter", "LIOSClass;", "(Ljava/lang/Class<*>;)Lorg/joda/convert/StringConverter<*>;", "toString", &OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INSTANCE, "LOrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory = { "BooleanArrayStringConverterFactory", "org.joda.convert.factory", ptrTable, methods, fields, 7, 0x11, 3, 1, -1, 5, -1, -1, -1 };
+  return &_OrgJodaConvertFactoryBooleanArrayStringConverterFactory;
+}
+
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanArrayStringConverterFactory class]) {
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INSTANCE, new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init());
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
   }
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "init", "BooleanArrayStringConverterFactory", NULL, 0x2, NULL, NULL },
-    { "findConverterWithIOSClass:", "findConverter", "Lorg.joda.convert.StringConverter;", 0x1, NULL, "(Ljava/lang/Class<*>;)Lorg/joda/convert/StringConverter<*>;" },
-    { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
-  };
-  static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x19, "Lorg.joda.convert.StringConverterFactory;", &OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INSTANCE, NULL, .constantValue.asLong = 0 },
-  };
-  static const char *inner_classes[] = {"Lorg.joda.convert.factory.BooleanArrayStringConverterFactory$BooleanArrayStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory = { 2, "BooleanArrayStringConverterFactory", "org.joda.convert.factory", NULL, 0x11, 3, methods, 1, fields, 0, NULL, 1, inner_classes, NULL, NULL };
-  return &_OrgJodaConvertFactoryBooleanArrayStringConverterFactory;
 }
 
 @end
@@ -105,15 +111,11 @@ void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init(OrgJodaConvert
 }
 
 OrgJodaConvertFactoryBooleanArrayStringConverterFactory *new_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init() {
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory *self = [OrgJodaConvertFactoryBooleanArrayStringConverterFactory alloc];
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init(self);
-  return self;
+  J2OBJC_NEW_IMPL(OrgJodaConvertFactoryBooleanArrayStringConverterFactory, init)
 }
 
 OrgJodaConvertFactoryBooleanArrayStringConverterFactory *create_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init() {
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory *self = [[OrgJodaConvertFactoryBooleanArrayStringConverterFactory alloc] autorelease];
-  OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init(self);
-  return self;
+  J2OBJC_CREATE_IMPL(OrgJodaConvertFactoryBooleanArrayStringConverterFactory, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverterFactory)
@@ -136,6 +138,25 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
   return self;
 }
 
++ (const J2ObjcClassInfo *)__metadata {
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "[LOrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;", 0x9, -1, -1, -1, -1, -1, -1 },
+    { NULL, "LOrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;", 0x9, 0, 1, -1, -1, -1, -1 },
+  };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(values);
+  methods[1].selector = @selector(valueOfWithNSString:);
+  #pragma clang diagnostic pop
+  static const J2ObjcFieldInfo fields[] = {
+    { "INSTANCE", "LOrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;", .constantValue.asLong = 0, 0x4019, -1, 2, -1, -1 },
+    { "EMPTY", "[Z", .constantValue.asLong = 0, 0x1a, -1, 3, -1, -1 },
+  };
+  static const void *ptrTable[] = { "valueOf", "LNSString;", &JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE), &OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY, "LOrgJodaConvertFactoryBooleanArrayStringConverterFactory;", "Ljava/lang/Enum<Lorg/joda/convert/factory/BooleanArrayStringConverterFactory$BooleanArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<[LZ;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter = { "BooleanArrayStringConverter", "org.joda.convert.factory", ptrTable, methods, fields, 7, 0x4408, 2, 2, 4, -1, -1, 5, -1 };
+  return &_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;
+}
+
 + (void)initialize {
   if (self == [OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter class]) {
     size_t allocSize = 0;
@@ -148,16 +169,6 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY, [IOSBooleanArray newArrayWithLength:0]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter)
   }
-}
-
-+ (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcFieldInfo fields[] = {
-    { "INSTANCE", "INSTANCE", 0x4019, "Lorg.joda.convert.factory.BooleanArrayStringConverterFactory$BooleanArrayStringConverter;", &JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE), NULL, .constantValue.asLong = 0 },
-    { "EMPTY", "EMPTY", 0x1a, "[Z", &OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY, NULL, .constantValue.asLong = 0 },
-  };
-  static const char *superclass_type_args[] = {"Lorg.joda.convert.factory.BooleanArrayStringConverterFactory$BooleanArrayStringConverter;"};
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter = { 2, "BooleanArrayStringConverter", "org.joda.convert.factory", "BooleanArrayStringConverterFactory", 0x4408, 0, NULL, 2, fields, 1, superclass_type_args, 0, NULL, NULL, "Ljava/lang/Enum<Lorg/joda/convert/factory/BooleanArrayStringConverterFactory$BooleanArrayStringConverter;>;Lorg/joda/convert/TypedStringConverter<L[Z;>;" };
-  return &_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;
 }
 
 @end
@@ -179,7 +190,7 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
       return e;
     }
   }
-  @throw [[[JavaLangIllegalArgumentException alloc] initWithNSString:name] autorelease];
+  @throw create_JavaLangIllegalArgumentException_initWithNSString_(name);
   return nil;
 }
 
@@ -199,7 +210,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
   if (((IOSBooleanArray *) nil_chk(array))->size_ == 0) {
     return @"";
   }
-  JavaLangStringBuilder *buf = [new_JavaLangStringBuilder_initWithInt_(array->size_) autorelease];
+  JavaLangStringBuilder *buf = create_JavaLangStringBuilder_initWithInt_(array->size_);
   for (jint i = 0; i < array->size_; i++) {
     [buf appendWithChar:IOSBooleanArray_Get(array, i) ? 'T' : 'F'];
   }
@@ -221,7 +232,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
       *IOSBooleanArray_GetRef(array, i) = false;
     }
     else {
-      @throw [new_JavaLangIllegalArgumentException_initWithNSString_(@"Invalid boolean[] string, must consist only of 'T' and 'F'") autorelease];
+      @throw create_JavaLangIllegalArgumentException_initWithNSString_(@"Invalid boolean[] string, must consist only of 'T' and 'F'");
     }
   }
   return array;
@@ -237,12 +248,19 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, NULL },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "[Z", 0x1, NULL, "(Ljava/lang/Class<+L[Z;>;Ljava/lang/String;)[Z" },
-    { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, "()Ljava/lang/Class<*>;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSString;", 0x1, 0, 1, -1, -1, -1, -1 },
+    { NULL, "[Z", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "LIOSClass;", 0x1, -1, -1, -1, 5, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 = { 2, "", "org.joda.convert.factory", "BooleanArrayStringConverterFactory$BooleanArrayStringConverter", 0xc018, 3, methods, 0, NULL, 0, NULL, 0, NULL, NULL, NULL };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertToStringWithId:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  methods[2].selector = @selector(getEffectiveType);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertToString", "[Z", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<+[LZ;>;Ljava/lang/String;)[Z", "()Ljava/lang/Class<*>;", "LOrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 = { "", "org.joda.convert.factory", ptrTable, methods, NULL, 7, 0xc018, 3, 0, 6, -1, -1, -1, -1 };
   return &_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1;
 }
 
@@ -251,5 +269,3 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
 void OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1_initWithNSString_withInt_(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1 *self, NSString *__name, jint __ordinal) {
   OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_initWithNSString_withInt_(self, __name, __ordinal);
 }
-
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_$1)

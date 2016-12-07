@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertTypedStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertTypedStringConverter_RESTRICT
-#define OrgJodaConvertTypedStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertTypedStringConverter")
+#ifdef RESTRICT_OrgJodaConvertTypedStringConverter
+#define INCLUDE_ALL_OrgJodaConvertTypedStringConverter 0
 #else
-#define OrgJodaConvertTypedStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertTypedStringConverter 1
 #endif
-#undef OrgJodaConvertTypedStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertTypedStringConverter
 
-#if !defined (OrgJodaConvertTypedStringConverter_) && (OrgJodaConvertTypedStringConverter_INCLUDE_ALL || defined(OrgJodaConvertTypedStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertTypedStringConverter_) && (INCLUDE_ALL_OrgJodaConvertTypedStringConverter || defined(INCLUDE_OrgJodaConvertTypedStringConverter))
 #define OrgJodaConvertTypedStringConverter_
 
-#define OrgJodaConvertStringConverter_RESTRICT 1
-#define OrgJodaConvertStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverter 1
+#define INCLUDE_OrgJodaConvertStringConverter 1
 #include "org/joda/convert/StringConverter.h"
 
 @class IOSClass;
@@ -29,7 +29,7 @@
  Implementations must be immutable and thread-safe.
  @since 1.7
  */
-@protocol OrgJodaConvertTypedStringConverter < OrgJodaConvertStringConverter, NSObject, JavaObject >
+@protocol OrgJodaConvertTypedStringConverter < OrgJodaConvertStringConverter, JavaObject >
 
 /*!
  @brief Gets the effective type that the converter works on.
@@ -49,4 +49,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertTypedStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertTypedStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertTypedStringConverter")

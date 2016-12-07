@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_RESTRICT
-#define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory 0
 #else
-#define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory 1
 #endif
-#undef OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_
 
-#define OrgJodaConvertStringConverterFactory_RESTRICT 1
-#define OrgJodaConvertStringConverterFactory_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverterFactory 1
+#define INCLUDE_OrgJodaConvertStringConverterFactory 1
 #include "org/joda/convert/StringConverterFactory.h"
 
 @class IOSClass;
@@ -71,16 +71,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_Enum) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter_Enum_INSTANCE = 0,
@@ -88,11 +91,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConvert
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_LongArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -116,16 +124,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_Enum) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter_Enum_INSTANCE = 0,
@@ -133,11 +144,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConvert
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_IntArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -161,16 +177,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_Enum) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter_Enum_INSTANCE = 0,
@@ -178,11 +197,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConvert
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_ShortArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -206,16 +230,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_Enum) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter_Enum_INSTANCE = 0,
@@ -223,11 +250,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConvert
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_DoubleArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -251,16 +283,19 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_) && (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter))
 #define OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_Enum) {
   OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter_Enum_INSTANCE = 0,
@@ -268,11 +303,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryNumericObjectArrayStringConvert
 
 @interface OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSObjectArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                     withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_FloatArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -296,4 +336,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryNumericObjectArrayStringConverte
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFactoryNumericObjectArrayStringConverterFactory")

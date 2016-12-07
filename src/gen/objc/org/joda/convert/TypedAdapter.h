@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertTypedAdapter_INCLUDE_ALL")
-#ifdef OrgJodaConvertTypedAdapter_RESTRICT
-#define OrgJodaConvertTypedAdapter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertTypedAdapter")
+#ifdef RESTRICT_OrgJodaConvertTypedAdapter
+#define INCLUDE_ALL_OrgJodaConvertTypedAdapter 0
 #else
-#define OrgJodaConvertTypedAdapter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertTypedAdapter 1
 #endif
-#undef OrgJodaConvertTypedAdapter_RESTRICT
+#undef RESTRICT_OrgJodaConvertTypedAdapter
 
-#if !defined (OrgJodaConvertTypedAdapter_) && (OrgJodaConvertTypedAdapter_INCLUDE_ALL || defined(OrgJodaConvertTypedAdapter_INCLUDE))
+#if !defined (OrgJodaConvertTypedAdapter_) && (INCLUDE_ALL_OrgJodaConvertTypedAdapter || defined(INCLUDE_OrgJodaConvertTypedAdapter))
 #define OrgJodaConvertTypedAdapter_
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
 
 @class IOSClass;
@@ -55,4 +55,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertTypedAdapter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertTypedAdapter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertTypedAdapter")

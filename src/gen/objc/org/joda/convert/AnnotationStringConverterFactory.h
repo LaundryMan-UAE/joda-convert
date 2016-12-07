@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertAnnotationStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertAnnotationStringConverterFactory_RESTRICT
-#define OrgJodaConvertAnnotationStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertAnnotationStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertAnnotationStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertAnnotationStringConverterFactory 0
 #else
-#define OrgJodaConvertAnnotationStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertAnnotationStringConverterFactory 1
 #endif
-#undef OrgJodaConvertAnnotationStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertAnnotationStringConverterFactory
 
-#if !defined (OrgJodaConvertAnnotationStringConverterFactory_) && (OrgJodaConvertAnnotationStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertAnnotationStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertAnnotationStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertAnnotationStringConverterFactory || defined(INCLUDE_OrgJodaConvertAnnotationStringConverterFactory))
 #define OrgJodaConvertAnnotationStringConverterFactory_
 
-#define OrgJodaConvertStringConverterFactory_RESTRICT 1
-#define OrgJodaConvertStringConverterFactory_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverterFactory 1
+#define INCLUDE_OrgJodaConvertStringConverterFactory 1
 #include "org/joda/convert/StringConverterFactory.h"
 
 @class IOSClass;
@@ -59,4 +59,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertAnnotationStringConverterFactory)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertAnnotationStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertAnnotationStringConverterFactory")

@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertEnumStringConverterFactory_RESTRICT
-#define OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertEnumStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory 0
 #else
-#define OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory 1
 #endif
-#undef OrgJodaConvertEnumStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertEnumStringConverterFactory
 
-#if !defined (OrgJodaConvertEnumStringConverterFactory_) && (OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertEnumStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertEnumStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory || defined(INCLUDE_OrgJodaConvertEnumStringConverterFactory))
 #define OrgJodaConvertEnumStringConverterFactory_
 
-#define OrgJodaConvertStringConverterFactory_RESTRICT 1
-#define OrgJodaConvertStringConverterFactory_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverterFactory 1
+#define INCLUDE_OrgJodaConvertStringConverterFactory 1
 #include "org/joda/convert/StringConverterFactory.h"
 
 @class IOSClass;
@@ -59,11 +59,11 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertEnumStringConverterFactory)
 
 #endif
 
-#if !defined (OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_) && (OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_) && (INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory || defined(INCLUDE_OrgJodaConvertEnumStringConverterFactory_EnumStringConverter))
 #define OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
 
 @class IOSClass;
@@ -100,4 +100,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertEnumStringConverterFactory_EnumStringCo
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertEnumStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertEnumStringConverterFactory")

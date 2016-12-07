@@ -3,7 +3,6 @@
 //  source: /Users/andrefonseca/Documents/PodsFolders/joda-convert/src/main/java/org/joda/convert/TypedStringConverter.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "org/joda/convert/TypedStringConverter.h"
 
@@ -14,10 +13,15 @@
 @implementation OrgJodaConvertTypedStringConverter
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x401, NULL, "()Ljava/lang/Class<*>;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LIOSClass;", 0x401, -1, -1, -1, 0, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertTypedStringConverter = { 2, "TypedStringConverter", "org.joda.convert", NULL, 0x609, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/StringConverter<TT;>;" };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(getEffectiveType);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "()Ljava/lang/Class<*>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/StringConverter<TT;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertTypedStringConverter = { "TypedStringConverter", "org.joda.convert", ptrTable, methods, NULL, 7, 0x609, 1, 0, -1, -1, -1, 1, -1 };
   return &_OrgJodaConvertTypedStringConverter;
 }
 

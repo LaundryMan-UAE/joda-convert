@@ -3,7 +3,6 @@
 //  source: /Users/andrefonseca/Documents/PodsFolders/joda-convert/src/main/java/org/joda/convert/FromStringConverter.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "org/joda/convert/FromStringConverter.h"
 
@@ -14,10 +13,15 @@
 @implementation OrgJodaConvertFromStringConverter
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "TT;", 0x401, NULL, "(Ljava/lang/Class<+TT;>;Ljava/lang/String;)TT;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, "LNSObject;", 0x401, 0, 1, -1, 2, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertFromStringConverter = { 2, "FromStringConverter", "org.joda.convert", NULL, 0x609, 1, methods, 0, NULL, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  #pragma clang diagnostic pop
+  static const void *ptrTable[] = { "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<+TT;>;Ljava/lang/String;)TT;", "<T:Ljava/lang/Object;>Ljava/lang/Object;" };
+  static const J2ObjcClassInfo _OrgJodaConvertFromStringConverter = { "FromStringConverter", "org.joda.convert", ptrTable, methods, NULL, 7, 0x609, 1, 0, -1, -1, -1, 3, -1 };
   return &_OrgJodaConvertFromStringConverter;
 }
 

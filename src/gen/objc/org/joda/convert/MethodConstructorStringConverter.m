@@ -45,16 +45,16 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_,
     return [((JavaLangReflectConstructor *) nil_chk(fromString_)) newInstanceWithNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ str } count:1 type:NSObject_class_()]];
   }
   @catch (JavaLangIllegalAccessException *ex) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Constructor is not accessible: ", fromString_)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Constructor is not accessible: ", fromString_));
   }
   @catch (JavaLangInstantiationException *ex) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Constructor is not valid: ", fromString_)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Constructor is not valid: ", fromString_));
   }
   @catch (JavaLangReflectInvocationTargetException *ex) {
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) cast_chk([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]);
   }
 }
 
@@ -68,16 +68,22 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_,
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "initWithIOSClass:withJavaLangReflectMethod:withJavaLangReflectConstructor:", "MethodConstructorStringConverter", NULL, 0x0, NULL, "(Ljava/lang/Class<TT;>;Ljava/lang/reflect/Method;Ljava/lang/reflect/Constructor<TT;>;)V" },
-    { "convertFromStringWithIOSClass:withNSString:", "convertFromString", "TT;", 0x1, NULL, "(Ljava/lang/Class<+TT;>;Ljava/lang/String;)TT;" },
-    { "getEffectiveType", NULL, "Ljava.lang.Class;", 0x1, NULL, "()Ljava/lang/Class<*>;" },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSObject;", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "LIOSClass;", 0x1, -1, -1, -1, 5, -1, -1 },
   };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithIOSClass:withJavaLangReflectMethod:withJavaLangReflectConstructor:);
+  methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
+  methods[2].selector = @selector(getEffectiveType);
+  #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "fromString_", NULL, 0x12, "Ljava.lang.reflect.Constructor;", NULL, "Ljava/lang/reflect/Constructor<TT;>;", .constantValue.asLong = 0 },
+    { "fromString_", "LJavaLangReflectConstructor;", .constantValue.asLong = 0, 0x12, -1, -1, 6, -1 },
   };
-  static const char *superclass_type_args[] = {"TT;"};
-  static const J2ObjcClassInfo _OrgJodaConvertMethodConstructorStringConverter = { 2, "MethodConstructorStringConverter", "org.joda.convert", NULL, 0x10, 3, methods, 1, fields, 1, superclass_type_args, 0, NULL, NULL, "<T:Ljava/lang/Object;>Lorg/joda/convert/ReflectionStringConverter<TT;>;" };
+  static const void *ptrTable[] = { "LIOSClass;LJavaLangReflectMethod;LJavaLangReflectConstructor;", "(Ljava/lang/Class<TT;>;Ljava/lang/reflect/Method;Ljava/lang/reflect/Constructor<TT;>;)V", "convertFromString", "LIOSClass;LNSString;", "(Ljava/lang/Class<+TT;>;Ljava/lang/String;)TT;", "()Ljava/lang/Class<*>;", "Ljava/lang/reflect/Constructor<TT;>;", "<T:Ljava/lang/Object;>Lorg/joda/convert/ReflectionStringConverter<TT;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertMethodConstructorStringConverter = { "MethodConstructorStringConverter", "org.joda.convert", ptrTable, methods, fields, 7, 0x10, 3, 1, -1, -1, -1, 7, -1 };
   return &_OrgJodaConvertMethodConstructorStringConverter;
 }
 
@@ -86,24 +92,20 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertMethodConstructorStringConverter, fromString_,
 void OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(OrgJodaConvertMethodConstructorStringConverter *self, IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {
   OrgJodaConvertReflectionStringConverter_initWithIOSClass_withJavaLangReflectMethod_(self, cls, toString);
   if ([((IOSClass *) nil_chk(cls)) isInterface] || JavaLangReflectModifier_isAbstractWithInt_([cls getModifiers]) || [cls isLocalClass] || [cls isMemberClass]) {
-    @throw [new_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$@", @"FromString constructor must be on an instantiable class: ", fromString)) autorelease];
+    @throw create_JavaLangIllegalArgumentException_initWithNSString_(JreStrcat("$@", @"FromString constructor must be on an instantiable class: ", fromString));
   }
   if ([((JavaLangReflectConstructor *) nil_chk(fromString)) getDeclaringClass] != cls) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"FromString constructor must be defined on specified class: ", fromString)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"FromString constructor must be defined on specified class: ", fromString));
   }
   JreStrongAssign(&self->fromString_, fromString);
 }
 
 OrgJodaConvertMethodConstructorStringConverter *new_OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {
-  OrgJodaConvertMethodConstructorStringConverter *self = [OrgJodaConvertMethodConstructorStringConverter alloc];
-  OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(self, cls, toString, fromString);
-  return self;
+  J2OBJC_NEW_IMPL(OrgJodaConvertMethodConstructorStringConverter, initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_, cls, toString, fromString)
 }
 
 OrgJodaConvertMethodConstructorStringConverter *create_OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(IOSClass *cls, JavaLangReflectMethod *toString, JavaLangReflectConstructor *fromString) {
-  OrgJodaConvertMethodConstructorStringConverter *self = [[OrgJodaConvertMethodConstructorStringConverter alloc] autorelease];
-  OrgJodaConvertMethodConstructorStringConverter_initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_(self, cls, toString, fromString);
-  return self;
+  J2OBJC_CREATE_IMPL(OrgJodaConvertMethodConstructorStringConverter, initWithIOSClass_withJavaLangReflectMethod_withJavaLangReflectConstructor_, cls, toString, fromString)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertMethodConstructorStringConverter)

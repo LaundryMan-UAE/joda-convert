@@ -5,19 +5,19 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL")
-#ifdef OrgJodaConvertFactoryBooleanArrayStringConverterFactory_RESTRICT
-#define OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory")
+#ifdef RESTRICT_OrgJodaConvertFactoryBooleanArrayStringConverterFactory
+#define INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory 0
 #else
-#define OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory 1
 #endif
-#undef OrgJodaConvertFactoryBooleanArrayStringConverterFactory_RESTRICT
+#undef RESTRICT_OrgJodaConvertFactoryBooleanArrayStringConverterFactory
 
-#if !defined (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_) && (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE))
+#if !defined (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryBooleanArrayStringConverterFactory))
 #define OrgJodaConvertFactoryBooleanArrayStringConverterFactory_
 
-#define OrgJodaConvertStringConverterFactory_RESTRICT 1
-#define OrgJodaConvertStringConverterFactory_INCLUDE 1
+#define RESTRICT_OrgJodaConvertStringConverterFactory 1
+#define INCLUDE_OrgJodaConvertStringConverterFactory 1
 #include "org/joda/convert/StringConverterFactory.h"
 
 @class IOSClass;
@@ -64,16 +64,20 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFacto
 
 #endif
 
-#if !defined (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_) && (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL || defined(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_) && (INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory || defined(INCLUDE_OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter))
 #define OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_
 
-#define JavaLangEnum_RESTRICT 1
-#define JavaLangEnum_INCLUDE 1
+#define RESTRICT_JavaLangEnum 1
+#define INCLUDE_JavaLangEnum 1
 #include "java/lang/Enum.h"
 
-#define OrgJodaConvertTypedStringConverter_RESTRICT 1
-#define OrgJodaConvertTypedStringConverter_INCLUDE 1
+#define RESTRICT_OrgJodaConvertTypedStringConverter 1
+#define INCLUDE_OrgJodaConvertTypedStringConverter 1
 #include "org/joda/convert/TypedStringConverter.h"
+
+@class IOSBooleanArray;
+@class IOSClass;
+@class IOSObjectArray;
 
 typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_Enum) {
   OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_Enum_INSTANCE = 0,
@@ -81,11 +85,16 @@ typedef NS_ENUM(NSUInteger, OrgJodaConvertFactoryBooleanArrayStringConverterFact
 
 @interface OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter : JavaLangEnum < NSCopying, OrgJodaConvertTypedStringConverter >
 
-#pragma mark Package-Private
+#pragma mark Public
+
+- (IOSBooleanArray *)convertFromStringWithIOSClass:(IOSClass *)arg0
+                                      withNSString:(NSString *)arg1;
+
++ (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
 
-+ (OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter *)valueOfWithNSString:(NSString *)name;
+#pragma mark Package-Private
 
 - (id)copyWithZone:(NSZone *)zone;
 
@@ -109,4 +118,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFactoryBooleanArrayStringConverterFacto
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFactoryBooleanArrayStringConverterFactory_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFactoryBooleanArrayStringConverterFactory")

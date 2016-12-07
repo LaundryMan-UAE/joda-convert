@@ -5,20 +5,22 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertFromString_INCLUDE_ALL")
-#ifdef OrgJodaConvertFromString_RESTRICT
-#define OrgJodaConvertFromString_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertFromString")
+#ifdef RESTRICT_OrgJodaConvertFromString
+#define INCLUDE_ALL_OrgJodaConvertFromString 0
 #else
-#define OrgJodaConvertFromString_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertFromString 1
 #endif
-#undef OrgJodaConvertFromString_RESTRICT
+#undef RESTRICT_OrgJodaConvertFromString
 
-#if !defined (OrgJodaConvertFromString_) && (OrgJodaConvertFromString_INCLUDE_ALL || defined(OrgJodaConvertFromString_INCLUDE))
+#if !defined (OrgJodaConvertFromString_) && (INCLUDE_ALL_OrgJodaConvertFromString || defined(INCLUDE_OrgJodaConvertFromString))
 #define OrgJodaConvertFromString_
 
-#define JavaLangAnnotationAnnotation_RESTRICT 1
-#define JavaLangAnnotationAnnotation_INCLUDE 1
+#define RESTRICT_JavaLangAnnotationAnnotation 1
+#define INCLUDE_JavaLangAnnotationAnnotation 1
 #include "java/lang/annotation/Annotation.h"
+
+@class IOSClass;
 
 /*!
  @brief Annotation used to mark a method or constructor as being suitable for converting
@@ -42,8 +44,10 @@
 
 J2OBJC_EMPTY_STATIC_INIT(OrgJodaConvertFromString)
 
+FOUNDATION_EXPORT id<OrgJodaConvertFromString> create_OrgJodaConvertFromString();
+
 J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromString)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertFromString_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFromString")

@@ -45,13 +45,13 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
     return (NSString *) cast_chk([((JavaLangReflectMethod *) nil_chk(toString_)) invokeWithId:object withNSObjectArray:[IOSObjectArray arrayWithLength:0 type:NSObject_class_()]], [NSString class]);
   }
   @catch (JavaLangIllegalAccessException *ex) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Method is not accessible: ", toString_)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"Method is not accessible: ", toString_));
   }
   @catch (JavaLangReflectInvocationTargetException *ex) {
     if ([[((JavaLangReflectInvocationTargetException *) nil_chk(ex)) getCause] isKindOfClass:[JavaLangRuntimeException class]]) {
       @throw (JavaLangRuntimeException *) cast_chk([ex getCause], [JavaLangRuntimeException class]);
     }
-    @throw [new_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]) autorelease];
+    @throw create_JavaLangRuntimeException_initWithNSString_withNSException_([ex getMessage], [ex getCause]);
   }
 }
 
@@ -66,16 +66,23 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
 }
 
 + (const J2ObjcClassInfo *)__metadata {
-  static const J2ObjcMethodInfo methods[] = {
-    { "initWithIOSClass:withJavaLangReflectMethod:", "ReflectionStringConverter", NULL, 0x0, NULL, "(Ljava/lang/Class<TT;>;Ljava/lang/reflect/Method;)V" },
-    { "convertToStringWithId:", "convertToString", "Ljava.lang.String;", 0x1, NULL, "(TT;)Ljava/lang/String;" },
-    { "description", "toString", "Ljava.lang.String;", 0x1, NULL, NULL },
+  static J2ObjcMethodInfo methods[] = {
+    { NULL, NULL, 0x0, -1, 0, -1, 1, -1, -1 },
+    { NULL, "LNSString;", 0x1, 2, 3, -1, 4, -1, -1 },
+    { NULL, "LNSString;", 0x1, 5, -1, -1, -1, -1, -1 },
   };
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  methods[0].selector = @selector(initWithIOSClass:withJavaLangReflectMethod:);
+  methods[1].selector = @selector(convertToStringWithId:);
+  methods[2].selector = @selector(description);
+  #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {
-    { "cls_", NULL, 0x12, "Ljava.lang.Class;", NULL, "Ljava/lang/Class<TT;>;", .constantValue.asLong = 0 },
-    { "toString_", NULL, 0x12, "Ljava.lang.reflect.Method;", NULL, NULL, .constantValue.asLong = 0 },
+    { "cls_", "LIOSClass;", .constantValue.asLong = 0, 0x12, -1, -1, 6, -1 },
+    { "toString_", "LJavaLangReflectMethod;", .constantValue.asLong = 0, 0x12, -1, -1, -1, -1 },
   };
-  static const J2ObjcClassInfo _OrgJodaConvertReflectionStringConverter = { 2, "ReflectionStringConverter", "org.joda.convert", NULL, 0x400, 3, methods, 2, fields, 0, NULL, 0, NULL, NULL, "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<TT;>;" };
+  static const void *ptrTable[] = { "LIOSClass;LJavaLangReflectMethod;", "(Ljava/lang/Class<TT;>;Ljava/lang/reflect/Method;)V", "convertToString", "LNSObject;", "(TT;)Ljava/lang/String;", "toString", "Ljava/lang/Class<TT;>;", "<T:Ljava/lang/Object;>Ljava/lang/Object;Lorg/joda/convert/TypedStringConverter<TT;>;" };
+  static const J2ObjcClassInfo _OrgJodaConvertReflectionStringConverter = { "ReflectionStringConverter", "org.joda.convert", ptrTable, methods, fields, 7, 0x400, 3, 2, -1, -1, -1, 7, -1 };
   return &_OrgJodaConvertReflectionStringConverter;
 }
 
@@ -84,10 +91,10 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
 void OrgJodaConvertReflectionStringConverter_initWithIOSClass_withJavaLangReflectMethod_(OrgJodaConvertReflectionStringConverter *self, IOSClass *cls, JavaLangReflectMethod *toString) {
   NSObject_init(self);
   if (((IOSObjectArray *) nil_chk([((JavaLangReflectMethod *) nil_chk(toString)) getParameterTypes]))->size_ != 0) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"ToString method must have no parameters: ", toString)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"ToString method must have no parameters: ", toString));
   }
   if ([toString getReturnType] != NSString_class_()) {
-    @throw [new_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"ToString method must return a String: ", toString)) autorelease];
+    @throw create_JavaLangIllegalStateException_initWithNSString_(JreStrcat("$@", @"ToString method must return a String: ", toString));
   }
   JreStrongAssign(&self->cls_, cls);
   JreStrongAssign(&self->toString_, toString);

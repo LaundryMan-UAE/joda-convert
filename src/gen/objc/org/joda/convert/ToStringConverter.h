@@ -5,15 +5,15 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertToStringConverter_INCLUDE_ALL")
-#ifdef OrgJodaConvertToStringConverter_RESTRICT
-#define OrgJodaConvertToStringConverter_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertToStringConverter")
+#ifdef RESTRICT_OrgJodaConvertToStringConverter
+#define INCLUDE_ALL_OrgJodaConvertToStringConverter 0
 #else
-#define OrgJodaConvertToStringConverter_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertToStringConverter 1
 #endif
-#undef OrgJodaConvertToStringConverter_RESTRICT
+#undef RESTRICT_OrgJodaConvertToStringConverter
 
-#if !defined (OrgJodaConvertToStringConverter_) && (OrgJodaConvertToStringConverter_INCLUDE_ALL || defined(OrgJodaConvertToStringConverter_INCLUDE))
+#if !defined (OrgJodaConvertToStringConverter_) && (INCLUDE_ALL_OrgJodaConvertToStringConverter || defined(INCLUDE_OrgJodaConvertToStringConverter))
 #define OrgJodaConvertToStringConverter_
 
 /*!
@@ -22,7 +22,7 @@
  ToStringConverter is an interface and must be implemented with care.
  Implementations must be immutable and thread-safe.
  */
-@protocol OrgJodaConvertToStringConverter < NSObject, JavaObject >
+@protocol OrgJodaConvertToStringConverter < JavaObject >
 
 /*!
  @brief Converts the specified object to a <code>String</code>.
@@ -39,4 +39,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertToStringConverter)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertToStringConverter_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertToStringConverter")

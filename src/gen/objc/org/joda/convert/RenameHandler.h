@@ -5,15 +5,15 @@
 
 #include "J2ObjC_header.h"
 
-#pragma push_macro("OrgJodaConvertRenameHandler_INCLUDE_ALL")
-#ifdef OrgJodaConvertRenameHandler_RESTRICT
-#define OrgJodaConvertRenameHandler_INCLUDE_ALL 0
+#pragma push_macro("INCLUDE_ALL_OrgJodaConvertRenameHandler")
+#ifdef RESTRICT_OrgJodaConvertRenameHandler
+#define INCLUDE_ALL_OrgJodaConvertRenameHandler 0
 #else
-#define OrgJodaConvertRenameHandler_INCLUDE_ALL 1
+#define INCLUDE_ALL_OrgJodaConvertRenameHandler 1
 #endif
-#undef OrgJodaConvertRenameHandler_RESTRICT
+#undef RESTRICT_OrgJodaConvertRenameHandler
 
-#if !defined (OrgJodaConvertRenameHandler_) && (OrgJodaConvertRenameHandler_INCLUDE_ALL || defined(OrgJodaConvertRenameHandler_INCLUDE))
+#if !defined (OrgJodaConvertRenameHandler_) && (INCLUDE_ALL_OrgJodaConvertRenameHandler || defined(INCLUDE_OrgJodaConvertRenameHandler))
 #define OrgJodaConvertRenameHandler_
 
 @class IOSClass;
@@ -83,8 +83,8 @@
  @return the enum value, not null
  @throws IllegalArgumentException if the name is not a valid enum constant
  */
-- (id)lookupEnumWithIOSClass:(IOSClass *)type
-                withNSString:(NSString *)name;
+- (JavaLangEnum *)lookupEnumWithIOSClass:(IOSClass *)type
+                            withNSString:(NSString *)name;
 
 /*!
  @brief Lookup a type from a name, handling renames.
@@ -131,4 +131,4 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertRenameHandler)
 
 #endif
 
-#pragma pop_macro("OrgJodaConvertRenameHandler_INCLUDE_ALL")
+#pragma pop_macro("INCLUDE_ALL_OrgJodaConvertRenameHandler")
