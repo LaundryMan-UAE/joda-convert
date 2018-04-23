@@ -32,6 +32,7 @@ task translateJava(type:Exec) {
     // the classpath is built from the runtime dependencies for the sourcesets ...
     executable "${J2OBJC_HOME_LATEST}/j2objc"
     args '--doc-comments'
+    args '--nullability'
     args '-d', file('src/gen/objc').path
     args '-sourcepath', (sourceSets.main.allJava.srcDirs).join(':')
     args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')

@@ -10,15 +10,19 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = false
 
-  s.dependency 'J2ObjC/lib/jre', '~> 1.2'
-  s.dependency 'J2ObjC/lib/jsr305', '~> 1.2'
-  s.dependency 'J2ObjC/lib/guava', '~> 1.2'
-
-  s.source_files = 'src/gen/objc/**/*.{h,m}'
-
-  s.public_header_files = 'src/gen/objc/**/*.h'
-  s.header_mappings_dir = 'src/gen/objc'
-  s.compiler_flags = '-Wno-nullability-completeness'
-
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/J2ObjC/dist/include" "${PODS_ROOT}/J2ObjC/dist/include/guava"' }
+#  s.dependency 'J2ObjC/lib/jre', '~> 1.2'
+#  s.dependency 'J2ObjC/lib/jsr305', '~> 1.2'
+#  s.dependency 'J2ObjC/lib/guava', '~> 1.2'
+  s.preserve_paths = 'src/gen/objc/org'
+  s.subspec 'org' do |o|
+    o.preserve_paths = 'src/gen/objc/org/joda'
+    o.subspec 'joda' do |j|
+      j.preserve_paths = 'src/gen/objc/org/joda/convert'
+      j.subspec 'convert' do |c|
+        c.source_files = 'src/gen/objc/**/*.{h,m}'
+        c.public_header_files = 'src/gen/objc/**/*.h'
+        c.header_mappings_dir = 'src/gen/objc'
+      end
+    end
+  end
 end
