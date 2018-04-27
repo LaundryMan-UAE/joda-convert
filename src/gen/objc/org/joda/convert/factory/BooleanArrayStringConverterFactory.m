@@ -22,7 +22,7 @@
 /*!
  @brief Restricted constructor.
  */
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 @end
 
@@ -60,7 +60,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertFactoryBooleanArrayString
 @implementation OrgJodaConvertFactoryBooleanArrayStringConverterFactory
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   OrgJodaConvertFactoryBooleanArrayStringConverterFactory_init(self);
   return self;
 }
@@ -85,6 +85,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(findConverterWithIOSClass:);
   methods[2].selector = @selector(description);
@@ -141,6 +142,7 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(values);
   methods[1].selector = @selector(valueOfWithNSString:);
   #pragma clang diagnostic pop
@@ -160,7 +162,7 @@ OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConver
     allocSize += objSize_INSTANCE;
     uintptr_t ptr = (uintptr_t)calloc(allocSize, 1);
     id e;
-    (JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_1 class], (void *)ptr), ptr += objSize_INSTANCE);
+    ((void) (JreEnum(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter, INSTANCE) = e = objc_constructInstance([OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_1 class], (void *)ptr)), ptr += objSize_INSTANCE);
     OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_1_initWithNSString_withInt_(e, @"INSTANCE", 0);
     JreStrongAssignAndConsume(&OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter_EMPTY, [IOSBooleanArray newArrayWithLength:0]);
     J2OBJC_SET_INITIALIZED(OrgJodaConvertFactoryBooleanArrayStringConverterFactory_BooleanArrayStringConverter)
@@ -251,6 +253,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertFactoryBooleanArrayStringConverte
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(convertToStringWithId:);
   methods[1].selector = @selector(convertFromStringWithIOSClass:withNSString:);
   methods[2].selector = @selector(getEffectiveType);

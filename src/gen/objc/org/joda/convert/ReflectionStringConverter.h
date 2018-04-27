@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertReflectionStringConverter
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertReflectionStringConverter_) && (INCLUDE_ALL_OrgJodaConvertReflectionStringConverter || defined(INCLUDE_OrgJodaConvertReflectionStringConverter))
 #define OrgJodaConvertReflectionStringConverter_
 
@@ -52,8 +57,8 @@
  @param toString the toString method, not null
  @throw RuntimeException(or subclass) if the method signatures are invalid
  */
-- (instancetype)initWithIOSClass:(IOSClass *)cls
-       withJavaLangReflectMethod:(JavaLangReflectMethod *)toString;
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)cls
+                 withJavaLangReflectMethod:(JavaLangReflectMethod *)toString;
 
 @end
 
@@ -65,4 +70,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertReflectionStringConverter)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertReflectionStringConverter")

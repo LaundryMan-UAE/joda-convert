@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertStringConverterFactory
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertStringConverterFactory_) && (INCLUDE_ALL_OrgJodaConvertStringConverterFactory || defined(INCLUDE_OrgJodaConvertStringConverterFactory))
 #define OrgJodaConvertStringConverterFactory_
 
@@ -44,4 +49,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConverterFactory)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertStringConverterFactory")

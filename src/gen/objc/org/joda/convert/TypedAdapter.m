@@ -15,8 +15,8 @@
   IOSClass *effectiveType_;
 }
 
-- (instancetype)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
-                                         withIOSClass:(IOSClass *)effectiveType;
+- (instancetype __nonnull)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
+                                                   withIOSClass:(IOSClass *)effectiveType;
 
 @end
 
@@ -36,8 +36,8 @@ __attribute__((unused)) static OrgJodaConvertTypedAdapter *create_OrgJodaConvert
   return OrgJodaConvertTypedAdapter_adaptWithIOSClass_withOrgJodaConvertStringConverter_(cls, converter);
 }
 
-- (instancetype)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
-                                         withIOSClass:(IOSClass *)effectiveType {
+- (instancetype __nonnull)initWithOrgJodaConvertStringConverter:(id<OrgJodaConvertStringConverter>)conv
+                                                   withIOSClass:(IOSClass *)effectiveType {
   OrgJodaConvertTypedAdapter_initWithOrgJodaConvertStringConverter_withIOSClass_(self, conv, effectiveType);
   return self;
 }
@@ -76,6 +76,7 @@ __attribute__((unused)) static OrgJodaConvertTypedAdapter *create_OrgJodaConvert
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(adaptWithIOSClass:withOrgJodaConvertStringConverter:);
   methods[1].selector = @selector(initWithOrgJodaConvertStringConverter:withIOSClass:);
   methods[2].selector = @selector(convertToStringWithId:);

@@ -27,6 +27,14 @@ __attribute__((unused)) static IOSObjectArray *OrgJodaConvertFromStringFactory__
   return [NSString stringWithFormat:@"@org.joda.convert.FromStringFactory(factory=%@)", factory_];
 }
 
+- (jboolean)isEqual:(id)obj {
+  return JreAnnotationEquals(self, obj);
+}
+
+- (NSUInteger)hash {
+  return JreAnnotationHashCode(self);
+}
+
 - (void)dealloc {
   RELEASE_(factory_);
   [super dealloc];
@@ -38,6 +46,7 @@ __attribute__((unused)) static IOSObjectArray *OrgJodaConvertFromStringFactory__
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(factory);
   #pragma clang diagnostic pop
   static const J2ObjcFieldInfo fields[] = {

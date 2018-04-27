@@ -25,6 +25,14 @@ __attribute__((unused)) static IOSObjectArray *OrgJodaConvertToString__Annotatio
   return @"@org.joda.convert.ToString()";
 }
 
+- (jboolean)isEqual:(id)obj {
+  return JreAnnotationEquals(self, obj);
+}
+
+- (NSUInteger)hash {
+  return JreAnnotationHashCode(self);
+}
+
 + (const J2ObjcClassInfo *)__metadata {
   static const void *ptrTable[] = { (void *)&OrgJodaConvertToString__Annotations$0 };
   static const J2ObjcClassInfo _OrgJodaConvertToString = { "ToString", "org.joda.convert", ptrTable, NULL, NULL, 7, 0x2609, 0, 0, -1, -1, -1, -1, 0 };

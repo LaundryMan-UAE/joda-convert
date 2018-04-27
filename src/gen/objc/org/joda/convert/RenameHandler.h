@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertRenameHandler
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertRenameHandler_) && (INCLUDE_ALL_OrgJodaConvertRenameHandler || defined(INCLUDE_OrgJodaConvertRenameHandler))
 #define OrgJodaConvertRenameHandler_
 
@@ -131,4 +136,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertRenameHandler)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertRenameHandler")

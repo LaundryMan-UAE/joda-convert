@@ -26,7 +26,7 @@
 /*!
  @brief Restricted constructor.
  */
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 /*!
  @brief Finds a converter searching annotated.
@@ -104,7 +104,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertAnnotationStringConverter
 @implementation OrgJodaConvertAnnotationStringConverterFactory
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   OrgJodaConvertAnnotationStringConverterFactory_init(self);
   return self;
 }
@@ -159,6 +159,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(findConverterWithIOSClass:);
   methods[2].selector = @selector(findAnnotatedConverterWithIOSClass:);

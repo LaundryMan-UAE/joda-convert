@@ -134,7 +134,7 @@ __attribute__((unused)) static JavaLangReflectConstructor *OrgJodaConvertStringC
 
 @interface OrgJodaConvertStringConvert_1 : NSObject < OrgJodaConvertTypedStringConverter >
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 - (NSString *)convertToStringWithId:(id)object;
 
@@ -160,9 +160,9 @@ __attribute__((unused)) static OrgJodaConvertStringConvert_1 *create_OrgJodaConv
   IOSClass *val$cls_;
 }
 
-- (instancetype)initWithOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)capture$0
-                  withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
-                                           withIOSClass:(IOSClass *)capture$2;
+- (instancetype __nonnull)initWithOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)capture$0
+                            withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
+                                                     withIOSClass:(IOSClass *)capture$2;
 
 - (NSString *)convertToStringWithId:(id)object;
 
@@ -192,13 +192,13 @@ OrgJodaConvertStringConvert *OrgJodaConvertStringConvert_INSTANCE;
 }
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   OrgJodaConvertStringConvert_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (instancetype)initWithBoolean:(jboolean)includeJdkConverters
+- (instancetype __nonnull)initWithBoolean:(jboolean)includeJdkConverters
 withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories {
   OrgJodaConvertStringConvert_initWithBoolean_withOrgJodaConvertStringConverterFactoryArray_(self, includeJdkConverters, factories);
   return self;
@@ -397,6 +397,7 @@ withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)fro
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(create);
   methods[1].selector = @selector(init);
   methods[2].selector = @selector(initWithBoolean:withOrgJodaConvertStringConverterFactoryArray:);
@@ -668,7 +669,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertStringConvert)
 @implementation OrgJodaConvertStringConvert_1
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   OrgJodaConvertStringConvert_1_init(self);
   return self;
 }
@@ -696,6 +697,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(convertToStringWithId:);
   methods[2].selector = @selector(convertFromStringWithIOSClass:withNSString:);
@@ -722,9 +724,9 @@ OrgJodaConvertStringConvert_1 *create_OrgJodaConvertStringConvert_1_init() {
 
 @implementation OrgJodaConvertStringConvert_2
 
-- (instancetype)initWithOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)capture$0
-                  withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
-                                           withIOSClass:(IOSClass *)capture$2 {
+- (instancetype __nonnull)initWithOrgJodaConvertToStringConverter:(id<OrgJodaConvertToStringConverter>)capture$0
+                            withOrgJodaConvertFromStringConverter:(id<OrgJodaConvertFromStringConverter>)capture$1
+                                                     withIOSClass:(IOSClass *)capture$2 {
   OrgJodaConvertStringConvert_2_initWithOrgJodaConvertToStringConverter_withOrgJodaConvertFromStringConverter_withIOSClass_(self, capture$0, capture$1, capture$2);
   return self;
 }
@@ -758,6 +760,7 @@ OrgJodaConvertStringConvert_1 *create_OrgJodaConvertStringConvert_1_init() {
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(initWithOrgJodaConvertToStringConverter:withOrgJodaConvertFromStringConverter:withIOSClass:);
   methods[1].selector = @selector(convertToStringWithId:);
   methods[2].selector = @selector(convertFromStringWithIOSClass:withNSString:);

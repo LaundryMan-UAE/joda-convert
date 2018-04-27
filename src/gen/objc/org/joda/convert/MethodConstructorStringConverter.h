@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertMethodConstructorStringConverter
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertMethodConstructorStringConverter_) && (INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter || defined(INCLUDE_OrgJodaConvertMethodConstructorStringConverter))
 #define OrgJodaConvertMethodConstructorStringConverter_
 
@@ -58,14 +63,14 @@
  @param fromString the fromString method, not null
  @throw RuntimeException(or subclass) if the method signatures are invalid
  */
-- (instancetype)initWithIOSClass:(IOSClass *)cls
-       withJavaLangReflectMethod:(JavaLangReflectMethod *)toString
-  withJavaLangReflectConstructor:(JavaLangReflectConstructor *)fromString;
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)cls
+                 withJavaLangReflectMethod:(JavaLangReflectMethod *)toString
+            withJavaLangReflectConstructor:(JavaLangReflectConstructor *)fromString;
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithIOSClass:(IOSClass *)arg0
-       withJavaLangReflectMethod:(JavaLangReflectMethod *)arg1 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)arg0
+                 withJavaLangReflectMethod:(JavaLangReflectMethod *)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -81,4 +86,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertMethodConstructorStringConverter)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertMethodConstructorStringConverter")

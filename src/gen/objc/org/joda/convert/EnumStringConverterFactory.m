@@ -16,7 +16,7 @@
 /*!
  @brief Restricted constructor.
  */
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 @end
 
@@ -42,7 +42,7 @@ id<OrgJodaConvertStringConverterFactory> OrgJodaConvertEnumStringConverterFactor
 @implementation OrgJodaConvertEnumStringConverterFactory
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   OrgJodaConvertEnumStringConverterFactory_init(self);
   return self;
 }
@@ -71,6 +71,7 @@ J2OBJC_IGNORE_DESIGNATED_END
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(init);
   methods[1].selector = @selector(findConverterWithIOSClass:);
   methods[2].selector = @selector(description);
@@ -108,8 +109,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
 
 @implementation OrgJodaConvertEnumStringConverterFactory_EnumStringConverter
 
-- (instancetype)initWithOrgJodaConvertEnumStringConverterFactory:(OrgJodaConvertEnumStringConverterFactory *)outer$
-                                                    withIOSClass:(IOSClass *)effectiveType {
+- (instancetype __nonnull)initWithOrgJodaConvertEnumStringConverterFactory:(OrgJodaConvertEnumStringConverterFactory *)outer$
+                                                              withIOSClass:(IOSClass *)effectiveType {
   OrgJodaConvertEnumStringConverterFactory_EnumStringConverter_initWithOrgJodaConvertEnumStringConverterFactory_withIOSClass_(self, outer$, effectiveType);
   return self;
 }
@@ -141,6 +142,7 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(OrgJodaConvertEnumStringConverterFactory)
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(initWithOrgJodaConvertEnumStringConverterFactory:withIOSClass:);
   methods[1].selector = @selector(convertToStringWithId:);
   methods[2].selector = @selector(convertFromStringWithIOSClass:withNSString:);

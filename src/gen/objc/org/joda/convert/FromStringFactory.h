@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertFromStringFactory
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertFromStringFactory_) && (INCLUDE_ALL_OrgJodaConvertFromStringFactory || defined(INCLUDE_OrgJodaConvertFromStringFactory))
 #define OrgJodaConvertFromStringFactory_
 
@@ -40,6 +45,10 @@
 
 @property (readonly) IOSClass *factory;
 
+- (jboolean)isEqual:(id)obj;
+
+- (NSUInteger)hash;
+
 @end
 
 @interface OrgJodaConvertFromStringFactory : NSObject < OrgJodaConvertFromStringFactory > {
@@ -57,4 +66,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertFromStringFactory)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertFromStringFactory")

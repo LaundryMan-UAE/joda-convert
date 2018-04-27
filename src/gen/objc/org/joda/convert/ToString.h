@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertToString
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertToString_) && (INCLUDE_ALL_OrgJodaConvertToString || defined(INCLUDE_OrgJodaConvertToString))
 #define OrgJodaConvertToString_
 
@@ -34,6 +39,10 @@
  */
 @protocol OrgJodaConvertToString < JavaLangAnnotationAnnotation >
 
+- (jboolean)isEqual:(id)obj;
+
+- (NSUInteger)hash;
+
 @end
 
 @interface OrgJodaConvertToString : NSObject < OrgJodaConvertToString >
@@ -48,4 +57,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertToString)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertToString")

@@ -35,8 +35,8 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
 
 @implementation OrgJodaConvertReflectionStringConverter
 
-- (instancetype)initWithIOSClass:(IOSClass *)cls
-       withJavaLangReflectMethod:(JavaLangReflectMethod *)toString {
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)cls
+                 withJavaLangReflectMethod:(JavaLangReflectMethod *)toString {
   OrgJodaConvertReflectionStringConverter_initWithIOSClass_withJavaLangReflectMethod_(self, cls, toString);
   return self;
 }
@@ -74,6 +74,7 @@ J2OBJC_FIELD_SETTER(OrgJodaConvertReflectionStringConverter, toString_, JavaLang
   };
   #pragma clang diagnostic push
   #pragma clang diagnostic ignored "-Wobjc-multiple-method-names"
+  #pragma clang diagnostic ignored "-Wundeclared-selector"
   methods[0].selector = @selector(initWithIOSClass:withJavaLangReflectMethod:);
   methods[1].selector = @selector(convertToStringWithId:);
   methods[2].selector = @selector(description);

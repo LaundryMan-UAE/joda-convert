@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_OrgJodaConvertStringConvert
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (OrgJodaConvertStringConvert_) && (INCLUDE_ALL_OrgJodaConvertStringConvert || defined(INCLUDE_OrgJodaConvertStringConvert))
 #define OrgJodaConvertStringConvert_
 
@@ -44,7 +49,7 @@
   It is strongly recommended to only alter the converters before performing
   actual conversions.
  */
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 /*!
  @brief Creates a new conversion manager.
@@ -58,7 +63,7 @@
  @param includeJdkConverters true to include the JDK converters
  @param factories optional array of factories to use, not null
  */
-- (instancetype)initWithBoolean:(jboolean)includeJdkConverters
+- (instancetype __nonnull)initWithBoolean:(jboolean)includeJdkConverters
 withOrgJodaConvertStringConverterFactoryArray:(IOSObjectArray *)factories;
 
 /*!
@@ -350,4 +355,8 @@ J2OBJC_TYPE_LITERAL_HEADER(OrgJodaConvertStringConvert)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_OrgJodaConvertStringConvert")
