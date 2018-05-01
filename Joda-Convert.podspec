@@ -10,9 +10,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = false
 
-#  s.dependency 'J2ObjC/lib/jre', '~> 1.2'
-#  s.dependency 'J2ObjC/lib/jsr305', '~> 1.2'
-#  s.dependency 'J2ObjC/lib/guava', '~> 1.2'
+  s.dependency 'J2ObjC/lib/jre', '~> 2.1.1'
+  s.dependency 'J2ObjC/lib/jsr305', '~> 2.1.1'
+  s.dependency 'J2ObjC/lib/guava', '~> 2.1.1'
   s.preserve_paths = 'src/gen/objc/org'
   s.subspec 'org' do |o|
     o.preserve_paths = 'src/gen/objc/org/joda'
