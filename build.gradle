@@ -1,0 +1,39 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.9.2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.google.guava:guava:29.0-jre"
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+task testPaths{
+    String someString = sourceSets.main.allJava.srcDirs.join(':');
+    println "$someString"
+}
+
+
+task cycleFinder(type:Exec) {
+    inputs.files sourceSets.main.allJava
+    executable "${J2OBJC_HOME}/cycle_finder"
+    args '-sourcepath', sourceSets.main.allJava.srcDirs.join(':')
+    args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+    args inputs.files
+}
+
+task translateJava(type:Exec) {
+    inputs.files sourceSets.main.allJava
+
+    // the classpath is built from the runtime dependencies for the sourcesets ...
+    executable "${J2OBJC_HOME}/j2objc"
+    args '--nullability'
+    args '-d', file('src/gen/objc').path
+    args '-sourcepath', (sourceSets.main.allJava.srcDirs).join(':')
+    args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+    args inputs.files
+}
