@@ -3,7 +3,7 @@ Laundrapp Translation Instructions
 
 No build is required for Android.
 
-The library will need to be transpiled for use with iOS. To do this open up a command line, clone the project, cd into the project root and run the following:
+The library will need to be transpiled for use with iOS. To do this open up a command line, clone the project, switch to 1.9.2-J2ObjC-2.6 branch,, cd into the project root and run the following:
 
 ```./gradlew translateJava```
 
