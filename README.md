@@ -1,15 +1,23 @@
-Laundrapp Translation Instructions
-------------
+Objective-C Translation Instructions
+====================================
 
 No build is required for Android.
 
-The library will need to be transpiled for use with iOS. To do this open up a command line, clone the project, switch to 1.9.2-J2ObjC-2.6 branch,, cd into the project root and run the following:
+The library will need to be transpiled for use with iOS. To do this open up a co mmand line, clone the project and run the following from root of the cloned directory:
 
-```./gradlew translateJava```
+```
+./gradlew translateJava
+```
 
 Once translated then check all the changed files into github.
 
-Once checked in the tag the HEAD of the new checkin, copy the commit hash and paste this into the customer-ios/Podfile entry for Joda-Convert.
+Open Joda-Convert.podspec and replace the tag in the following line with the tag you will tag the commit with.
+
+```
+  s.source           = { :git => "https://github.com/Laundromap-Australia/joda-convert.git", :tag => "v1.9.2-J2ObjC-2.6-1" }
+```
+
+Once checked in and tagged, copy the commit hash from the tagged commit and paste this into the customer-ios/Podfile entry for joda-convert.
 
 
 Joda-Convert
